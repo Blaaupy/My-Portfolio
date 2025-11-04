@@ -1,0 +1,41 @@
+@use "../../styles/variables.scss" as vars;
+
+.header-left {
+  flex: 0 0 auto;
+}
+
+.nav {
+  margin: 0 auto;
+  display: flex;
+  gap: 15px;
+
+  a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s, outline-offset 0.3s;
+
+    &.active {
+      background-color: var(--accent);
+      color: vars.$text-light;
+      outline: 3px solid vars.$secondary-color;
+      outline-offset: -3px; // bordure vers l'intérieur
+    }
+  }
+}
+
+.header-right {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+
+  select {
+    padding: 4px 6px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    background-color: var(--background);
+    color: var(--text);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,103 @@
+@use "../../styles/variables.scss" as vars;
+
+.btn {
+  background-color: var(--accent);
+  color: vars.$text-light;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px 0;
+
+  .home-hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    .home-section-content {
+      max-width: 600px;
+
+      h1 { font-size: 2.5rem; span { color: var(--accent); } }
+      p { margin: 1rem 0 2rem; font-size: 1.2rem; line-height: 1.5; }
+
+      .home-section-buttons { display: flex; flex-wrap: wrap; gap: 1rem; }
+    }
+
+    .home-hero-image img {
+      max-width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px var(--shadow);
+    }
+  }
+
+  .home-about {
+    position: relative;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: var(--background-alt);
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("/textures/paper-texture.png") repeat;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 { font-family: "Merriweather", serif; font-size: 2.4rem; margin-bottom: 1.5rem; color: var(--accent); }
+    p { font-size: 1.2rem; line-height: 1.8; color: var(--text); max-width: 800px; margin: 0 auto 2.5rem; }
+  }
+
+  .home-skills {
+    padding: 0 2rem;
+    text-align: center;
+
+    h2 { font-size: 2rem; margin-bottom: 1rem; color: var(--accent); }
+    p { max-width: 700px; margin: 0 auto 2rem; font-size: 19px; }
+  }
+
+  .skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+
+    li {
+      background-color: var(--accent);
+      color: vars.$text-light;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+    }
+  }
+}

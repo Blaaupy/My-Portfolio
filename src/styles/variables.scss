@@ -1,0 +1,34 @@
+/* Thème clair par défaut */
+:root {
+  --background: #ffffff;
+  --text: #1a1a1a;
+  --accent: #00b894;
+  --border: #e0e0e0;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Thème sombre */
+[data-theme="dark"] {
+  --background: #1a1a1a;
+  --text: #ffffff;
+  --accent: #00cec9;
+  --border: #555;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+// ==========================
+// Couleurs secondaires ou fixes (Sass)
+// ==========================
+$secondary-color: #0984e3;
+$text-light: #ffffff;
+$text-dark: #1a1a1a;
+
+// ==========================
+// Boutons / hover / actif
+// ==========================
+$btn-text: $text-light;
+$btn-hover-text: $text-light;
+
+// Exemple d’utilisation : tu peux combiner Sass + CSS vars
+// background: var(--accent); // dynamique selon le thème
+// color: $btn-text;          // fixe

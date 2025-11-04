@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact me"
+  },
+  "home": {
+    "greeting": "Hi, I'm",
+    "intro": "Passionate web developer specializing in React, modern front-end development, and interface design.",
+    "projectsBtn": "See my projects",
+    "cvBtn": "CV Download",
+    "contactBtn": "Contact me",
+    "aboutTitle": "About me",
+    "aboutText": "I create modern, responsive, and aesthetically pleasing interfaces. I like React, UI/UX design, and learning new technologies.",
+    "aboutBtn": "See more",
+    "skillsTitle": "Skills",
+    "skills": ["React / Vite", "HTML & CSS / SCSS", "Modern JavaScript (ES6+)", "Responsive Design", "UI/UX Design"]
+  }
+}

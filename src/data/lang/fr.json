@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contactez-moi"
+  },
+  "home": {
+    "greeting": "Salut, moi c’est",
+    "intro": "Développeur web passionné, spécialisé en React, front-end moderne et design d’interface.",
+    "projectsBtn": "Voir mes projets",
+    "cvBtn": "Télécharger CV",
+    "contactBtn": "Me contacter",
+    "aboutTitle": "À propos de moi",
+    "aboutText": "Je crée des interfaces modernes, responsives et esthétiques. J’aime React, le design UI/UX et apprendre de nouvelles technologies.",
+    "aboutBtn": "En savoir plus",
+    "skillsTitle": "Compétences",
+    "skills": ["React / Vite", "HTML & CSS / SCSS", "JavaScript moderne (ES6+)", "Responsive Design", "UI/UX Design"]
+  }
+
+}
