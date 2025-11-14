@@ -19,20 +19,14 @@ const projects = [
   {
     id: 2,
     title: "Sophie Bluel - Architecte",
-    logo: "/images/sophiebluel-logo.png",
+    logo: "/portfolio-2/images/SophieBluel.png",
     descriptionShort:
       "Site de portfolio interactif avec interface d’administration.",
     descriptionLong:
       "Développement complet du front-end en JavaScript et intégration d’un back-end Node/Express.",
     slides: [
-      { type: "image", src: "/images/Sophie-preview1.png" },
-      { type: "iframe", url: "https://tonliensophie.com" },
-      {
-        type: "links",
-        links: {
-          front: "https://github.com/tonprofil/SophieBluel-Frontend",
-          back: "https://github.com/tonprofil/SophieBluel-Backend",
-        },
+      { type: "iframe",
+        url: "https://blaaupy.github.io/Portfolio-architecte-sophie-bluel/"
       },
     ],
   },
