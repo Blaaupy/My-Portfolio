@@ -1,5 +1,7 @@
 import "./ProjectFloatingNav.scss";
 import ProjectInternalNav from "../ProjectInternalNav/ProjectInternalNav";
+import { useContext } from "react";
+import { LanguageContext } from "../../../context/LanguageContext";
 
 export default function ProjectFloatingNav({
   projects,
@@ -16,6 +18,8 @@ export default function ProjectFloatingNav({
   onNext,
   onChangeSlide
 }) {
+  const { texts } = useContext(LanguageContext);
+
   return (
     <div className="floating-nav">
       {projects.map((project, index) => (
@@ -26,39 +30,54 @@ export default function ProjectFloatingNav({
             className={`nav-btn ${activeIndex === index ? "active" : ""}`}
             onClick={() => onSelectProject(index)}
           >
-            {project.titleFr}
+            {/* Nom du projet selon langue */}
+            {texts.language === "fr" ? project.titleFr : project.titleEn}
           </button>
 
           {/* Section extra */}
           {activeIndex === index && (
-            <div className="project-extra-container">
+            <>
+              <div className="connector-line"></div>
 
-              {/* 1️⃣ Voir plus / Voir moins — visible uniquement si expanded */}
-              {expandedIndex === index && (
-                <button onClick={() => onTogglePreview(index)}>
-                  {previewIndex === index ? "Voir moins" : "Voir plus"}
-                </button>
-              )}
+              <div className="project-extra-container">
 
-              {/* 2️⃣ InternalNav — apparaît UNIQUEMENT si preview ouverte */}
-              {previewIndex === index && (
-                <ProjectInternalNav
-                  slides={project.slides}
-                  current={currentSlide}
-                  onPrev={onPrev}
-                  onNext={onNext}
-                  onChange={onChangeSlide}
-                />
-              )}
+                {/* Voir plus / Voir moins */}
+                {expandedIndex === index && (
+                  <div
+                    className="extra-btn"
+                    onClick={() => onTogglePreview(index)}
+                  >
+                    {previewIndex === index
+                      ? texts.floatingNav.seeLess
+                      : texts.floatingNav.seeMore}
+                  </div>
+                )}
 
-              {/* 3️⃣ Fermer / Ouvrir — toujours visible dans un projet actif */}
-              <button onClick={() => onToggleExpand(index)}>
-                {expandedIndex === index ? "Fermer" : "Ouvrir"}
-              </button>
-            </div>
+                {/* InternalNav */}
+                {previewIndex === index && (
+                  <ProjectInternalNav
+                    slides={project.slides}
+                    current={currentSlide}
+                    onPrev={onPrev}
+                    onNext={onNext}
+                    onChange={onChangeSlide}
+                  />
+                )}
+
+                {/* Ouvrir / Fermer */}
+                <div
+                  className="extra-btn"
+                  onClick={() => onToggleExpand(index)}
+                >
+                  {expandedIndex === index
+                    ? texts.floatingNav.close
+                    : texts.floatingNav.open}
+                </div>
+              </div>
+            </>
           )}
 
-          {/* Ligne verticale */}
+          {/* Ligne verticale entre les projets */}
           {index < projects.length - 1 && <div className="connector-line"></div>}
         </div>
       ))}

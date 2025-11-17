@@ -72,5 +72,11 @@
   },
   "footer": {
     "AllRights": "All rights reserved"
+  },
+  "floatingNav":{
+    "open": "Open",
+    "seeMore": "Show more",
+    "close": "Close",
+    "seeLess": "Show less"
   }
 }

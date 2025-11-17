@@ -98,7 +98,7 @@ export default function Projects() {
         onChangeSlide={handleChangeSlide}
       />
 
-      <section className="projects-section page-container">
+      <section className="projects-section">
         <h1>Mes Projets</h1>
 
         <div className="projects-container">

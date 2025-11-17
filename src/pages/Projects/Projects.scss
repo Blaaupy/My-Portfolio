@@ -1,32 +1,36 @@
 @use "../../styles/variables.scss" as *;
 
-.projects-page {
-  text-align: center;
 
-  .projects-intro {
-    max-width: 800px;
 
-    h1 {
-      color: var(--accent);
-      
-    }
+.projects-intro {
+  max-width: 800px;
 
-    p {
-      color: var(--text);
-      opacity: 0.9;
-    }
+  h1 {
+    color: var(--accent);
+    
   }
 
-  .projects-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  p {
+    color: var(--text);
+    opacity: 0.9;
   }
 }
 
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
 .projects-section {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
   max-width: 1200px;
   width: 100%;
+  gap: 50px;
+  padding: 50px 0;
   background: var(--bg-primary);
   color: var(--text);
 

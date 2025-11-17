@@ -72,5 +72,11 @@
   },
   "footer": {
     "AllRights": "Tous droits réservés"
+  },
+  "floatingNav":{
+    "open": "Ouvrir",
+    "seeMore": "Voir plus",
+    "close": "Fermer",
+    "seeLess": "Voir moins"
   }
 }

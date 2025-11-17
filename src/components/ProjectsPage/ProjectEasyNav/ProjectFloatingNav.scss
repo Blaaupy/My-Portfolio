@@ -16,7 +16,7 @@
   align-items: center;
 }
 
-.nav-btn {
+.nav-btn, .project-extra-container {
   padding: 0.4rem 0.8rem;
   min-width: 110px;
   text-align: center;
@@ -52,6 +52,7 @@
   align-items: center;
   margin-top: 0.5rem;
   gap: 0.5rem;
+  
 
   .project-see-more {
     padding: 0.4rem 0.8rem;
@@ -64,5 +65,35 @@
     &:hover {
       background: var(--accent-light);
     }
+  }
+}
+.extra-btn {
+  padding: 0.4rem 0.9rem;
+  min-width: 100px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  color: var(--text);
+  cursor: pointer;
+
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease,
+    box-shadow 0.15s ease;
+
+  /* Micro-shadow + smooth hover */
+  &:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-1.5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Pressed */
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
   }
 }
