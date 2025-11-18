@@ -8,7 +8,7 @@ export default function Projects() {
   const projects = ProjectsData.projects;
   const cardRefs = useRef([]);
 
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [expandedIndex, setExpandedIndex] = useState(null);
   const [previewIndex, setPreviewIndex] = useState(null);
   const [slideIndex, setSlideIndex] = useState(0);
