@@ -38,8 +38,10 @@
   padding: 0.45rem 0.7rem;
   border-radius: 8px;
   border: 1px solid var(--accent);
-  background: var(--background); /* Fix du bug → couleur forcée */
-  color: var(--text);
+
+  background: var(--background) !important;  /* empêche l'héritage noir */
+  color: var(--text) !important;             /* empêche le texte noir invisible */
+
   font-size: 0.9rem;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
@@ -49,6 +51,13 @@
   }
 }
 
+.project-select:focus,
+.project-select:focus-visible {
+  background: var(--background) !important;
+  color: var(--text) !important;
+  outline: none;
+  border-color: var(--accent);
+}
 /* -----------------------------------
    Boutons / Extra actions
 ----------------------------------- */
