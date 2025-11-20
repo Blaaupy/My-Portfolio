@@ -31,7 +31,7 @@ export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
         {/* Intro */}
         {slide.type === "intro" && (
           <div className="intro-slide">
-            <h4>{slide.title}</h4>
+            <h4>{t(slide.titleFr, slide.titleEn)}</h4>
             <div className="text-block">
               <p>{t(slide.contentFr, slide.contentEn)}</p>
             </div>
@@ -50,10 +50,11 @@ export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
             )}
           </div>
         )}
-        {/* Résumer */}
+
+        {/* Résumé */}
         {slide.type === "summary" && (
           <div className="summary-slide">
-            <h4>{slide.title}</h4>
+            <h4>{t(slide.titleFr, slide.titleEn)}</h4>
 
             {slide.sections?.map((sec, i) => (
               <div key={i} className="summary-section">

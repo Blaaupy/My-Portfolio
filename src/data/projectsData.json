@@ -7,23 +7,25 @@
       "logo": "/portfolio-2/images/Booki.png",
       "shortFr": "Intégration complète d’un site de réservation en HTML/CSS, 100% responsive.",
       "shortEn": "Full integration of a booking website using HTML/CSS, fully responsive.",
-      "longFr": "Création d’un site vitrine responsive à partir d'une maquette Figma. Travail autour du HTML sémantique, du Flexbox, du responsive mobile-first et de la validation W3C.",
-      "longEn": "Creation of a responsive showcase website from a Figma mockup. Focus on semantic HTML, Flexbox, mobile-first responsive design, and W3C validation.",
-      "technos": ["HTML", "CSS", "Responsive Design"],
+      "longFr": "Création d’un site vitrine responsive à partir d'une maquette Figma. Travail autour du HTML sémantique, du Flexbox, du responsive mobile-first et de la validation W3C. Ce projet, mon premier concret en intégration web, m’a permis de poser des bases solides pour mes projets futurs.",
+      "longEn": "Creation of a responsive showcase website from a Figma mockup. Focus on semantic HTML, Flexbox, mobile-first responsive design, and W3C validation. This was my first real hands-on web integration project, which helped me build a solid foundation for future projects.",
+      "technos": ["HTML", "CSS", "Responsive Design", "W3C Validation"],
       "slides": [
         {
           "type": "intro",
-          "title": "Présentation & Mission",
-          "contentFr": "Dans le cadre de ma formation en développement web, j’ai intégré la start-up Booki en tant que développeur front-end junior. Ma mission consistait à créer la page d’accueil du site à partir des maquettes fournies par l’UI designer, en respectant les contraintes techniques et la structure imposée. Ce projet, l’un de mes premiers, m’a permis de me familiariser avec l’intégration web et de comprendre le workflow entre développeur et designer. Aujourd’hui, je découperais la maquette de manière plus détaillée pour anticiper certains problèmes de responsive.",
-          "contentEn": "As part of my web development training, I joined Booki as a junior front-end developer. My mission was to create the homepage from the UI designer’s mockups while respecting technical constraints and file structure. Being one of my first projects, it helped me get familiar with front-end integration and understand the developer-designer workflow. Today, I would slice the mockup in a more detailed way to better anticipate responsive issues.",
-          "challengesFr": "L’un des défis principaux a été d’adapter le découpage initial des maquettes. Certaines sections n’étaient pas assez détaillées, j’ai donc dû revoir le découpage et réorganiser certains éléments pour assurer un rendu précis et responsive.",
-          "challengesEn": "One of the main challenges was adapting the initial mockup slicing. Some sections were not detailed enough, so I had to refine the slicing and reorganize elements to ensure a precise and responsive layout.",
+          "titleFr": "Présentation & Mission",
+          "titleEn": "Presentation & Mission",
+          "contentFr": "Dans le cadre de ma formation en développement web, j’ai intégré la start-up Booki en tant que développeur front-end junior. Ma mission consistait à créer la page d’accueil du site à partir des maquettes fournies par l’UI designer, en respectant les contraintes techniques et la structure imposée. Étant mon premier projet concret d’intégration HTML/CSS, il m’a permis de comprendre le workflow entre développeur et designer, de gérer le responsive mobile-first et d’appliquer des bonnes pratiques de validation W3C.",
+          "contentEn": "As part of my web development training, I joined Booki as a junior front-end developer. My mission was to create the homepage from the UI designer’s mockups while respecting technical constraints and file structure. Being my first hands-on HTML/CSS project, it helped me understand the developer-designer workflow, handle mobile-first responsive design, and apply W3C validation best practices.",
+          "challengesFr": "L’un des défis principaux a été d’adapter le découpage initial des maquettes. Certaines sections n’étaient pas assez détaillées, j’ai donc dû revoir le découpage et réorganiser certains éléments pour assurer un rendu précis et responsive. J’ai également dû m’assurer que le site respectait les standards W3C et l’accessibilité de base.",
+          "challengesEn": "One of the main challenges was adapting the initial mockup slicing. Some sections were not detailed enough, so I had to refine the slicing and reorganize elements to ensure a precise and responsive layout. I also had to ensure the website met basic W3C standards and accessibility guidelines.",
           "previewTextFr": "Introduction du projet : Contexte, rôle et mission.",
           "previewTextEn": "Project introduction: context, role and mission."
         },
         {
           "type": "summary",
-          "title": "Résumé & Commentaires",
+          "titleFr": "Résumé & Commentaires",
+          "titleEn": "Summary & Comments",
           "previewTextFr": "Résumé des difficultés et points forts du projet",
           "previewTextEn": "Summary of challenges and highlights",
           "sections": [
@@ -32,7 +34,8 @@
               "titleEn": "Technical challenges",
               "points": [
                 { "fr": "Découpage précis de la maquette Figma", "en": "Precise slicing of the Figma mockup" },
-                { "fr": "Gestion de la responsivité mobile-first", "en": "Mobile-first responsive handling" }
+                { "fr": "Gestion de la responsivité mobile-first", "en": "Mobile-first responsive handling" },
+                { "fr": "Respect des standards W3C et accessibilité de base", "en": "Compliance with W3C standards and basic accessibility" }
               ]
             },
             {
@@ -40,14 +43,15 @@
               "titleEn": "Solutions implemented",
               "points": [
                 { "fr": "Création de composants HTML/CSS réutilisables", "en": "Created reusable HTML/CSS components" },
-                { "fr": "Optimisation du CSS pour un rendu fluide", "en": "CSS optimization for smooth rendering" }
+                { "fr": "Optimisation du CSS pour un rendu fluide et responsive", "en": "CSS optimization for smooth and responsive rendering" },
+                { "fr": "Vérification de la conformité W3C et bonnes pratiques d’accessibilité", "en": "Checked W3C compliance and accessibility best practices" }
               ]
             },
             {
               "titleFr": "Points forts du projet",
               "titleEn": "Project highlights",
-              "contentFr": "Site responsive, conforme aux maquettes et validé W3C. Apprentissage solide du workflow intégration front-end.",
-              "contentEn": "Responsive website, faithful to the mockups, W3C validated. Strong learning experience in front-end integration workflow."
+              "contentFr": "Site responsive, conforme aux maquettes, validé W3C et accessible. Premier projet concret d’intégration HTML/CSS, posant des bases solides pour mes projets suivants.",
+              "contentEn": "Responsive website, faithful to the mockups, W3C validated and accessible. First real hands-on HTML/CSS project, providing a solid foundation for future projects."
             }
           ]
         },
@@ -97,11 +101,11 @@
           "previewTextEn": "All Booki files",
           "previewTextFr": "Tous les fichiers Booki",
           "links": [
-            { "name": "Première Maquette / First Mockup", "url": "/portfolio-2/files/booki/Premier_découpage_maquette.jpg", "type": "download" },
-            { "name": "Maquette / Mockup Clean", "url": "/portfolio-2/files/booki/Découpage_maquette_final.jpg", "type": "download" },
-            { "name": "Booki Dev Web - Note de synthèse pour intégration du site Booki", "url": "/portfolio-2/files/booki/DW+Booki+-+Note+de+synthese.pdf", "type": "download" },
+            { "name": "Premier Découpage Maquette / First Mockup slicing", "url": "/portfolio-2/files/booki/Premier_découpage_maquette.jpg", "type": "download" },
+            { "name": "Découpage Maquette propre / Clean Mockup slicing", "url": "/portfolio-2/files/booki/Découpage_maquette_final.jpg", "type": "download" },
+            { "name": "Note de synthèse / Summary note", "url": "/portfolio-2/files/booki/DW+Booki+-+Note+de+synthese.pdf", "type": "download" },
             { "name": "Maquette Original / Original Mockup", "url": "https://www.figma.com/design/r9YJyUkpVdrxzBBKGH7reY/Maquettes-Booki--desktop--mobile--tablette-?node-id=3-0&p=f&t=mcKTnz0PjGDT30Dg-0", "type": "navToLink" },
-            { "name": "Lien GitHub", "url": "https://github.com/Blaaupy/booki-starter-code", "type": "navToLink" }
+            { "name": "Lien GitHub / GitHub link", "url": "https://github.com/Blaaupy/booki-starter-code", "type": "navToLink" }
           ]
         }
       ]
@@ -111,29 +115,27 @@
       "titleFr": "Sophie Bluel — Portfolio d’architecte",
       "titleEn": "Sophie Bluel — Architect Portfolio",
       "logo": "/portfolio-2/images/SophieBluel.png",
-
       "shortFr": "Site de portfolio dynamique avec système de login et gestion des projets.",
       "shortEn": "Dynamic portfolio website with admin login and project management.",
-
-      "longFr": "Développement complet du front-end en JavaScript : affichage dynamique des projets, filtres, modale d’édition, upload d’images, suppression via API et authentification par token. Projet orienté manipulation DOM et appels API.",
-      "longEn": "Full front-end development in JavaScript: dynamic project display, filters, edit modal, image upload, deletion via API, and token-based authentication.",
-
+      "longFr": "Développement complet du front-end en JavaScript, manipulation du DOM, affichage dynamique des projets, filtres, modale d’édition, upload d’images, suppression via API et authentification par token. Ce projet m’a permis de renforcer mes compétences en gestion des événements utilisateurs, en communication avec une API et en sécurité basique des applications front-end.",
+      "longEn": "Full front-end development in JavaScript, including DOM manipulation, dynamic project display, filters, edit modal, image upload, deletion via API, and token-based authentication. This project strengthened my skills in handling user events, API communication, and basic front-end security.",
       "technos": ["JavaScript", "HTML", "CSS", "API REST"],
-
       "slides": [
         {
           "type": "intro",
-          "title": "Présentation & Mission",
-          "contentFr": "Dans le cadre de ma formation en développement web, j’ai intégré le scénario ArchiWebos en tant que développeur front-end junior. Ma mission consistait à créer la page de présentation des travaux d'une architecte d’intérieur à partir du HTML fourni, à développer la page de connexion administrateur et une modale permettant d'uploader de nouveaux médias. Ce projet m’a permis de me familiariser avec la manipulation du DOM, la gestion des événements utilisateurs et la communication avec une API.",
-          "contentEn": "As part of my web development training, I joined the ArchiWebos scenario as a junior front-end developer. My mission was to create the portfolio page of an interior designer from the provided HTML, develop the admin login page, and create a modal for uploading new media. This project allowed me to get familiar with DOM manipulation, user event handling, and communication with an API.",
-          "challengesFr": "L’un des principaux défis a été de gérer la communication avec l’API tout en maintenant une interface fluide et réactive. Il a également fallu concevoir la modale d’upload from scratch et s’assurer que toutes les interactions utilisateurs fonctionnaient correctement.",
-          "challengesEn": "One of the main challenges was handling communication with the API while keeping a smooth and responsive interface. It was also necessary to create the upload modal from scratch and ensure all user interactions worked correctly.",
-          "previewTextFr": "Introduction du projet : Contexte, rôle et missions principales.",
+          "titleFr": "Présentation & Mission",
+          "titleEn": "Presentation & Mission",
+          "contentFr": "Dans le cadre de ma formation en développement web, j’ai intégré le scénario ArchiWebos en tant que développeur front-end junior. Ma mission consistait à créer la page de présentation des travaux d'une architecte d’intérieur à partir du HTML fourni, développer la page de connexion administrateur et créer une modale permettant d'uploader de nouveaux médias. Ce projet, premier full JavaScript manipulant le DOM et les API, m’a permis de comprendre les interactions dynamiques et d’appliquer des bonnes pratiques pour la sécurisation du login et la gestion des événements utilisateurs.",
+          "contentEn": "As part of my web development training, I joined the ArchiWebos scenario as a junior front-end developer. My mission was to create the portfolio page of an interior designer from the provided HTML, develop the admin login page, and create a modal for uploading new media. This first full JavaScript project manipulating the DOM and APIs helped me understand dynamic interactions and apply best practices for login security and user event handling.",
+          "challengesFr": "Les principaux défis ont été de gérer la communication avec l’API tout en maintenant une interface fluide et réactive, de créer la modale d’upload from scratch et de s’assurer que toutes les interactions fonctionnaient correctement, en particulier la validation et l’upload des images.",
+          "challengesEn": "The main challenges were handling API communication while keeping a smooth and responsive interface, building the upload modal from scratch, and ensuring all interactions worked correctly, especially image validation and uploads.",
+          "previewTextFr": "Introduction du projet : contexte, rôle et missions principales.",
           "previewTextEn": "Project introduction: context, role and main tasks."
         },
         {
           "type": "summary",
-          "title": "Résumé & Commentaires",
+          "titleFr": "Résumé & Commentaires",
+          "titleEn": "Summary & Comments",
           "previewTextFr": "Résumé des difficultés et points forts du projet",
           "previewTextEn": "Summary of challenges and highlights",
           "sections": [
@@ -141,23 +143,27 @@
               "titleFr": "Défis techniques",
               "titleEn": "Technical challenges",
               "points": [
-                { "fr": "Communication avec l’API tout en gardant l’interface fluide", "en": "API communication while keeping UI smooth" },
-                { "fr": "Création de la modale upload from scratch", "en": "Built upload modal from scratch" }
+                { "fr": "Gestion du DOM dynamique pour l’affichage des projets", "en": "Dynamic DOM handling for project display" },
+                { "fr": "Création d’une modale d’upload fonctionnelle from scratch", "en": "Built functional upload modal from scratch" },
+                { "fr": "Communication avec l’API tout en gardant l’interface fluide et réactive", "en": "API communication while keeping UI smooth and responsive" },
+                { "fr": "Sécurisation du login administrateur et gestion des tokens", "en": "Securing admin login and managing tokens" }
               ]
             },
             {
               "titleFr": "Solutions mises en place",
               "titleEn": "Solutions implemented",
               "points": [
-                { "fr": "Gestion dynamique du DOM pour l’affichage des projets", "en": "Dynamic DOM handling for project display" },
-                { "fr": "Implémentation de filtres et modale fonctionnels", "en": "Implemented functional filters and modal" }
+                { "fr": "Manipulation dynamique du DOM pour l’affichage et la mise à jour des projets", "en": "Dynamic DOM manipulation for project display and updates" },
+                { "fr": "Implémentation de la modale d’upload avec validation des fichiers", "en": "Implemented upload modal with file validation" },
+                { "fr": "Création de filtres et interactions dynamiques efficaces", "en": "Created functional filters and dynamic interactions" },
+                { "fr": "Gestion sécurisée du login via tokens", "en": "Secure login management using tokens" }
               ]
             },
             {
               "titleFr": "Points forts du projet",
               "titleEn": "Project highlights",
-              "contentFr": "Portfolio interactif avec login sécurisé, filtres dynamiques et interface responsive.",
-              "contentEn": "Interactive portfolio with secure login, dynamic filters, and responsive interface."
+              "contentFr": "Portfolio interactif et sécurisé avec login, filtres dynamiques, modale d’édition et interface responsive. Premier projet full JS manipulant le DOM et les API, renforçant mes compétences en front-end dynamique.",
+              "contentEn": "Interactive and secure portfolio with login, dynamic filters, edit modal, and responsive interface. First full JavaScript project manipulating the DOM and APIs, strengthening my skills in dynamic front-end development."
             }
           ]
         },
@@ -177,8 +183,6 @@
               "labelEn": "Kanban — Project tasks"
             }
           ]
-          
-          
         },
         {
           "type": "video",
@@ -230,23 +234,25 @@
       "logo": "/portfolio-2/images/Nina.png",
       "shortFr": "Optimisation SEO, performance et débogage complet d’un site de photographe.",
       "shortEn": "SEO, performance optimization and debugging of a photographer portfolio.",
-      "longFr": "Correction des bugs JS/CSS, optimisation Lighthouse (Performance, SEO, Accessibilité), compression des images, lazy loading, amélioration du chargement, structure sémantique et métadonnées adaptées.",
-      "longEn": "Fixing JS/CSS issues, Lighthouse optimization (Performance, SEO, Accessibility), image compression, lazy loading, semantic structure, and metadata improvements.",
+      "longFr": "Correction des bugs JS/CSS sur un site existant, optimisation Lighthouse (Performance, SEO, Accessibilité), compression d’images volumineuses, lazy loading, amélioration du chargement des pages, structure sémantique et métadonnées adaptées. Ce projet m’a permis de me familiariser avec l’audit de sites tiers et la mise en œuvre de bonnes pratiques SEO et d’accessibilité sans altérer le fonctionnement du site.",
+      "longEn": "Fixing JS/CSS issues on an existing site, Lighthouse optimization (Performance, SEO, Accessibility), handling large image compression, lazy loading, improving page loading, semantic structure, and metadata. This project helped me get familiar with auditing third-party websites and implementing SEO and accessibility best practices without affecting site functionality.",
       "technos": ["JavaScript", "SEO", "Performance", "Accessibility"],
       "slides": [
         {
           "type": "intro",
-          "title": "Présentation & Mission",
-          "contentFr": "Dans le cadre de ma formation en développement web, j’ai été chargé d’optimiser le site de Nina Carducci, photographe, en tant que développeur freelance. Ma mission consistait à analyser les performances et le référencement SEO, corriger les bugs existants, améliorer l’accessibilité du site, optimiser le chargement des pages et produire un rapport détaillant les modifications apportées. Ce projet m’a permis de me familiariser avec les audits Lighthouse et Wave, la manipulation du code existant et la mise en œuvre de bonnes pratiques SEO et d’accessibilité.",
-          "contentEn": "As part of my web development training, I was tasked with optimizing the website of Nina Carducci, a photographer, as a freelance developer. My mission was to analyze performance and SEO, fix existing bugs, improve site accessibility, optimize page loading, and produce a detailed report of the modifications made. This project allowed me to get familiar with Lighthouse and Wave audits, code manipulation, and implementing best practices in SEO and accessibility.",
-          "challengesFr": "L’un des principaux défis a été d’identifier et corriger les problèmes de performance et de référencement sans altérer le fonctionnement du site, tout en améliorant l’accessibilité pour tous les utilisateurs.",
-          "challengesEn": "One of the main challenges was identifying and fixing performance and SEO issues without affecting site functionality, while improving accessibility for all users.",
+          "titleFr": "Présentation & Mission",
+          "titleEn": "Presentation & Mission",
+          "contentFr": "Dans le cadre de ma formation en développement web, j’ai été chargé d’optimiser le site de Nina Carducci, photographe, en tant que développeur freelance. Ma mission consistait à analyser les performances et le référencement SEO, corriger les bugs existants, améliorer l’accessibilité, optimiser le chargement des pages et produire un rapport détaillant les modifications apportées. Ce projet m’a permis de travailler sur un site existant, comprendre la structure du code tiers et appliquer les bonnes pratiques SEO, performance et accessibilité.",
+          "contentEn": "As part of my web development training, I was tasked with optimizing the website of Nina Carducci, a photographer, as a freelance developer. My mission was to analyze performance and SEO, fix existing bugs, improve accessibility, optimize page loading, and produce a detailed report of the changes. This project involved working on an existing site, understanding third-party code structure, and applying SEO, performance, and accessibility best practices.",
+          "challengesFr": "Les principaux défis ont été d’identifier et corriger les problèmes de performance et de référencement sans altérer le fonctionnement du site, gérer les images volumineuses via lazy loading et compression, et améliorer l’accessibilité pour tous les utilisateurs.",
+          "challengesEn": "The main challenges were identifying and fixing performance and SEO issues without affecting site functionality, handling large images via lazy loading and compression, and improving accessibility for all users.",
           "previewTextFr": "Introduction du projet : contexte, rôle et missions principales.",
           "previewTextEn": "Project introduction: context, role and main tasks."
         },
         {
           "type": "summary",
-          "title": "Résumé & Commentaires",
+          "titleFr": "Résumé & Commentaires",
+          "titleEn": "Summary & Comments",
           "previewTextFr": "Résumé des difficultés et points forts du projet",
           "previewTextEn": "Summary of challenges and highlights",
           "sections": [
@@ -254,30 +260,33 @@
               "titleFr": "Défis techniques",
               "titleEn": "Technical challenges",
               "points": [
-                { "fr": "Identifier et corriger les bugs JS/CSS existants", "en": "Identify and fix existing JS/CSS bugs" },
-                { "fr": "Optimisation SEO, performance et accessibilité", "en": "SEO, performance, and accessibility optimization" }
+                { "fr": "Identifier et corriger les bugs JS/CSS sur un site existant", "en": "Identify and fix JS/CSS bugs on an existing site" },
+                { "fr": "Optimisation SEO et performance sans casser le site", "en": "SEO and performance optimization without breaking the site" },
+                { "fr": "Compression d’images volumineuses et lazy loading", "en": "Handling large image compression and lazy loading" },
+                { "fr": "Amélioration de l’accessibilité pour tous les utilisateurs", "en": "Improving accessibility for all users" }
               ]
             },
             {
               "titleFr": "Solutions mises en place",
               "titleEn": "Solutions implemented",
               "points": [
-                { "fr": "Compression des images et lazy loading", "en": "Image compression and lazy loading" },
-                { "fr": "Amélioration de la structure sémantique et des métadonnées", "en": "Improved semantic structure and metadata" }
+                { "fr": "Audit complet du site avec Lighthouse et Wave", "en": "Comprehensive site audit with Lighthouse and Wave" },
+                { "fr": "Compression des images et implémentation du lazy loading", "en": "Image compression and lazy loading implementation" },
+                { "fr": "Correction des bugs JS/CSS et ajustements responsive", "en": "Fixing JS/CSS bugs and responsive adjustments" },
+                { "fr": "Optimisation de la structure sémantique et des métadonnées", "en": "Optimized semantic structure and metadata" }
               ]
             },
             {
               "titleFr": "Points forts du projet",
               "titleEn": "Project highlights",
-              "contentFr": "Rapport détaillé livré, site optimisé pour performances et SEO, accessibilité améliorée.",
-              "contentEn": "Detailed report delivered, site optimized for performance and SEO, improved accessibility."
+              "contentFr": "Site optimisé pour SEO, performance et accessibilité. Rapport détaillé livré. Expérience enrichissante sur l’audit et l’optimisation de sites existants, avec application de bonnes pratiques avancées.",
+              "contentEn": "Site optimized for SEO, performance, and accessibility. Detailed report delivered. Valuable experience in auditing and optimizing existing sites, applying advanced best practices."
             }
           ]
         },
         {
           "type": "iframe",
           "iframeType": "pdf",
-          "title": "Rapport Lighthouse avant optimisation",
           "previewTextFr": "Audit Lighthouse du site avant optimisation.",
           "previewTextEn": "Lighthouse report of the site before optimization.",
           "url": "/portfolio-2/files/nina/Before_Optimisation_Lighthouse_Report.pdf"
@@ -285,7 +294,6 @@
         {
           "type": "iframe",
           "iframeType": "pdf",
-          "title": "Rapport Lighthouse après optimisation",
           "previewTextFr": "Audit Lighthouse du site après optimisation.",
           "previewTextEn": "Lighthouse report of the site after optimization.",
           "url": "/portfolio-2/files/nina/Optimised_Website_Lighthouse_Report.pdf"
@@ -293,7 +301,6 @@
         {
           "type": "iframe",
           "iframeType": "pdf",
-          "title": "Rapport d’intervention",
           "previewTextFr": "Rapport détaillant toutes les modifications effectuées sur le site.",
           "previewTextEn": "Detailed report of all changes made on the website.",
           "url": "/portfolio-2/files/nina/RapportOptimisation.pdf"
@@ -301,7 +308,6 @@
         {
           "type": "iframe",
           "iframeType": "site",
-          "title": "Site final optimisé",
           "previewTextFr": "Version finale du site optimisé pour les performances et le SEO.",
           "previewTextEn": "Final version of the website optimized for performance and SEO.",
           "url": "https://blaaupy.github.io/Nina-Carducci-Dev/"
@@ -311,57 +317,138 @@
           "previewTextFr": "Tous les fichiers Nina Carducci",
           "previewTextEn": "All Nina Carducci files",
           "links": [
-            { "name": "Rapport Lighthouse avant optimisation", "url": "/portfolio-2/files/nina/Before_Optimisation_Lighthouse_Report.pdf", "type": "download" },
-            { "name": "Rapport Lighthouse après optimisation", "url": "/portfolio-2/files/nina/Optimised_Website_Lighthouse_Report.pdf", "type": "download" },
-            { "name": "Rapport d’intervention", "url": "/portfolio-2/files/nina/RapportOptimisation.pdf", "type": "download" },
-            { "name": "Site final optimisé", "url": "https://blaaupy.github.io/Nina-Carducci-Dev/", "type": "navToLink" },
-            { "name": "Lien GitHub", "url": "https://github.com/Blaaupy/Nina-Carducci-Dev", "type": "navToLink" }
+            { "name": "Rapport Lighthouse avant optimisation / Lighthouse report of the site before optimization. ", "url": "/portfolio-2/files/nina/Before_Optimisation_Lighthouse_Report.pdf", "type": "download" },
+            { "name": "Rapport Lighthouse après optimisation / Lighthouse report of the site after optimization.", "url": "/portfolio-2/files/nina/Optimised_Website_Lighthouse_Report.pdf", "type": "download" },
+            { "name": "Rapport d’intervention / Detailed report of all changes made on the website. ", "url": "/portfolio-2/files/nina/RapportOptimisation.pdf", "type": "download" },
+            { "name": "Site final optimisé / Final version of the website optimized", "url": "https://blaaupy.github.io/Nina-Carducci-Dev/", "type": "navToLink" },
+            { "name": "Lien GitHub / GitHub link", "url": "https://github.com/Blaaupy/Nina-Carducci-Dev", "type": "navToLink" }
           ]
         }
       ]
     },
     {
       "id": 4,
-      "titleFr": "Mon Vieux Grimoire — API & Backend",
-      "titleEn": "Mon Vieux Grimoire — Backend & API",
-      "logo": "/portfolio-2/images/MonVieuxGrimoire.png",
-
-      "shortFr": "Développement d’une API sécurisée avec gestion des livres et système de notation.",
-      "shortEn": "Development of a secure API with book management and rating system.",
-
-      "longFr": "Construction d’un backend complet avec Node.js, Express et MongoDB : CRUD complet sur les livres, système de notation, validation sécurisée, gestion des images et middleware d’authentification JWT.",
-      "longEn": "Building a complete backend using Node.js, Express, and MongoDB: full CRUD for books, rating system, secure validation, image management and JWT authentication.",
-
-      "technos": ["Node.js", "Express", "MongoDB", "JWT"],
-
+      "titleFr": "Kasa — Location Immobilière",
+      "titleEn": "Kasa — Real Estate Rental",
+      "logo": "/portfolio-2/images/Kasa.png",
+      "shortFr": "Intégration complète d’une plateforme de location immobilière en React.",
+      "shortEn": "Full integration of a real-estate rental platform built with React.",
+      "longFr": "En tant que développeur front-end freelance pour Kasa, j’ai participé à la refonte complète de leur site de location immobilière en React. J’ai travaillé sur le routing, la gestion des props et du state, la création d’un carrousel d’images et un système de collapse dynamique. Ce projet m’a permis de renforcer ma compréhension des composants React et de l’architecture SPA.",
+      "longEn": "As a freelance front-end developer for Kasa, I participated in the complete redesign of their real-estate rental platform using React. I worked on routing, props and state management, building an image carousel, and a dynamic collapse system. This project helped me strengthen my understanding of React components and SPA architecture.",
+      "technos": ["React", "JavaScript", "SCSS", "Routing"],
       "slides": [
         {
+          "type": "intro",
+          "titleFr": "Présentation & Mission",
+          "titleEn": "Presentation & Mission",
+          "contentFr": "J’ai rejoint Kasa, l’un des leaders français de la location d’appartements entre particuliers, pour participer à la refonte complète de leur site. Mon rôle était de développer le front-end en React, en suivant les maquettes Figma fournies et en utilisant des données simulées pour afficher les annonces. J’ai mis en place le routing complet, géré les props et le state pour les composants dynamiques, créé un carrousel d’images et un système de collapse pour le contenu. Cette mission m’a permis de mieux comprendre la structuration des pages et l’architecture des composants en React.",
+          "contentEn": "I joined Kasa, one of France’s leading peer-to-peer rental platforms, to participate in the complete redesign of their website. My role was to develop the front-end in React, following provided Figma mockups and using simulated data to display listings. I implemented full routing, managed props and state for dynamic components, built an image carousel, and a collapse system for content. This mission helped me gain a better understanding of React page structuring and component architecture.",
+          "challengesFr": "Les principaux défis ont été la maîtrise du state et des props, la logique conditionnelle des composants dynamiques, la gestion des collapses et du carrousel, et le respect fidèle des maquettes responsive.",
+          "challengesEn": "The main challenges included mastering state and props, conditional logic in dynamic components, managing collapses and the carousel, and accurately following responsive mockups.",
+          "previewTextFr": "Contexte du projet Kasa, rôle et responsabilités.",
+          "previewTextEn": "Kasa project context, role and responsibilities."
+        },
+        {
           "type": "summary",
-          "title": "Résumé & Commentaires",
-          "previewTextFr": "Résumé des difficultés et points forts du projet",
-          "previewTextEn": "Summary of challenges and highlights",
+          "titleFr": "Résumé & Commentaires",
+          "titleEn": "Summary & Comments",
+          "previewTextFr": "Difficultés rencontrées et solutions mises en place pour ce projet React.",
+          "previewTextEn": "Challenges faced and solutions implemented in this React project.",
           "sections": [
             {
               "titleFr": "Défis techniques",
               "titleEn": "Technical challenges",
               "points": [
-                { "fr": "Création d’une API sécurisée avec Node.js et Express", "en": "Built secure API with Node.js and Express" },
-                { "fr": "Gestion des images et système de notation", "en": "Image management and rating system" }
+                {
+                  "fr": "Maîtrise des props et du state pour les composants dynamiques",
+                  "en": "Mastering props and state for dynamic components"
+                },
+                {
+                  "fr": "Création d’un carrousel et d’un système de collapse fonctionnels",
+                  "en": "Building a functional carousel and collapse system"
+                },
+                {
+                  "fr": "Structuration claire et maintenable d’une SPA (Single Page Application)",
+                  "en": "Clear and maintainable SPA (Single Page Application) structuring"
+                }
               ]
             },
             {
               "titleFr": "Solutions mises en place",
               "titleEn": "Solutions implemented",
               "points": [
-                { "fr": "CRUD complet sur les livres", "en": "Full CRUD on books" },
-                { "fr": "Middleware JWT pour sécuriser les endpoints", "en": "JWT middleware to secure endpoints" }
+                {
+                  "fr": "Composants modulaires et réutilisables",
+                  "en": "Modular and reusable components"
+                },
+                {
+                  "fr": "Gestion centralisée du state pour simplifier la logique",
+                  "en": "Centralized state management to simplify logic"
+                },
+                {
+                  "fr": "Routing avancé pour naviguer entre toutes les pages sans rechargement",
+                  "en": "Advanced routing for seamless page navigation without reloads"
+                }
               ]
             },
             {
               "titleFr": "Points forts du projet",
               "titleEn": "Project highlights",
-              "contentFr": "Backend complet et sécurisé, facile à maintenir et évolutif pour de futures fonctionnalités.",
-              "contentEn": "Complete and secure backend, maintainable and scalable for future features."
+              "contentFr": "Acquisition de réflexes solides en React, compréhension de la structure SPA et des composants dynamiques, expérience en implémentation d’animations et de navigation fluide.",
+              "contentEn": "Developed strong React skills, understanding SPA structure and dynamic components, experience implementing animations and smooth navigation."
+            }
+          ]
+        },
+        {
+          "type": "iframe",
+          "iframeType": "pdf",
+          "title": "Guidelines de développement",
+          "previewTextFr": "Documentation PDF des bonnes pratiques de codage pour le projet Kasa.",
+          "previewTextEn": "PDF documentation of coding best practices for the Kasa project.",
+          "url": "/portfolio-2/files/kasa/Kasa_coding_guidelines.pdf"
+        },
+        {
+          "type": "doubleImage",
+          "title": "Maquettes clés",
+          "previewTextFr": "Maquettes principales : page d’accueil et page logement.",
+          "previewTextEn": "Main mockups: homepage and housing page.",
+          "images": [
+            {
+              "src": "/portfolio-2/files/kasa/HomepageKasa.png",
+              "labelFr": "Homepage — Maquette du projet",
+              "labelEn": "Homepage — Mockup of the project"
+            },
+            {
+              "src": "/portfolio-2/files/kasa/HousingpageKasa.png",
+              "labelFr": "Page logement — Maquette du projet",
+              "labelEn": "Housing page — Mockup of the project"
+            }
+          ]
+        },
+        {
+          "type": "iframe",
+          "iframeType": "site",
+          "title": "Site intégré",
+          "previewTextFr": "Résultat final : intégration complète du site Kasa en React.",
+          "previewTextEn": "Final result: full integration of the Kasa site in React.",
+          "url": "https://blaaupy.github.io/Kasa/"
+        },
+        {
+          "type": "allLinks",
+          "previewTextFr": "Liens vers maquettes complètes et dépôt GitHub du projet.",
+          "previewTextEn": "Links to complete mockups and project GitHub repository.",
+          "links": [
+            { "name": "Coding Guidelines Kasa", "url": "/portfolio-2/files/kasa/Kasa_coding_guidelines.pdf", "type": "download" },
+            { 
+              "name": "Maquette complète / Complete mockup", 
+              "url": "https://www.figma.com/design/kfKHknHySoTibZfdolGAX6/Sophie-Bluel---Desktop?node-id=0-1&p=f&t=EjqZlPxcRaTJEFfK-0", 
+              "type": "navToLink" 
+            },
+            { "name": "Site final / Final Website", "url": "https://blaaupy.github.io/Kasa/", "type": "navToLink" },
+            {
+              "name": "Lien GitHub / GitHub link",
+              "url": "https://github.com/Blaaupy/Kasa",
+              "type": "navToLink"
             }
           ]
         }
@@ -369,80 +456,269 @@
     },
     {
       "id": 5,
-      "titleFr": "Qwenta — Interface de gestion de menus",
-      "titleEn": "Qwenta — Menu Management Interface",
-      "logo": "/portfolio-2/images/Qwenta.png",
-
-      "shortFr": "Intégration d’une interface multi-pages à partir d’une maquette Figma.",
-      "shortEn": "Integration of a multi-page interface from a Figma mockup.",
-
-      "longFr": "Réalisation d’une interface professionnelle en suivant une maquette Figma. Mise en page avancée, organisation SCSS, composants réutilisables et intégration pixel-perfect.",
-      "longEn": "Creation of a professional multi-page interface based on a Figma mockup. Advanced layout, SCSS organisation, reusable components and pixel-perfect integration.",
-
-      "technos": ["React", "SCSS", "UI Design"],
-
+      "titleFr": "Mon Vieux Grimoire — Back-end Livre",
+      "titleEn": "Mon Vieux Grimoire — Book Back-end",
+      "logo": "/portfolio-2/images/MonVieuxGrimoire.png",
+      "shortFr": "Développement complet du back-end d’un site de notation de livres avec Node.js et MongoDB.",
+      "shortEn": "Full back-end development of a book rating site with Node.js and MongoDB.",
+      "longFr": "Ce projet consistait à développer le back-end d’un site de notation de livres, en utilisant Node.js, Express et MongoDB. J’ai mis en place les modèles de données, les opérations CRUD pour les livres et les notes, un système d’authentification sécurisé et l’optimisation des images. Ce projet m’a permis de renforcer mes compétences en architecture MVC, gestion d’API et sécurité des données.",
+      "longEn": "This project involved developing the back-end of a book rating site using Node.js, Express, and MongoDB. I implemented data models, CRUD operations for books and ratings, a secure authentication system, and image optimization. This project helped me strengthen my skills in MVC architecture, API management, and data security.",
+      "technos": ["Node.js", "Express", "MongoDB", "Mongoose", "MVC", "API REST", "Authentication", "Green Code"],
       "slides": [
         {
+          "type": "intro",
+          "titleFr": "Présentation & Mission",
+          "titleEn": "Presentation & Mission",
+          "contentFr": "Dans le cadre de mon travail en freelance, j’ai rejoint le projet \"Mon Vieux Grimoire\" en tant que développeur back-end. La mission était de créer l’API du site de notation de livres pour une petite chaîne de librairies à Lille. Mon rôle a été de mettre en place les modèles MongoDB, les routes et opérations CRUD, l’authentification sécurisée des utilisateurs et l’optimisation des images, tout en respectant l’architecture MVC et les bonnes pratiques du Green Code.",
+          "contentEn": "As a freelance back-end developer, I joined the \"Mon Vieux Grimoire\" project. The mission was to create the API for a book rating site for a small chain of bookstores in Lille. My role included setting up MongoDB models, CRUD routes and operations, secure user authentication, and image optimization, while following the MVC architecture and Green Code best practices.",
+          "challengesFr": "Les principaux défis ont été la sécurisation des données utilisateur, la gestion des opérations CRUD avec MongoDB, l’optimisation et le stockage des images pour réduire l’impact écologique, et le respect d’une architecture MVC claire et maintenable.",
+          "challengesEn": "Main challenges included securing user data, managing CRUD operations with MongoDB, optimizing and storing images to reduce ecological impact, and adhering to a clear and maintainable MVC architecture.",
+          "previewTextFr": "Introduction au projet Mon Vieux Grimoire : contexte, rôle et objectifs principaux.",
+          "previewTextEn": "Mon Vieux Grimoire project introduction: context, role, and main objectives."
+        },
+
+        {
           "type": "summary",
-          "title": "Résumé & Commentaires",
-          "previewTextFr": "Résumé des difficultés et points forts du projet",
-          "previewTextEn": "Summary of challenges and highlights", 
+          "titleFr": "Résumé & Commentaires",
+          "titleEn": "Summary & Comments",
+          "previewTextFr": "Résumé des difficultés et points forts du projet.",
+          "previewTextEn": "Summary of challenges and project highlights.",
           "sections": [
             {
               "titleFr": "Défis techniques",
               "titleEn": "Technical challenges",
               "points": [
-                { "fr": "Intégration multi-pages pixel-perfect", "en": "Pixel-perfect multi-page integration" },
-                { "fr": "Organisation SCSS et composants réutilisables", "en": "SCSS organization and reusable components" }
+                {
+                  "fr": "Modélisation des données avec Mongoose et gestion des relations entre livres et notes",
+                  "en": "Data modeling with Mongoose and managing relationships between books and ratings"
+                },
+                {
+                  "fr": "Mise en place d’un système d’authentification sécurisé pour les utilisateurs",
+                  "en": "Implementing a secure user authentication system"
+                },
+                {
+                  "fr": "Optimisation et stockage des images pour respecter le Green Code",
+                  "en": "Image optimization and storage following Green Code practices"
+                },
+                {
+                  "fr": "Respect de l’architecture MVC pour structurer le back-end de manière claire et maintenable",
+                  "en": "Adhering to MVC architecture for a clear and maintainable back-end structure"
+                }
               ]
             },
             {
               "titleFr": "Solutions mises en place",
               "titleEn": "Solutions implemented",
               "points": [
-                { "fr": "Respect strict de la maquette Figma", "en": "Strict adherence to Figma mockup" },
-                { "fr": "Kanban et gestion de fichiers techniques intégrés", "en": "Integrated Kanban and technical files management" }
+                {
+                  "fr": "Création de modèles Mongoose modulaires pour les livres, notes et utilisateurs",
+                  "en": "Created modular Mongoose models for books, ratings, and users"
+                },
+                {
+                  "fr": "Développement de routes CRUD sécurisées avec Express et validation des données",
+                  "en": "Developed secure CRUD routes with Express and data validation"
+                },
+                {
+                  "fr": "Intégration de la gestion des images et optimisation pour limiter l’impact écologique",
+                  "en": "Integrated image management and optimization to minimize ecological impact"
+                },
+                {
+                  "fr": "Respect strict de l’architecture MVC et documentation claire de l’API",
+                  "en": "Strictly followed MVC architecture and documented the API clearly"
+                }
               ]
             },
             {
               "titleFr": "Points forts du projet",
               "titleEn": "Project highlights",
-              "contentFr": "Interface professionnelle, responsive et bien structurée, facile à maintenir.",
-              "contentEn": "Professional, responsive, well-structured interface, easy to maintain."
+              "contentFr": "Renforcement des compétences en back-end Node.js, architecture MVC, sécurisation des données et optimisation des ressources pour un site web complet.",
+              "contentEn": "Strengthened skills in Node.js back-end development, MVC architecture, data security, and resource optimization for a complete web application."
             }
           ]
         },
         {
-          "type": "files",
-          "previewTextFr": "Spécifications techniques.",
-          "previewTextEn": "Technical specifications.",
-          "files": [
-            { "name": "PDF Spec", "url": "/portfolio-2/files/qwenta/Spécifications_Techniques_PDF.pdf" }
-          ]
+          "type": "iframe",
+          "iframeType": "pdf",
+          "titleFr": "Spécifications Fonctionnelles",
+          "titleEn": "Functional Specifications",
+          "previewTextFr": "Document PDF des spécifications fonctionnelles du projet.",
+          "previewTextEn": "PDF document of the project's functional specifications.",
+          "url": "/portfolio-2/files/monvieuxgrimoire/Backend_Specifications_fonctionnelles.pdf"
         },
         {
-          "type": "files",
-          "previewTextFr": "Veille technologique.",
-          "previewTextEn": "Technological monitoring.",
-          "files": [
-            { "name": "PDF Veille", "url": "/portfolio-2/files/qwenta/Veille_Technologique_PDF.pdf" }
-          ]
+          "type": "iframe",
+          "iframeType": "pdf",
+          "titleFr": "Spécifications API",
+          "titleEn": "API Specifications",
+          "previewTextFr": "Documentation PDF détaillant la structure et le fonctionnement de l’API.",
+          "previewTextEn": "PDF documentation detailing the structure and behavior of the API.",
+          "url": "/portfolio-2/files/monvieuxgrimoire/Backend_Specifications_API.pdf"
         },
         {
-          "type": "image",
-          "previewTextFr": "Aperçu du Kanban.",
-          "previewTextEn": "Kanban Overview.",
-          "src": "/portfolio-2/files/qwenta/Kanban_Screen.png"
+          "type": "video",
+          "titleFr": "Démonstration complète",
+          "titleEn": "Full demonstration",
+          "previewTextFr": "Vidéo complète présentant tout le fonctionnement du back-end.",
+          "previewTextEn": "Full video demonstrating the complete back-end workflow.",
+          "src": "/portfolio-2/files/monvieuxgrimoire/MonVieuxGrimoireFonctionnalitées.mp4"
         },
         {
           "type": "allLinks",
-          "previewTextFr": "Tous les fichiers Qwenta",
-          "previewTextEn": "All Qwenta files",
+          "previewTextFr": "Tous les fichiers et ressources du projet Mon Vieux Grimoire.",
+          "previewTextEn": "All files and resources for the Mon Vieux Grimoire project.",
           "links": [
-            { "name": "Spécifications Techniques PDF", "url": "/portfolio-2/files/qwenta/Spec_Techniques.pdf", "type": "download" },
-            { "name": "Veille Technologique PDF", "url": "/portfolio-2/files/qwenta/Veille_Technologique_PDF.pdf", "type": "download" },
-            { "name": "Kanban PDF", "url": "/portfolio-2/files/qwenta/Kanban_Qwenta_Final_Version.pdf", "type": "download" },
-            { "name": "Lien GitHub", "url": "https://github.com/Blaaupy/Mon-vieux-Grimoir-Backend", "type": "navToLink" }
+            {
+              "name": "Spécifications Fonctionnelles",
+              "url": "/portfolio-2/files/monvieuxgrimoire/Backend_Specifications_fonctionnelles.pdf",
+              "type": "download"
+            },
+            {
+              "name": "Spécifications API",
+              "url": "/portfolio-2/files/monvieuxgrimoire/Backend_Specifications_API.pdf",
+              "type": "download"
+            },
+            {
+              "name": "Vidéo démonstration / Demo video",
+              "url": "/portfolio-2/files/monvieuxgrimoire/MonVieuxGrimoireFonctionnalitées.mp4",
+              "type": "download"
+            },
+            {
+              "name": "Maquette Figma / Figma mockup",
+              "url": "https://www.figma.com/file/Snidyc45xi6qchoOPabMA9/Maquette-Mon-Vieux-Grimoir?node-id=0%3A1",
+              "type": "navToLink"
+            },
+            {
+              "name": "Lien GitHub / GitHub link",
+              "url": "https://github.com/Blaaupy/Mon-vieux-Grimoir-Backend",
+              "type": "navToLink"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "titleFr": "Qwenta — Gestion de Menus",
+      "titleEn": "Qwenta — Menu Management",
+      "logo": "/portfolio-2/images/Qwenta.png",
+      "shortFr": "Développement complet d’une application de gestion de menus et de commandes.",
+      "shortEn": "Full development of a menu and order management application.",
+      "longFr": "Le projet Qwenta consistait à créer une application permettant de gérer des menus et commandes pour une chaîne de restauration. J’ai participé à toutes les phases : conception, spécifications fonctionnelles et techniques, développement, suivi via Kanban et présentation finale.",
+      "longEn": "The Qwenta project involved creating an application for menu and order management for a restaurant chain. I contributed to all phases: design, functional and technical specifications, development, Kanban tracking, and final presentation.",
+      "technos": ["LibreOffice", "Canva", "PowerPoint", "Notion"],
+      "slides": [
+        {
+          "type": "intro",
+          "titleFr": "Présentation & Mission",
+          "titleEn": "Presentation & Mission",
+          "contentFr": "Dans le cadre du projet Qwenta, j’ai été chargé de planifier et organiser le développement de l’application “Menu Maker”, destinée aux restaurateurs. Mon rôle a consisté à analyser la maquette et les spécifications fonctionnelles, rédiger les spécifications techniques, mettre en place un suivi des tâches via Kanban et organiser une veille technologique sur les outils et pratiques pertinents pour le projet. Ce travail m’a permis de structurer efficacement les différentes étapes du projet avant le développement effectif.",
+          "contentEn": "As part of the Qwenta project, I was responsible for planning and organizing the development of the “Menu Maker” application for restaurateurs. My role involved analyzing the mockups and functional specifications, writing the technical specifications, setting up task tracking via Kanban, and conducting technological watch on relevant tools and best practices. This work allowed me to effectively structure the different phases of the project before actual development.",
+          "challengesFr": "Les principaux défis ont été : identifier et traduire correctement les besoins fonctionnels en spécifications techniques claires, organiser les tâches dans un Kanban réaliste et cohérent pour l’équipe, établir une veille efficace sur les outils et pratiques pertinents, et anticiper les contraintes liées au développement futur tout en respectant les délais impartis.",
+          "challengesEn": "Main challenges included identifying and accurately translating functional requirements into clear technical specifications, organizing tasks in a realistic and coherent Kanban for the team, conducting an effective watch on relevant tools and practices, and anticipating future development constraints while respecting the deadlines.",
+          "previewTextFr": "Introduction au projet Qwenta : contexte, rôle et objectifs.",
+          "previewTextEn": "Qwenta project introduction: context, role, and objectives.",
+          "technos": ["LibreOffice", "Canva", "PowerPoint", "Notion"]
+        },
+        {
+          "type": "summary",
+          "titleFr": "Résumé & Commentaires",
+          "titleEn": "Summary & Comments",
+          "previewTextFr": "Résumé des difficultés, solutions et points forts du projet.",
+          "previewTextEn": "Summary of challenges, solutions, and project highlights.",
+          "sections": [
+            {
+              "titleFr": "Défis techniques",
+              "titleEn": "Technical challenges",
+              "points": [
+                {"fr": "Traduire les besoins fonctionnels en spécifications techniques claires", "en": "Translating functional requirements into clear technical specifications"},
+                {"fr": "Organiser les tâches et priorités dans un Kanban cohérent pour l’équipe", "en": "Organizing tasks and priorities in a coherent Kanban for the team"},
+                {"fr": "Mettre en place une veille efficace sur les outils et bonnes pratiques du projet", "en": "Establishing effective watch on relevant tools and best practices"},
+                {"fr": "Anticiper les contraintes futures pour le développement du site", "en": "Anticipating future constraints for the site's development"}
+              ]
+            },
+            {
+              "titleFr": "Solutions mises en place",
+              "titleEn": "Solutions implemented",
+              "points": [
+                {"fr": "Documentation complète des spécifications fonctionnelles et techniques", "en": "Comprehensive documentation of functional and technical specifications"},
+                {"fr": "Kanban détaillé et suivi des tâches avec Notion", "en": "Detailed Kanban and task tracking with Notion"},
+                {"fr": "Organisation d’une veille structurée sur les outils et bonnes pratiques", "en": "Structured watch on relevant tools and best practices"}
+              ]
+            },
+            {
+              "titleFr": "Points forts du projet",
+              "titleEn": "Project highlights",
+              "contentFr": "Renforcement des compétences en organisation de projet, planification, documentation technique et veille technologique.",
+              "contentEn": "Strengthened skills in project organization, planning, technical documentation, and technological watch."
+            }
+          ]
+        },
+        {
+          "type": "doubleImage",
+          "titleFr": "Maquette & Exemple",
+          "titleEn": "Mockup & Example",
+          "previewTextFr": "Maquette principale et exemple de fonctionnalité de l’application.",
+          "previewTextEn": "Main mockup and example of the application's functionality.",
+          "images": [
+            {"src": "/portfolio-2//files/qwenta/Qwenta_Homepage.png", "labelFr": "Page d’accueil — Maquette", "labelEn": "Homepage — Mockup"},
+            {"src": "/portfolio-2/files/qwenta/Qwenta_Example_of_a_Functionality.png", "labelFr": "Exemple de fonctionnalité", "labelEn": "Example of functionality"}
+          ]
+        },
+        {
+          "type": "iframe",
+          "iframeType": "pdf",
+          "titleFr": "Spécifications Fonctionnelles",
+          "titleEn": "Functional Specifications",
+          "previewTextFr": "PDF des spécifications fonctionnelles du projet.",
+          "previewTextEn": "PDF of the project's functional specifications.",
+          "url": "/portfolio-2/files/qwenta/Menu_Maker_by_Qwenta_Spécifications_Fonctionnelles.pdf"
+        },
+        {
+          "type": "iframe",
+          "iframeType": "pdf",
+          "titleFr": "Spécifications Techniques",
+          "titleEn": "Technical Specifications",
+          "previewTextFr": "PDF des spécifications techniques du projet.",
+          "previewTextEn": "PDF of the project's technical specifications.",
+          "url": "/portfolio-2/files/qwenta/Spécifications_Techniques_PDF.pdf"
+        },
+        {
+          "type": "iframe",
+          "iframeType": "pdf",
+          "titleFr": "Veille Technologique",
+          "titleEn": "Technological Watch",
+          "previewTextFr": "PDF de la veille technologique réalisée pour le projet.",
+          "previewTextEn": "PDF of the technological watch conducted for the project.",
+          "url": "/portfolio-2/files/qwenta/Veille_Technologique_PDF.pdf"
+        },
+        {
+          "type": "image",
+          "previewTextFr": "Kanban",
+          "previewTextEn": "Kanban",
+          "src": "/portfolio-2/files/qwenta/Kanban_Screen.png"
+        },
+        {
+          "type": "iframe",
+          "iframeType": "pdf",
+          "titleFr": "Présentation",
+          "titleEn": "Presentation",
+          "previewTextFr": "Présentation PowerPoint du projet.",
+          "previewTextEn": "Project PowerPoint presentation.",
+          "url": "/portfolio-2/files/qwenta/Qwenta_Presentation.pdf"
+        },
+        {
+          "type": "allLinks",
+          "previewTextFr": "Tous les fichiers et ressources du projet Qwenta.",
+          "previewTextEn": "All files and resources for the Qwenta project.",
+          "links": [
+            {"name": "Maquette Homepage", "url": "/portfolio-2/files/qwenta/Qwenta_Homepage.png", "type": "download"},
+            {"name": "Exemple de fonctionnalité", "url": "/portfolio-2/files/qwenta/Qwenta_Example_of_a_Functionality.png", "type": "download"},
+            {"name": "Spécifications Fonctionnelles", "url": "/portfolio-2/files/qwenta/Menu_Maker_by_Qwenta_Spécifications_Fonctionnelles.pdf", "type": "download"},
+            {"name": "Spécifications Techniques", "url": "/portfolio-2/files/qwenta/Spécifications_Techniques_PDF.pdf", "type": "download"},
+            {"name": "Veille Technologique", "url": "/portfolio-2/files/qwenta/Veille_Technologique_PDF.pdf", "type": "download"},
+            {"name": "Présentation PowerPoint (en PDF)", "url": "/portfolio-2/files/qwenta/Qwenta_Presentation.pdf", "type": "download"},
+            {"name": "Kanban", "url": "https://www.notion.so/27f90a03b5b0801485b1cc47510a770b?v=27f90a03b5b08098b74b000c49ef16f7&source=copy_link", "type": "navToLink"},
+            {"name": "Maquette Figma", "url": "https://www.figma.com/design/Q6NEUPqwz1U3HFaCaVoF7N/Maquette-desktop---Menu-Maker-by-Qwenta?node-id=0-6", "type": "navToLink"}
           ]
         }
       ]

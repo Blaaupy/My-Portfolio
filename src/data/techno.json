@@ -6,5 +6,7 @@
   { "name": "HTML5", "color": "#e34f26", "level": 95, "icon": "/portfolio-2/images/HTML5_logo_and_wordmark.svg", "alt": "Logo HTML5" },
   { "name": "CSS3", "color": "#1572b6", "level": 90, "icon": "/portfolio-2/images/CSS3_logo.svg", "alt": "Logo CSS3" },
   { "name": "Git", "color": "#f34f29", "level": 75, "icon": "/portfolio-2/images/Git-logo.svg", "alt": "Logo Git" },
-  { "name": "Figma", "color": "#a259ff", "level": 80, "icon": "/portfolio-2/images/Figma Icon (Full-color).svg", "alt": "Logo Figma" }
+  { "name": "Figma", "color": "#a259ff", "level": 80, "icon": "/portfolio-2/images/Figma Icon (Full-color).svg", "alt": "Logo Figma" },
+  { "name": "Photoshop", "color": "#a259ff", "level": 80, "icon": "/portfolio-2/images/Figma Icon (Full-color).svg", "alt": "Logo Figma" },
+  { "name": "Python", "color": "#a259ff", "level": 80, "icon": "/portfolio-2/images/Figma Icon (Full-color).svg", "alt": "Logo Figma" }
 ]
