@@ -1,39 +1,42 @@
 @use "../../styles/variables.scss" as vars;
 
-.header-left {
-  flex: 0 0 auto;
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: vars.$spacing-sm; // Use a variable
 }
 
 .nav {
-  margin: 0 auto;
   display: flex;
-  gap: 15px;
+  gap: vars.$spacing-sm; // Use a variable
 
   a {
     text-decoration: none;
-    color: var(--text);
-    padding: 10px;
-    border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s, outline-offset 0.3s;
+    color: var(--color-text);
+    padding: vars.$spacing-xs;
+    border-radius: vars.$radius-sm;
+    transition: background-color vars.$transition-base, color vars.$transition-base;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--color-primary);
+      color: #ffffff;
+    }
 
     &.active {
-      background-color: var(--accent);
-      color: vars.$text-light;  
+      background-color: var(--color-primary);
+      color: #ffffff;
     }
   }
 }
 
-.header-right {
-  display: flex;
-  flex: 0 0 auto;
-  gap: 10px;
-
-  select {
-    padding: 4px 6px;
-    border-radius: 5px;
-    border: 1px solid var(--accent);
-    background-color: var(--background);
-    color: var(--text);
-    cursor: pointer;
-  }
+// Style the language selector
+.header-right select {
+  padding: vars.$spacing-xs;
+  border-radius: vars.$radius-sm;
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  cursor: pointer;
 }

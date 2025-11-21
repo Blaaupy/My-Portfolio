@@ -1,22 +1,22 @@
-/* -----------------------------------
-   Floating Nav (barre du bas)
------------------------------------ */
+@use "../../../styles/variables" as *;
+
 .floating-nav {
   position: fixed;
-  bottom: 1.2rem;
+  bottom: $spacing-md;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: $spacing-xs;
 
-  padding: 0.6rem 1rem;
-  background: var(--background);     /* Fond non transparent */
-  border-radius: 15px;
-  border: 2px solid var(--accent);
+  padding: $spacing-xs $spacing-sm;
+  background: var(--color-background);
+  border-radius: $radius-lg;
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 4px 12px var(--color-shadow);
 
   z-index: 50;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition: all $transition-base;
 }
 
 /* Animation on scroll */
@@ -35,84 +35,53 @@
    SELECT (choix du projet)
 ----------------------------------- */
 .project-select {
-  padding: 0.45rem 0.7rem;
-  border-radius: 8px;
-  border: 1px solid var(--accent);
-
-  background: var(--background) !important;  /* empêche l'héritage noir */
-  color: var(--text) !important;             /* empêche le texte noir invisible */
-
-  font-size: 0.9rem;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $radius-sm;
+  border: 1px solid var(--color-primary);
+  background: var(--color-background);
+  color: var(--color-text);
+  font-size: $font-size-sm;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: all $transition-fast;
 
   &:hover {
-    background: var(--accent-light);
+    // A subtle hover effect using the primary color
+    background: rgba(var(--color-primary-rgb), 0.05);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    border-color: var(--color-secondary); // Use secondary color for focus state
+    box-shadow: 0 0 0 2px rgba(var(--color-secondary-rgb), 0.2);
   }
 }
 
-.project-select:focus,
-.project-select:focus-visible {
-  background: var(--background) !important;
-  color: var(--text) !important;
-  outline: none;
-  border-color: var(--accent);
-}
 /* -----------------------------------
    Boutons / Extra actions
 ----------------------------------- */
 .extra-btn {
-  padding: 0.45rem 0.9rem;
+  padding: $spacing-xs $spacing-sm;
   min-width: 105px;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: $font-size-xs;
   font-weight: 500;
 
-  border: 1px solid var(--accent);
-  border-radius: 8px;
-  background: color-mix(in srgb, var(--accent) 10%, var(--background));
-  color: var(--text);
+  border: 1px solid var(--color-primary);
+  border-radius: $radius-sm;
+  background: transparent;
+  color: var(--color-primary);
   cursor: pointer;
 
-  transition: background 0.2s ease, color 0.2s ease,
-              transform 0.15s ease, box-shadow 0.15s ease;
+  transition: all $transition-fast;
 
   &:hover {
-    background: var(--accent);
-    color: white;
-    transform: translateY(-1.5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+    background: var(--color-primary);
+    color: var(--color-background); // Invert text color on hover
+    transform: translateY(-1px);
   }
 
   &:active {
     transform: translateY(0);
-    box-shadow: none;
-  }
-}
-
-/* -----------------------------------
-   Bouton principal nav (si tu le réutilises)
------------------------------------ */
-.nav-btn {
-  padding: 0.45rem 0.8rem;
-  min-width: 110px;
-  text-align: center;
-
-  border-radius: 8px;
-  border: 1px solid var(--accent);
-  background: var(--accent-light);
-  color: var(--text);
-  cursor: pointer;
-
-  transition: background 0.2s ease, color 0.2s ease;
-
-  &:hover {
-    background: var(--accent);
-    color: #fff;
-  }
-
-  &.active {
-    background: var(--accent);
-    color: #fff;
   }
 }

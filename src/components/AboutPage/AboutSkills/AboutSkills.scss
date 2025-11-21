@@ -4,51 +4,54 @@
   text-align: center;
 
   h2 {
-    font-size: 2.3rem;
-    margin-bottom: 0.5rem;
-    color: var(--accent);
+    font-size: vars.$font-size-xl;
+    margin-bottom: vars.$spacing-xs;
+    color: var(--color-primary);
   }
 
   .skills-intro {
     max-width: 700px;
-    margin: 0 auto 2.5rem;
-    color: var(--text);
-    font-size: 1.1rem;
+    margin: 0 auto vars.$spacing-xl;
+    color: var(--color-text);
+    font-size: vars.$font-size-md;
     line-height: 1.6;
   }
 
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    // Use auto-fit for better responsiveness without needing media queries for grid columns
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: vars.$spacing-md;
     justify-items: center;
     align-items: start;
   }
 
   .skill-card {
-    background: var(--background-alt);
-    border-radius: 20px;
-    padding: 1rem;
+    background: var(--color-background);
+    border: 1px solid var(--color-secondary); // Use a subtle border instead of just shadow
+    border-radius: vars.$radius-xl;
+    padding: vars.$spacing-sm;
     width: 160px;
     height: 180px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px var(--color-shadow);
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.4s ease;
-    gap: 0.5rem;
+    transition: all vars.$transition-base;
+    gap: vars.$spacing-xs;
 
+    // The subtle background gradient on hover
     &::before {
       content: "";
       position: absolute;
       inset: 0;
       background: radial-gradient(circle at top, var(--skill-color) 0%, transparent 70%);
       opacity: 0;
-      transition: opacity 0.4s ease;
+      transition: opacity vars.$transition-base;
       z-index: 0;
     }
 
@@ -58,7 +61,7 @@
       z-index: 1;
       opacity: 0;
       transform: scale(0.8);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transition: opacity 0.6s ease, transform 0.6s ease; // Keep this specific long transition
       display: flex;
       justify-content: center;
       align-items: center;
@@ -70,7 +73,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 0.3rem;
+      margin-top: calc(vars.$spacing-xs / 2);
 
       .skill-icon {
         max-width: 100%;
@@ -80,26 +83,26 @@
     }
 
     h3 {
-      font-size: 1rem;
+      font-size: vars.$font-size-base;
       font-weight: 600;
-      color: var(--text);
+      color: var(--color-text);
       z-index: 1;
       text-align: center;
-      min-height: 1.2rem; // assure l’alignement vertical des titres
+      min-height: 1.2rem; // Assures vertical alignment of titles
       transition: transform 0.3s ease, color 0.3s ease;
     }
 
     .skill-button {
       position: absolute;
-      bottom: 15px;
+      bottom: vars.$spacing-xs;
       opacity: 0;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      background: var(--accent);
-      color: vars.$text-light;
+      transition: opacity vars.$transition-base, transform vars.$transition-base;
+      background: var(--color-primary);
+      color: #ffffff; // Button text is light
       border: none;
-      border-radius: 6px;
-      padding: 0.35rem 0.7rem;
-      font-size: 0.75rem;
+      border-radius: vars.$radius-sm;
+      padding: vars.$spacing-xs vars.$spacing-sm;
+      font-size: vars.$font-size-xs;
       cursor: pointer;
       z-index: 1;
       align-self: center;
@@ -107,16 +110,14 @@
     }
 
     &:hover {
-      transform: translateY(-6px) scale(1.05);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 10px 25px var(--color-shadow);
 
       &::before {
         opacity: 0.25;
       }
 
       h3 {
-        animation: bounce 0.5s;
-        color: vars.$text-light;
+        color: #ffffff; // Change text color on hover for contrast
       }
 
       .skill-button {
@@ -125,6 +126,7 @@
       }
     }
 
+    // Animation for when the card becomes visible on scroll
     &.visible .skill-circle {
       opacity: 1;
       transform: scale(1);
@@ -136,26 +138,27 @@
     }
   }
 
-  /* Responsive */
+  /* --- Responsive Design --- */
   @media (max-width: 900px) {
     .skills-grid {
+      // Adjust the minimum size for smaller screens
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1rem;
+      gap: vars.$spacing-sm;
     }
   }
 
   @media (max-width: 600px) {
-    .skills-grid {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 0.8rem;
-    }
-
     h2 {
-      font-size: 2rem;
+      font-size: vars.$font-size-lg;
     }
 
     .skills-intro {
-      font-size: 1rem;
+      font-size: vars.$font-size-base;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: vars.$spacing-sm;
     }
 
     .skill-card {
@@ -173,13 +176,13 @@
       }
 
       h3 {
-        font-size: 0.9rem;
+        font-size: vars.$font-size-sm;
         min-height: 1.1rem;
       }
 
       .skill-button {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.7rem;
+        padding: calc(vars.$spacing-xs / 2) calc(vars.$spacing-xs * 0.75);
+        font-size: calc(vars.$font-size-xs * 0.9); // Slightly smaller text
       }
     }
   }

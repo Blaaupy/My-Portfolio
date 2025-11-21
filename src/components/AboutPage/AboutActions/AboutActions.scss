@@ -3,34 +3,10 @@
 .about-actions {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: vars.$spacing-md;
   flex-wrap: wrap;
-
-  .btn {
-    background: var(--accent);
-    color: vars.$text-light;
-    padding: 0.9rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.3s ease;
-    text-decoration: none;
-    cursor: pointer;
-
-    &:hover {
-      background: var(--accent);
-      transform: translateY(-3px);
-    }
-
-    &.secondary {
-      background: transparent;
-      border: 2px solid var(--accent);
-      color: var(--accent);
-
-      &:hover {
-        background: var(--accent);
-        color: vars.$text-light;
-      }
-    }
+  
+  .btn--secondary{
+    color: var(--accent);
   }
 }

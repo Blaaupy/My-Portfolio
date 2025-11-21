@@ -1,49 +1,83 @@
 @use "./variables.scss" as vars;
 
-html[data-theme="light"],
-html[data-theme="dark"] {
-  transition: background-color 0.4s ease, color 0.4s ease;
+*,
+*::before,
+*::after {
+  transition: background-color vars.$transition-base, color vars.$transition-base, border-color vars.$transition-base;
 }
 
+// Basic Reset
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0; // Good practice to reset margin
+  
+  // These are the properties that are visually changing
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
 
+// Main layout class
 .page-container {
   display: flex;
   flex-direction: column;
-  justify-self: center;
-  max-width: 1000px;
-  min-height: 80vh;
-  gap: 50px;
-  padding: 50px 0;
+  max-width: vars.$container-max-width;
+  margin: 0 auto;
+  padding: vars.$spacing-xl 0;
+  gap: vars.$spacing-lg;
+  min-height: calc(100vh - (2 * vars.$header-height));
 }
 
+// Global Header/Footer Styles
 header,
 footer {
-  padding: 0 1rem;
-  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--background);
-  color: var(--text);
-  box-shadow: 0 2px 4px var(--shadow); // ombre vers le bas 
+  height: vars.$header-height;
+  padding: 0 vars.$spacing-sm;
+  background-color: var(--color-background); // <-- CRITICAL
+  color: var(--color-text); // <-- CRITICAL
+  box-shadow: 0 2px 4px var(--color-shadow);
 }
 
 footer {
-  box-shadow: 0 -2px 4px var(--shadow); // ombre vers le haut
+  box-shadow: 0 -2px 4px var(--color-shadow);
 }
 
+// Global Button Component System
 .btn {
-  background-color: var(--accent);
-  color: vars.$text-light;
+  background-color: var(--color-primary);
+  color: #ffffff;
   border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 500;
+  padding: vars.$spacing-sm vars.$spacing-md;
+  border-radius: vars.$radius-md;
+  font-weight: 600;
+  font-size: vars.$font-size-base;
   cursor: pointer;
-  transition: 0.3s ease;
-  font-size: 16px;
-  &:hover {
+  transition: transform vars.$transition-base, box-shadow vars.$transition-base;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover,
+  &:focus-visible {
     transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 15px rgba(var(--color-primary-rgb), 0.25);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--color-primary);
+      color: #ffffff;
+    }
   }
 }

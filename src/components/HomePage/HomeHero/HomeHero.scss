@@ -5,54 +5,48 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: vars.$spacing-lg;
 
   .home-section-content {
     max-width: 600px;
 
     h1 {
-      font-size: 2.5rem;
-
+      // Use our new, larger font size for the hero title
+      font-size: vars.$font-size-hero; 
       span {
-        color: var(--accent);
+        color: var(--color-primary);
       }
     }
 
     p {
-      margin: 1rem 0 2rem;
-      font-size: 1.2rem;
-      line-height: 1.5;
-      color: var(--text);
+      margin: vars.$spacing-sm 0 vars.$spacing-lg;
+      font-size: vars.$font-size-md;
+      line-height: 1.6;
     }
 
     .home-section-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: vars.$spacing-sm;
 
+      // Override the global button padding specifically for hero buttons
       .btn {
-        background-color: var(--accent);
-        color: vars.$text-light;
-        border: none;
-        padding: 0.7rem 1.5rem;
-        border-radius: 8px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: 0.3s ease;
-
-        &:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-        }
+        padding: vars.$btn-padding-hero;
       }
     }
   }
 
   .home-hero-image {
+    text-align: center;
+    min-width: 280px;
+    max-width: 300px; 
+    
     img {
-      max-width: 300px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px var(--shadow);
+      // Set a specific max-width to restore the original size
+      max-width: 100%;
+      height: auto; // Maintain aspect ratio
+      border-radius: vars.$radius-lg;
+      box-shadow: 0 4px 10px var(--color-shadow);
     }
   }
 }

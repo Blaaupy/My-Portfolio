@@ -1,55 +1,67 @@
-/* Thème clair par défaut */
+// ===================================
+// 1. CSS Custom Properties for Theming
+// ===================================
+
+
 :root {
-  --background: #ffffff;
-  --text: #1a1a1a;
-  --accent: #3D7047;
-  --shadow: rgba(0, 0, 0, 0.1);
-  --inactive: #cccccc;
-  --accent-rgb: 61, 112, 71; // équivalent de #3D7047
+  // --- Colors ---
+  --color-background: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #3D7047;
+  --color-primary-rgb: 61, 112, 71;
+  --color-secondary: #6CAC79;
+  --color-inactive: #cccccc;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-slider-bg: #e0e0e0;
 }
 
-/* Thème sombre */
 [data-theme="dark"] {
-  --background: #1a1a1a;
-  --text: #ffffff;
-  --accent: #1e5c2b;
-  --shadow: rgba(0, 0, 0, 0.5);
-  --slider-bg: #444444;
-  --accent-rgb: 140, 178, 148; // équivalent de #8CB294
+  --color-background: #1a1a1a;
+  --color-text: #ffffff;
+  --color-primary: #1e5c2b;
+  --color-primary-rgb: 30, 92, 43;
+  --color-secondary: #8CB294;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-slider-bg: #444444;
 }
-/* Thème clair */
-[data-theme="light"] {
-  --slider-bg: #e0e0e0;
-}
-// ==========================
-// Couleurs secondaires ou fixes (Sass)
-// ==========================
-$secondary-color: #6CAC79;
-$text-light: #ffffff;
-$text-dark: #1a1a1a;
 
-// ==========================
-// Boutons / hover / actif
-// ==========================
-$btn-text: $text-light;
-$btn-hover-text: $text-light;
+// ===================================
+// 2. Sass Variables for Static Design Tokens
+// ===================================
 
-// Exemple d’utilisation : tu peux combiner Sass + CSS vars
-// background: var(--accent); // dynamique selon le thème
-// color: $btn-text;          // fixe
-$spacing-xs: 0.5rem;
-$spacing-sm: 1rem;
-$spacing-md: 1.5rem;
-$spacing-lg: 2rem;
-$spacing-xl: 3rem;
+// --- Spacing ---
+ $spacing-xs: 0.5rem;   // 8px
+ $spacing-sm: 1rem;    // 16px
+ $spacing-md: 1.5rem;  // 24px
+ $spacing-lg: 2rem;    // 32px
+ $spacing-xl: 3rem;    // 48px
 
-$font-size-sm: 0.9rem;
-$font-size-base: 1rem;
-$font-size-md: 1.1rem;
-$font-size-lg: 1.4rem;
-$font-size-xl: 2rem;
+ $btn-padding-hero: 0.7rem 1.5rem; // The original padding you liked
 
-$radius-sm: 6px;
-$radius-md: 12px;
-$radius-lg: 16px;
-$radius-xl: 24px;
+// --- Typography ---
+ $font-size-xs: 0.8rem;
+ $font-size-sm: 0.9rem;
+ $font-size-base: 1rem;
+ $font-size-md: 1.1rem;
+ $font-size-lg: 1.4rem;
+ $font-size-xl: 2rem;
+
+ $font-size-hero: 2.5rem; // ~40px, for the main H1
+ $font-size-section-title: 2.4rem; // ~38px, for section H2s
+// --- Border Radius ---
+ $radius-sm: 6px;
+ $radius-md: 12px;
+ $radius-lg: 16px;
+ $radius-xl: 24px;
+
+// --- Layout ---
+ $header-height: 80px;
+ $container-max-width: 1000px;
+ 
+// We define the transition variable first in this file
+ $transition-fast: 0.2s ease;
+ $transition-base: 0.3s ease;
+ $transition-slow: 0.4s ease;
+
+// NOTE: I moved the transition variables to the top so they are defined before being used.
+// You can remove the old transition variables from the bottom section.

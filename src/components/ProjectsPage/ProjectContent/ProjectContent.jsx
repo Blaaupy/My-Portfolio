@@ -1,12 +1,22 @@
 import "./ProjectContent.scss";
 import ProjectInternalNav from "../ProjectInternalNav/ProjectInternalNav";
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { LanguageContext } from "../../../context/LanguageContext";
+import { ThemeContext } from "../../../context/ThemeContext";
 
 export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
   const { language } = useContext(LanguageContext);
+  const { theme } = useContext(ThemeContext);
   const slides = project.slides || [];
   if (!slides.length) return null;
+
+  // --- State to control the content overlay ---
+  const [showContent, setShowContent] = useState(false);
+
+  // --- Effect to reset the overlay when the slide changes ---
+  useEffect(() => {
+    setShowContent(false);
+  }, [slideIndex]);
 
   const nextSlide = () => onChangeSlide((slideIndex + 1) % slides.length);
   const prevSlide = () =>
@@ -14,6 +24,9 @@ export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
 
   const slide = slides[slideIndex];
   const t = (fr, en) => (language === "fr" ? fr : en);
+
+  // --- UPDATED LOGIC: Apply overlay to any content that isn't natively styled ---
+  const needsOverlay = theme === 'dark' && !['intro', 'summary', 'allLinks'].includes(slide.type);
 
   return (
     <div className={`project-content project-${project.id}`}>
@@ -28,6 +41,7 @@ export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
       />
 
       <div className="preview-container">
+        {/* --- Natively styled slides (rendered outside the wrapper) --- */}
         {/* Intro */}
         {slide.type === "intro" && (
           <div className="intro-slide">
@@ -72,55 +86,8 @@ export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
             ))}
           </div>
         )}
-        {/* Iframe et ajoute une classe pdf ou site en fonction du iframeType */}
-        {(slide.type === "iframe" || slide.type === "files") && (
-          <div className="files-slide">
-            <div className="file-preview">
-              {(slide.type === "iframe" ? [slide] : slide.files).map((file, index) => {
-                const iframeClass = slide.iframeType === "pdf" ? "iframe-pdf" : "iframe-site";
 
-                return (
-                  <iframe
-                    key={index}
-                    src={file.url || slide.url}
-                    title={file.title || file.name || slide.title || project.titleFr}
-                    className={`project-iframe ${iframeClass}`}
-                    loading="lazy"
-                  />
-                );
-              })}
-            </div>
-          </div>
-        )}
-        {/* Image */}
-        {slide.type === "image" && (
-          <div className="image-slide">
-            {t(slide.captionFr, slide.captionEn) && (
-              <p className="image-caption">{t(slide.captionFr, slide.captionEn)}</p>
-            )}
-            <img src={slide.src} alt={slide.title || project.titleFr} />
-          </div>
-        )}
-        {/* Double Image */}
-        {slide.type === "doubleImage" && (
-          <div className="double-image-slide">
-            {slide.images.map((img, i) => (
-              <div key={i} className="double-image-card">
-                <p>{t(img.labelFr, img.labelEn)}</p>
-                <img src={img.src} alt={img.labelFr} />
-              </div>
-            ))}
-          </div>
-        )}
-        {/*  Video */}
-        {slide.type === "video" && (
-          <div className="video-slide">
-            <video controls>
-              <source src={slide.src} type="video/mp4" />
-            </video>
-          </div>
-        )}
-
+        {/* All Links */}
         {slide.type === "allLinks" && slide.links?.length > 0 && (
           <div className="all-links-slide">
             <h4>{slide.title}</h4>
@@ -142,6 +109,77 @@ export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
                 </div>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* --- All other content wrapped for the overlay logic --- */}
+        {!['intro', 'summary', 'allLinks'].includes(slide.type) && (
+          <div className="content-wrapper">
+            {/* --- Conditionally render the overlay --- */}
+            {needsOverlay && !showContent && (
+              <div className="content-overlay">
+                <p>{t("Ce contenu n'est pas optimisé pour le mode sombre.", "This content is not optimized for dark mode.")}</p>
+                <button onClick={() => setShowContent(true)}>
+                  {t("Afficher quand même", "Show anyway")}
+                </button>
+              </div>
+            )}
+
+            {/* --- Render the actual content if the overlay is not needed or has been dismissed --- */}
+            {(!needsOverlay || showContent) && (
+              <>
+                {/* Iframe */}
+                {slide.type === "iframe" && (
+                  <div className="files-slide">
+                    <div className="file-preview">
+                      {(slide.type === "iframe" ? [slide] : slide.files).map((file, index) => {
+                        const iframeClass = slide.iframeType === "pdf" ? "iframe-pdf" : "iframe-site";
+                        return (
+                          <iframe
+                            key={index}
+                            src={file.url || slide.url}
+                            title={file.title || file.name || slide.title || project.titleFr}
+                            className={`project-iframe ${iframeClass}`}
+                            loading="lazy"
+                          />
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Image */}
+                {slide.type === "image" && (
+                  <div className="image-slide">
+                    {t(slide.captionFr, slide.captionEn) && (
+                      <p className="image-caption">{t(slide.captionFr, slide.captionEn)}</p>
+                    )}
+                    <img src={slide.src} alt={slide.title || project.titleFr} />
+                  </div>
+                )}
+
+                {/* Double Image */}
+                {slide.type === "doubleImage" && (
+                  <div className="double-image-slide">
+                    {slide.images.map((img, i) => (
+                      <div key={i} className="double-image-card">
+                        <p>{t(img.labelFr, img.labelEn)}</p>
+                        <img src={img.src} alt={img.labelFr} />
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Video */}
+                {slide.type === "video" && (
+                  <div className="video-slide">
+                    <video controls>
+                      <source src={slide.src} type="video/mp4" />
+                    </video>
+                  </div>
+                )}
+              </>
+            )}
           </div>
         )}
       </div>

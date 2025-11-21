@@ -2,9 +2,10 @@
 
 .about-intro {
   h1 {
-    color: var(--accent);
+    color: var(--color-primary);
     margin-bottom: 1rem;
     text-align: center;
+    font-size: vars.$font-size-hero;
   }
 
   p {

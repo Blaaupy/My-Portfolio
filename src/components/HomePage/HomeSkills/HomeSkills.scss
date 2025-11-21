@@ -1,36 +1,51 @@
 @use "../../../styles/variables.scss" as vars;
 
 .home-skills {
-  padding: 0 2rem;
+  padding: 0 vars.$spacing-lg;
   text-align: center;
 
   h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--accent);
-  }
-
-  p {
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    font-size: 1.1rem;
-    color: var(--text);
+    // 1. Use the specific, larger font size for section titles from your variables
+    font-size: vars.$font-size-section-title; 
+    margin-bottom: vars.$spacing-lg;
+    color: var(--color-primary);
   }
 
   .skills-list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    
+    // 2. Use a smaller gap to bring the skill icons closer together
+    gap: vars.$spacing-sm; 
+    
     list-style: none;
     padding: 0;
 
     li {
-      background-color: var(--accent);
-      color: vars.$text-light;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background-color: var(--color-background);
+      
+      // 3. Use the secondary color for a vibrant green border
+      border: 1px solid var(--color-secondary); 
+      
+      border-radius: vars.$radius-md;
+      transition: transform vars.$transition-base, box-shadow vars.$transition-base;
+
+      .skill-icon {
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px var(--color-shadow);
+      }
     }
   }
 }

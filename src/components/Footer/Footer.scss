@@ -1,7 +1,19 @@
+@use "../../styles/variables.scss" as vars;
+
 .links {
-    display: flex;
-    gap:10px;
-    a {
-        text-decoration: none;
+  display: flex;
+  gap: vars.$spacing-sm;
+
+  a {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: vars.$spacing-xs;
+    border-radius: vars.$radius-sm;
+    transition: color vars.$transition-base;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-primary);
     }
+  }
 }

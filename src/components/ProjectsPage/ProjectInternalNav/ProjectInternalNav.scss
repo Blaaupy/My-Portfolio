@@ -1,54 +1,62 @@
+@use "../../../styles/variables" as *;
+
 .project-internal-nav {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: $spacing-xs;
 
-  /* --- styles communs flèches + boutons --- */
   .nav-arrow,
   .nav-dots button {
-    height: 32px;
-    min-width: 32px;          /* même largeur minimale que les flèches */
-    border: 1px solid var(--accent);
-    border-radius: 6px;
+    height: 2rem; // 32px
+    min-width: 2rem; // 32px
+    border: 1px solid var(--color-primary);
+    border-radius: $radius-sm;
     background: transparent;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.2s;
-  }
-
-  /* --- flèches --- */
-  .nav-arrow {
-    img {
-      width: 60%;
-      height: 60%;
-      object-fit: contain;
-      pointer-events: none;
-    }
+    transition: all $transition-fast;
+    
+    // Set the text color to inherit from the theme
+    color: var(--color-text);
 
     &:hover {
-      background: var(--accent-light);
+      background-color: var(--color-primary);
+      color: #ffffff; // White text/icon on hover
     }
   }
 
-  /* --- boutons numérotés --- */
+  .nav-arrow {
+    // Style the SVG within the button
+    svg {
+      width: 1rem; // 16px
+      height: 1rem; // 16px
+      
+      // Use currentColor to inherit from parent button
+      fill: currentColor;
+      
+      // More specific selector to override inline styles in the SVG
+      path {
+        fill: currentColor;
+      }
+    }
+  }
+
   .nav-dots {
     display: flex;
     gap: 4px;
 
     button {
-      padding: 0;           /* important : pas de padding sinon désaligné */
-      font-size: 0.9rem;    /* tu peux ajuster */
-      line-height: 1;       /* centré proprement */
-
-      &:hover {
-        background: var(--accent-light);
-      }
+      padding: 0;
+      font-size: $font-size-sm;
+      font-weight: 500;
+      line-height: 1;
 
       &.active {
-        background: var(--accent);
-        color: #fff;
+        background: var(--color-primary);
+        color: #ffffff;
       }
     }
   }

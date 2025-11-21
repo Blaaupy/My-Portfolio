@@ -50,8 +50,8 @@ export default function AboutSkills({ texts }) {
                 text={`${skill.level}%`}
                 styles={buildStyles({
                   pathColor: skill.color,
-                  textColor: "var(--text)",
-                  trailColor: "var(--background-alt)",
+                  textColor: "var(--color-text)",
+                  trailColor: "var(--color-slider-bg)",
                 })}
               />
             </div>

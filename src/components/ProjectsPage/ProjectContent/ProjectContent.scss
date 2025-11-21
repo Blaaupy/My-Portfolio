@@ -1,12 +1,11 @@
-@use "../../../styles/variables.scss" as *;
+@use "../../../styles/variables" as *;
 
 .project-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 1.5rem;
-  
+  gap: $spacing-md;
 
   /* ------------------------------------------------------- */
   /* PREVIEW TEXT (titre au-dessus de la slide)            */
@@ -14,19 +13,19 @@
   .slide-preview-text {
     max-width: 820px;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: $font-size-lg;
     font-weight: 600;
-    color: var(--accent);
+    color: var(--color-primary);
     line-height: 1.4;
-    padding: 0.8rem 1.2rem;
-    border-radius: 14px;
-    background: rgba(var(--bg-secondary-rgb, 245, 245, 250), 0.85);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $radius-md;
+    background: rgba(var(--color-primary-rgb), 0.05);
+    border: 1px solid rgba(var(--color-primary-rgb), 0.1);
+    transition: transform $transition-base, box-shadow $transition-base;
 
     &:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 8px 24px var(--color-shadow);
     }
   }
 
@@ -35,17 +34,17 @@
   /* ------------------------------------------------------- */
   .preview-container {
     width: 100%;
-    min-height: 500px;
-    border-radius: 14px;
-    background: var(--bg-secondary);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    min-height: 31.25rem; // 500px
+    border-radius: $radius-md;
+    background: var(--color-background);
+    box-shadow: 0 6px 20px var(--color-shadow);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow $transition-base;
 
     &:hover {
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 10px 30px var(--color-shadow);
     }
 
     iframe,
@@ -53,13 +52,79 @@
       width: 100%;
       border: none;
       object-fit: contain;
-      border-radius: 12px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: $radius-sm;
+      transition: transform $transition-base;
     }
 
     iframe {
       flex: 1;
-      height: 800px;
+      height: 50rem; // 800px
+    }
+  }
+
+  /* ------------------------------------------------------- */
+  /* CONTENT WRAPPER & OVERLAY                              */
+  /* ------------------------------------------------------- */
+  .content-wrapper {
+    position: relative; // Establishes a positioning context for the overlay
+    width: 100%;
+    flex: 1; // Allows the wrapper to grow and fill the container
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-wrapper {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+  .content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // Use a subtle, theme-aware background, just like your other components
+    background-color: rgba(var(--color-primary-rgb), 0.1);
+    backdrop-filter: blur(4px); // Adds a modern, soft-focus effect
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-md;
+    z-index: 10;
+    border-radius: $radius-md;
+    border: 1px solid rgba(var(--color-primary-rgb), 0.2); // Subtle border
+
+    p {
+      font-size: $font-size-lg;
+      font-weight: 600;
+      text-align: center;
+      max-width: 80%;
+      color: var(--color-text); // Use the main text color for readability
+    }
+
+    button {
+      // Style the button to match your project's design language
+      padding: $spacing-sm $spacing-md;
+      border-radius: $radius-md;
+      font-size: $font-size-md;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all $transition-base;
+      background: transparent; // Transparent background
+      color: var(--color-primary); // Primary color for text/border
+      border: 1px solid var(--color-primary);
+
+      &:hover {
+        // Invert colors on hover, like your other buttons
+        background: var(--color-primary);
+        color: var(--color-background);
+        transform: translateY(-1px); // Subtle lift effect
+      }
     }
   }
 
@@ -67,86 +132,86 @@
   /* INTRO SLIDE (texte + technos + challenges)             */
   /* ------------------------------------------------------- */
   .intro-slide {
-  position: relative;
-  padding: 2rem;
-  border-radius: 16px;
-  max-width: 920px;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-
-  h4 {
-    font-size: 2rem;
-    text-align: center;
-    color: var(--accent);
-    margin-bottom: 1rem;
     position: relative;
+    padding: $spacing-lg;
+    border-radius: $radius-lg;
+    max-width: 57.5rem; // 920px
+    align-self: center;
+    display: flex;
+    flex-direction: column;
 
-    &::after {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 4px;
-      background: var(--accent);
-      margin: 0.5rem auto 0;
-      border-radius: 2px;
+    h4 {
+      font-size: $font-size-xl;
+      text-align: center;
+      color: var(--color-primary);
+      margin-bottom: $spacing-sm;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 3.75rem; // 60px
+        height: 4px;
+        background: var(--color-primary);
+        margin: 0.5rem auto 0;
+        border-radius: 2px;
+      }
     }
-  }
 
-  .text-block {
-    max-width: 820px;
-    margin: 1rem auto;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    text-align: justify;
-    color: var(--text-color);
+    .text-block {
+      max-width: 51.25rem; // 820px
+      margin: $spacing-sm auto;
+      font-size: $font-size-md;
+      line-height: 1.7;
+      text-align: justify;
+      color: var(--color-text);
 
-    span.highlight {
-      color: var(--accent);
-      font-weight: 600;
+      span.highlight {
+        color: var(--color-primary);
+        font-weight: 600;
+      }
     }
-  }
 
     .intro-technos {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 0.6rem;
-      margin-top: 1.5rem;
+      gap: $spacing-xs;
+      margin-top: $spacing-md;
       list-style: none;
       padding: 0;
 
       li {
-        background-color: var(--accent);
+        background-color: var(--color-primary);
         color: #fff;
-        padding: 0.5rem 1rem;
-        border-radius: 14px;
+        padding: $spacing-xs $spacing-sm;
+        border-radius: $radius-md;
         font-weight: 500;
-        font-size: 0.95rem;
-        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        font-size: $font-size-sm;
+        box-shadow: 0 3px 8px var(--color-shadow);
+        transition: transform $transition-fast, box-shadow $transition-fast;
 
         &:hover {
           transform: translateY(-2px);
-          box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+          box-shadow: 0 6px 16px var(--color-shadow);
         }
       }
     }
 
     .challenges {
-      margin-top: 1.5rem;
-      font-size: 1.05rem;
+      margin-top: $spacing-md;
+      font-size: $font-size-base;
       font-style: italic;
-      color: var(--accent);
-      border-left: 4px solid var(--accent);
-      padding-left: 1rem;
-      max-width: 820px;
+      color: var(--color-primary);
+      border-left: 4px solid var(--color-primary);
+      padding-left: $spacing-sm;
+      max-width: 51.25rem; // 820px
       margin-left: auto;
       margin-right: auto;
 
       h5 {
-        font-size: 1.2em;
-        margin-bottom: 0.5em;
+        font-size: $font-size-lg;
+        margin-bottom: $spacing-xs;
       }
     }
   }
@@ -156,16 +221,24 @@
   /* ------------------------------------------------------- */
   .files-slide {
     width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 
-    .file-preview iframe {
+    .file-preview {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    iframe {
       width: 100%;
-      height: calc(100vh - 250px);
-      max-height: 900px;
-      border-radius: 12px;
+      height: calc(100vh - 15.625rem); // 250px
+      max-height: 56.25rem; // 900px
+      border-radius: $radius-sm;
       border: none;
       object-fit: contain;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+      transition: transform $transition-base;
     }
   }
 
@@ -174,16 +247,23 @@
   /* ------------------------------------------------------- */
   .all-links-slide {
     width: 100%;
-    padding: 1.5rem 1rem;
+    padding: $spacing-md $spacing-sm;
     display: flex;
     flex-direction: column;
 
+    h4 {
+      font-size: $font-size-xl;
+      text-align: center;
+      color: var(--color-primary);
+      margin-bottom: $spacing-md;
+    }
+
     .link-cards {
-      max-width: 900px;
+      max-width: 56.25rem; // 900px
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: $spacing-sm;
       margin: 0 auto;
     }
 
@@ -191,27 +271,27 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.8rem 1rem;
-      border-radius: 12px;
-      border: 1px solid var(--accent);
-      background: rgba(var(--accent-rgb, 61, 112, 71), 0.1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      color: var(--accent);
+      padding: $spacing-sm $spacing-md;
+      border-radius: $radius-sm;
+      border: 1px solid var(--color-primary);
+      background: rgba(var(--color-primary-rgb), 0.05);
+      transition: transform $transition-fast, box-shadow $transition-fast;
+      color: var(--color-text);
 
       &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        box-shadow: 0 6px 16px var(--color-shadow);
       }
 
       .file-name {
         font-weight: 600;
-        color: var(--text-color);
+        color: var(--color-text);
       }
 
       .file-link {
         font-style: italic;
         font-weight: 600;
-        color: var(--accent);
+        color: var(--color-primary);
         text-decoration: none;
 
         &:hover {
@@ -229,13 +309,13 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 1rem;
+    padding: $spacing-sm;
 
     .image-caption {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
+      font-size: $font-size-base;
+      margin-bottom: $spacing-xs;
       font-style: italic;
-      color: var(--text-color);
+      color: var(--color-text);
       text-align: center;
       max-width: 90%;
     }
@@ -244,36 +324,37 @@
       width: 100%;
       max-width: 100%;
       height: auto;
-      border-radius: 14px;
+      border-radius: $radius-md;
       object-fit: contain;
-      box-shadow: 0 10px 30px rgba(11, 22, 55, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 30px var(--color-shadow);
+      transition: transform $transition-base;
     }
   }
+
   /* DOUBLE IMAGE SLIDE */
   .double-image-slide {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    padding: 1rem;
+    gap: $spacing-md;
+    padding: $spacing-sm;
     flex-wrap: wrap;
 
     .double-image-card {
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-width: 420px;
-      gap: 0.5rem;
+      max-width: 26.25rem; // 420px
+      gap: $spacing-xs;
 
       img {
         width: 100%;
-        border-radius: 14px;
-        box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+        border-radius: $radius-md;
+        box-shadow: 0 8px 22px var(--color-shadow);
       }
 
       p {
         font-style: italic;
-        color: var(--text-color);
+        color: var(--color-text);
         text-align: center;
       }
     }
@@ -284,67 +365,70 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 1rem;
+    padding: $spacing-sm;
 
     video {
       width: 100%;
-      border-radius: 14px;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+      border-radius: $radius-md;
+      box-shadow: 0 8px 22px var(--color-shadow);
     }
   }
+
+  /* SUMMARY SLIDE */
   .summary-slide {
     position: relative;
-    padding: 2rem;
-    border-radius: 16px;
-    width: 920px;
+    padding: $spacing-lg;
+    border-radius: $radius-lg;
+    width: 57.5rem; // 920px
     align-self: center;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    transition: box-shadow 0.3s ease;
+    gap: $spacing-md;
+    transition: box-shadow $transition-base;
 
     h4 {
-      font-size: 2rem;
+      font-size: $font-size-xl;
       text-align: center;
-      color: var(--accent);
-      margin-bottom: 1rem;
+      color: var(--color-primary);
+      margin-bottom: $spacing-sm;
       position: relative;
 
       &::after {
         content: '';
         display: block;
-        width: 60px;
+        width: 3.75rem; // 60px
         height: 4px;
-        background: var(--accent);
+        background: var(--color-primary);
         margin: 0.5rem auto 0;
         border-radius: 2px;
       }
     }
 
     .summary-section {
-      border-left: 4px solid var(--accent);
-      padding-left: 1rem;
-      background: rgba(var(--accent-rgb, 61, 112, 71), 0.05);
-      border-radius: 12px;
-      padding: 1rem 1.2rem;
-      color: var(--text-color);
-      font-size: 1.1rem;
+      border-left: 4px solid var(--color-primary);
+      padding-left: $spacing-sm;
+      background: rgba(var(--color-primary-rgb), 0.05);
+      border-radius: $radius-sm;
+      padding: $spacing-sm $spacing-md;
+      color: var(--color-text);
+      font-size: $font-size-md;
       line-height: 1.6;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
-      
+      gap: $spacing-xs;
+
       h5 {
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
-        color: var(--accent);
+        font-size: $font-size-lg;
+        margin-bottom: $spacing-xs;
+        color: var(--color-primary);
       }
 
       ul {
         list-style: disc;
-        margin-left: 1.5rem;
+        margin-left: $spacing-md;
+
         li {
-          margin-bottom: 0.5rem;
+          margin-bottom: $spacing-xs;
         }
       }
     }

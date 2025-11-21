@@ -3,43 +3,46 @@
 .project-card-container {
   display: flex;
   flex-direction: column;
-  background: var(--bg-secondary);
-  border: 2px solid var(--accent);
+  background: var(--color-background);
+  border: 2px solid var(--color-primary);
   border-radius: $radius-lg;
-  box-shadow: 0 0 15px var(--shadow);
-  /* margin supprimé intentionnellement pour permettre align-self left/right */
+  box-shadow: 0 4px 12px var(--color-shadow);
   width: 80%;
-  max-width: 900px;
-  transition: all 0.5s ease;
+  max-width: $container-max-width - 100px; // Using container variable with adjustment
+  transition: all $transition-slow;
   overflow: hidden;
-  color: var(--text);
+  color: var(--color-text);
 
-  /* --- Partie principale --- */
   .project-main {
     display: flex;
     align-items: center;
-    /* justify-content contrôlé par .left / .right via align-self sur le container parent */
     padding: $spacing-md;
     gap: $spacing-md;
     position: relative;
 
-    .project-logo img {
-      width: 80px;
-      height: 80px;
-      object-fit: scale-down;
+    .project-logo {
+      img {
+        width: 5rem; // 80px
+        height: 5rem; // 80px
+        object-fit: contain;
+        border-radius: $radius-sm;
+      }
     }
 
     .project-info {
       flex: 1;
+
       h2 {
-        color: var(--accent);
+        color: var(--color-primary);
         margin-bottom: $spacing-xs;
         font-size: $font-size-lg;
+        font-weight: 600; // Consider adding $font-weight-bold to variables
       }
 
       p {
         font-size: $font-size-base;
         opacity: 0.9;
+        line-height: 1.5; // Consider adding $line-height-base to variables
       }
 
       .project-details {
@@ -47,97 +50,111 @@
         opacity: 0;
         max-height: 0;
         overflow: hidden;
-        transition: all 0.5s ease;
+        transition: opacity $transition-base, max-height $transition-base;
+        
+        p {
+          line-height: 1.6; // Consider adding $line-height-loose to variables
+        }
       }
     }
 
     .project-arrow {
-      width: 30px;
-      height: 30px;
+      // Using variables for button size
+      width: 1.875rem; // 30px
+      height: 3.125rem; // 50px
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      background: transparent;
+      border: none;
+      padding: 0;
+      transition: all $transition-base;
+      color: var(--color-text);
 
-      img {
-        width: 100%;
-        transition: transform 0.3s ease, opacity 0.3s ease;
+      svg {
+        // Using variables for SVG size
+        width: 1.875rem; // 30px
+        height: 3.125rem; // 50px
+        fill: currentColor;
+        transition: transform $transition-base;
+        
+        path {
+          fill: currentColor;
+        }
+      }
+
+      &:hover {
         opacity: 0.8;
       }
 
-      &:hover img {
-        opacity: 1;
-        transform: scale(1.1);
-      }
-
-      img.rotated {
+      .rotated {
         transform: rotate(180deg);
       }
     }
   }
 
-  /* --- Partie "Voir plus" --- */
   .project-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: $spacing-xs;
     padding: $spacing-sm;
-    border-top: 1px solid var(--accent);
-    background: var(--bg-primary);
+    border-top: 1px solid var(--color-primary);
+    background: rgba(var(--color-primary-rgb), 0.05);
     cursor: pointer;
-    color: var(--accent);
+    color: var(--color-primary);
     font-size: $font-size-md;
-    font-weight: 500;
-    transition: background 0.3s ease;
+    font-weight: 500; // Consider adding $font-weight-medium to variables
+    transition: all $transition-base;
+    border: none;
+    width: 100%;
 
-    img {
-      width: 18px;
-      transition: transform 0.3s ease;
+    svg {
+      width: 1.25rem; // 20px
+      height: 1.25rem; // 20px
+      transition: transform $transition-base;
+      fill: currentColor;
+      
+      path {
+        fill: currentColor;
+      }
     }
 
-    img.rotated {
+    .rotated {
       transform: rotate(180deg);
     }
 
     &:hover {
-      background: var(--accent-light, rgba(255, 255, 255, 0.05));
+      background: rgba(var(--color-primary-rgb), 0.1);
     }
   }
 
-  /* --- Preview --- */
   .project-preview-container {
     width: 100%;
-    border-top: 1px solid var(--accent);
+    border-top: 1px solid var(--color-primary);
     padding: $spacing-md;
-    background: var(--bg-secondary);
-    animation: fadeIn 0.4s ease forwards;
+    background: rgba(var(--color-primary-rgb), 0.03);
+    animation: fadeIn $transition-base;
   }
 
-  /* --- États --- */
   &.expanded {
     width: 100%;
-    max-width: 1200px;
-    background: var(--bg-primary);
-    box-shadow: 0 0 25px var(--accent);
+    max-width: $container-max-width + 200px; // Using container variable with adjustment
+    box-shadow: 0 8px 24px var(--color-shadow);
 
     .project-info .project-details {
       opacity: 1;
-      max-height: 300px;
-      transition: opacity 0.5s ease 0.3s, max-height 0.6s ease 0.3s;
+      max-height: 18.75rem; // 300px
     }
   }
 
-  /* --- Côté gauche / droite — PLACEMENT de la card dans la colonne --- */
-  /* IMPORTANT : on utilise align-self sur le container (.project-card-container) au lieu de
-     manipuler justify-content dans .project-main. Cela permet d'avoir une card alignée à gauche ou à droite. */
-
-  /* --- Côté gauche / droite --- */
+  // Left-aligned card
   &.left {
     justify-self: flex-start;
 
     .project-main {
-      flex-direction: row; /* ordre normal = logo → info → arrow */
+      flex-direction: row;
       text-align: left;
 
       .project-info {
@@ -146,11 +163,12 @@
     }
   }
 
+  // Right-aligned card
   &.right {
     justify-self: flex-end;
 
     .project-main {
-      flex-direction: row-reverse; /* inverse l’ordre → arrow → info → logo */
+      flex-direction: row-reverse;
       text-align: right;
 
       .project-info {
@@ -159,15 +177,50 @@
     }
   }
 
-
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(-10px);
+      transform: translateY(-0.625rem); // 10px
     }
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    width: 95%;
+    
+    .project-main {
+      padding: $spacing-sm;
+      gap: $spacing-sm;
+      
+      .project-logo img {
+        width: 3.75rem; // 60px
+        height: 3.75rem; // 60px
+      }
+      
+      .project-info {
+        h2 {
+          font-size: $font-size-md;
+        }
+        
+        p {
+          font-size: $font-size-sm;
+        }
+      }
+
+      // Adjust arrow size for mobile
+      .project-arrow {
+        width: 1.5625rem; // 25px
+        height: 2.5rem; // 40px
+        
+        svg {
+          width: 1.5rem; // 24px
+          height: 1.5rem; // 24px
+        }
+      }
     }
   }
 }

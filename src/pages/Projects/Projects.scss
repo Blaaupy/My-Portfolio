@@ -1,70 +1,51 @@
-@use "../../styles/variables.scss" as *;
-
-
-
-.projects-intro {
-  max-width: 800px;
-
-  h1 {
-    color: var(--accent);
-    
-  }
-
-  p {
-    color: var(--text);
-    opacity: 0.9;
-  }
-}
-
-.projects-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
+// Use the variables file without a namespace to access them directly (e.g., $spacing-md)
+@use "../../styles/variables" as *;
 
 .projects-section {
   display: flex;
   flex-direction: column;
-  justify-self: center;
-  max-width: 1200px;
+  align-items: center; // Center the content horizontally
   width: 100%;
-  gap: 50px;
-  padding: 50px 0;
-  background: var(--bg-primary);
-  color: var(--text);
+  max-width: 75rem;
+  margin: 0 auto; // Center the section itself
+  padding: $spacing-xl 0; // Use spacing variable for vertical padding
+  gap: $spacing-xl; // Use spacing variable for gap
+  color: var(--color-text);
 
   .main-text {
     display: flex;
     flex-direction: column;
-    gap: 1em;
-  }
-
-  h1 {
+    align-items: center; // Center text
+    gap: $spacing-sm; // Use spacing variable
     text-align: center;
-    color: var(--accent);
-  }
 
-  .main-desc {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-    font-size: 1.2em;
-    padding: 0.8rem 1.2rem;
-    border-radius: 14px;
-    background: rgba(var(--bg-secondary-rgb, 245, 245, 250), 0.85);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: vars(--text-color);
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    h1 {
+      font-size: $font-size-hero; // Use font-size variable
+      color: var(--color-primary);
+    }
+
+    .main-desc {
+      max-width: 60rem;
+      font-size: $font-size-sm; // Small, footnote-like size
+      font-style: italic; // Italic to signify it's a note
+      opacity: 0.8; // Slightly faded text
+      line-height: 1.6;
+      text-align: center;
+
+      // The subtle background box
+      padding: $spacing-sm $spacing-md;
+      border-radius: $radius-md;
+      background-color: rgba(var(--color-primary-rgb), 0.05); // A very light green background
+      border: 1px solid rgba(var(--color-primary-rgb), 0.1); // A soft, matching border
     }
   }
 
   .projects-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: $spacing-xl; // Use spacing variable for consistent gap between cards
+    width: 100%;
   }
 }
+
+// I've removed the unused `.projects-intro` and `.projects-list` blocks as they weren't in your JSX.

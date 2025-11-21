@@ -3,53 +3,33 @@
 .home-about {
   position: relative;
   width: 100%;
-  padding: 1rem 2rem;
-  background: var(--background-alt, var(--background));
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: vars.$spacing-sm vars.$spacing-lg;
+  background-color: var(--color-background);
+  // Use the secondary color for a nice green border that works with the theme
+  border: 1px solid var(--color-secondary); 
+  border-radius: vars.$radius-lg;
+  box-shadow: 0 6px 20px var(--color-shadow);
   overflow: hidden;
   text-align: center;
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: 0.05;
-    pointer-events: none;
-  }
-
   h2 {
     font-family: "Merriweather", serif;
-    font-size: 2.4rem;
-    margin-bottom: 1.5rem;
-    color: var(--accent);
+    // Use our new, larger font size for section titles
+    font-size: vars.$font-size-section-title;
+    margin-bottom: vars.$spacing-md;
+    color: var(--color-primary);
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: vars.$font-size-md;
     line-height: 1.8;
-    color: var(--text);
+    color: var(--color-text);
     max-width: 800px;
-    margin: 0 auto 2.5rem;
+    margin: 0 auto vars.$spacing-xl;
   }
 
-  .btn {
-    background-color: var(--accent);
-    color: vars.$text-light;
-    padding: 0.7rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s ease;
-
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    }
-  }
-
-  // Animation fade-in
+  // The .btn styles are handled globally in main.scss
+  // The animation is a nice touch, let's keep it.
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease-out forwards;

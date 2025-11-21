@@ -1,40 +1,40 @@
 import "./ProjectInternalNav.scss";
-import ArrowLeft from "../../../assets/images/ArrowLeft.png";
-import ArrowRight from "../../../assets/images/ArrowRight.png";
+// Import SVGs as React Components
+import ArrowLeft from "../../../assets/images/Arrow-Left.svg?react";
+import ArrowRight from "../../../assets/images/Arrow-Right.svg?react";
 
 export default function ProjectInternalNav({
   slides,
   current,
   onPrev,
   onNext,
-  onChange
+  onChange,
 }) {
   return (
     <div className="project-internal-nav">
-
-      {/* Flèche précédente */}
-      <button className="nav-arrow" onClick={onPrev} aria-label="Précédent">
-        <img src={ArrowRight} alt="Précédent" />
+      {/* Previous Button */}
+      <button className="nav-arrow" onClick={onPrev} aria-label="Previous Slide">
+        <ArrowRight />
       </button>
 
-      {/* Boutons numérotés */}
+      {/* Numbered Dots */}
       <div className="nav-dots">
         {slides.map((_, index) => (
           <button
             key={index}
             className={index === current ? "active" : ""}
             onClick={() => onChange(index)}
+            aria-label={`Go to slide ${index + 1}`}
           >
             {index + 1}
           </button>
         ))}
       </div>
 
-      {/* Flèche suivante */}
-      <button className="nav-arrow" onClick={onNext} aria-label="Suivant">
-        <img src={ArrowLeft} alt="Suivant" />
+      {/* Next Button */}
+      <button className="nav-arrow" onClick={onNext} aria-label="Next Slide">
+        <ArrowLeft />
       </button>
-
     </div>
   );
 }

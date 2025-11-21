@@ -1,8 +1,11 @@
 import { useContext } from "react";
 import "./ProjectCard.scss";
-import ArrowLeft from "../../../assets/images/ArrowLeft.png";
-import ArrowRight from "../../../assets/images/ArrowRight.png";
-import ArrowUp from "../../../assets/images/ArrowUp.png";
+
+// ⬇️ Import SVGs as React Components (SVGR)
+import ArrowLeft from "../../../assets/images/Arrow-Left.svg?react";
+import ArrowRight from "../../../assets/images/Arrow-Right.svg?react";
+import ArrowUp from "../../../assets/images/Arrow-Up.svg?react";
+
 import ProjectContent from "../ProjectContent/ProjectContent";
 import { LanguageContext } from "../../../context/LanguageContext";
 
@@ -22,7 +25,7 @@ export default function ProjectCard({
   const shortDesc = language === "fr" ? project.shortFr : project.shortEn;
   const longDesc = language === "fr" ? project.longFr : project.longEn;
 
-  const arrowImg = isLeft ? ArrowLeft : ArrowRight;
+  const ArrowIcon = isLeft ? ArrowLeft : ArrowRight;
 
   return (
     <div className={`project-card-container ${isLeft ? "left" : "right"} ${expanded ? "expanded" : ""}`}>
@@ -42,18 +45,21 @@ export default function ProjectCard({
           )}
         </div>
 
-        <div className="project-arrow" onClick={onToggleExpand}>
-          <img src={arrowImg} className={expanded ? "rotated" : ""} />
-        </div>
+        {/* --- Bouton flèche pour expand --- */}
+        <button className="project-arrow" onClick={onToggleExpand} aria-label="Expand project">
+          <ArrowIcon className={expanded ? "rotated" : ""} />
+        </button>
       </div>
 
+      {/* --- Toggle Voir plus --- */}
       {expanded && (
-        <div className="project-toggle" onClick={onTogglePreview}>
+        <button className="project-toggle" onClick={onTogglePreview}>
           <span>{showPreview ? texts.project.showLess : texts.project.showMore}</span>
-          <img src={ArrowUp} className={showPreview ? "rotated" : ""} />
-        </div>
+          <ArrowUp className={showPreview ? "rotated" : ""} />
+        </button>
       )}
 
+      {/* --- Preview Slider --- */}
       {showPreview && (
         <div className="project-preview-container">
           <ProjectContent
