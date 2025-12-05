@@ -40,3 +40,13 @@
   color: var(--color-text);
   cursor: pointer;
 }
+
+@media screen and (max-width: 642px) {
+  nav,
+  .header-right {
+    display: none;
+  }
+  header {
+    justify-content: center; 
+  }
+}

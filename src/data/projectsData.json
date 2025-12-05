@@ -56,14 +56,14 @@
           ]
         },
         {
-          "type": "files",
+          "type": "iframe",
           "iframeType": "pdf",
           "previewTextFr": "Spécifications fonctionnelles et techniques du site web Booki",
           "previewTextEn": "Functional and technical specifications of the Booki website",
           "files": [
             {
               "name": "Booki Dev Web - Note de synthèse pour intégration du site Booki",
-              "url": "/portfolio-2/files/booki/DW+Booki+-+Note+de+synthese.pdf"
+              "url": "/portfolio-2/files/booki/DW_Booki_Note_de_synthese.pdf"
             }
           ]
         },
@@ -103,7 +103,7 @@
           "links": [
             { "name": "Premier Découpage Maquette / First Mockup slicing", "url": "/portfolio-2/files/booki/Premier_découpage_maquette.jpg", "type": "download" },
             { "name": "Découpage Maquette propre / Clean Mockup slicing", "url": "/portfolio-2/files/booki/Découpage_maquette_final.jpg", "type": "download" },
-            { "name": "Note de synthèse / Summary note", "url": "/portfolio-2/files/booki/DW+Booki+-+Note+de+synthese.pdf", "type": "download" },
+            { "name": "Note de synthèse / Summary note", "url": "/portfolio-2/files/booki/DW_Booki_Note_de_synthese.pdf", "type": "download" },
             { "name": "Maquette Original / Original Mockup", "url": "https://www.figma.com/design/r9YJyUkpVdrxzBBKGH7reY/Maquettes-Booki--desktop--mobile--tablette-?node-id=3-0&p=f&t=mcKTnz0PjGDT30Dg-0", "type": "navToLink" },
             { "name": "Lien GitHub / GitHub link", "url": "https://github.com/Blaaupy/booki-starter-code", "type": "navToLink" }
           ]
@@ -231,7 +231,7 @@
       "id": 3,
       "titleFr": "Nina Carducci — Photographe",
       "titleEn": "Nina Carducci — Photographer",
-      "logo": "/portfolio-2/images/Nina.png",
+      "logo": "/portfolio-2/images/Nina.svg",
       "shortFr": "Optimisation SEO, performance et débogage complet d’un site de photographe.",
       "shortEn": "SEO, performance optimization and debugging of a photographer portfolio.",
       "longFr": "Correction des bugs JS/CSS sur un site existant, optimisation Lighthouse (Performance, SEO, Accessibilité), compression d’images volumineuses, lazy loading, amélioration du chargement des pages, structure sémantique et métadonnées adaptées. Ce projet m’a permis de me familiariser avec l’audit de sites tiers et la mise en œuvre de bonnes pratiques SEO et d’accessibilité sans altérer le fonctionnement du site.",
@@ -458,7 +458,7 @@
       "id": 5,
       "titleFr": "Mon Vieux Grimoire — Back-end Livre",
       "titleEn": "Mon Vieux Grimoire — Book Back-end",
-      "logo": "/portfolio-2/images/MonVieuxGrimoire.png",
+      "logo": "/portfolio-2/images/MonVieuxGrimoire.svg",
       "shortFr": "Développement complet du back-end d’un site de notation de livres avec Node.js et MongoDB.",
       "shortEn": "Full back-end development of a book rating site with Node.js and MongoDB.",
       "longFr": "Ce projet consistait à développer le back-end d’un site de notation de livres, en utilisant Node.js, Express et MongoDB. J’ai mis en place les modèles de données, les opérations CRUD pour les livres et les notes, un système d’authentification sécurisé et l’optimisation des images. Ce projet m’a permis de renforcer mes compétences en architecture MVC, gestion d’API et sécurité des données.",
@@ -600,7 +600,7 @@
       "id": 6,
       "titleFr": "Qwenta — Gestion de Menus",
       "titleEn": "Qwenta — Menu Management",
-      "logo": "/portfolio-2/images/Qwenta.png",
+      "logo": "/portfolio-2/images/Qwenta.svg",
       "shortFr": "Développement complet d’une application de gestion de menus et de commandes.",
       "shortEn": "Full development of a menu and order management application.",
       "longFr": "Le projet Qwenta consistait à créer une application permettant de gérer des menus et commandes pour une chaîne de restauration. J’ai participé à toutes les phases : conception, spécifications fonctionnelles et techniques, développement, suivi via Kanban et présentation finale.",

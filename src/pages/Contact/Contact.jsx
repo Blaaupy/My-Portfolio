@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef, useContext } from "react";
+import emailjs from '@emailjs/browser'; // Importer EmailJS
+import { FaGithub, FaLinkedin } from "react-icons/fa"; // Importer les icônes
 import { LanguageContext } from "../../context/LanguageContext";
 import "./Contact.scss";
 
@@ -7,6 +9,8 @@ export default function Contact() {
 
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(null); // État pour l'erreur
+  const [isLoading, setIsLoading] = useState(false); // État pour le chargement
 
   const introRef = useRef(null);
   const formRef = useRef(null);
@@ -18,12 +22,29 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form);
-    setSuccess(true);
-    setForm({ name: "", email: "", message: "" });
-    setTimeout(() => setSuccess(false), 5000); // fait disparaître le message après 5s
-  };
+    setIsLoading(true);
+    setError(null);
 
+    //  IDs EmailJS
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    emailjs.sendForm(serviceID, templateID, e.target, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setSuccess(true);
+        setForm({ name: "", email: "", message: "" });
+        setTimeout(() => setSuccess(false), 5000);
+      })
+      .catch((err) => {
+        console.error('FAILED...', err);
+        setError("Une erreur est survenue. Veuillez réessayer.");
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -56,35 +77,26 @@ export default function Contact() {
           onSubmit={handleSubmit}
           ref={formRef}
         >
-          <input
-            type="text"
-            name="name"
-            placeholder={texts.contact.namePlaceholder}
-            value={form.name}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder={texts.contact.emailPlaceholder}
-            value={form.email}
-            onChange={handleChange}
-            required
-            pattern="^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$"
-          />
-          <textarea
-            name="message"
-            placeholder={texts.contact.messagePlaceholder}
-            value={form.message}
-            onChange={handleChange}
-            rows="5"
-            required
-          ></textarea>
-          <button type="submit" className="btn">
-            {texts.contact.submitBtn}
+          {/* --- Labels Flottants --- */}
+          <div className="input-group">
+            <input type="text" id="name" name="name" value={form.name} onChange={handleChange} required placeholder=" " />
+            <label htmlFor="name">{texts.contact.namePlaceholder}</label>
+          </div>
+          <div className="input-group">
+            <input type="email" id="email" name="email" value={form.email} onChange={handleChange} required placeholder=" " pattern="^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$" />
+            <label htmlFor="email">{texts.contact.emailPlaceholder}</label>
+          </div>
+          <div className="input-group">
+            <textarea id="message" name="message" value={form.message} onChange={handleChange} rows="5" required placeholder=" "></textarea>
+            <label htmlFor="message">{texts.contact.messagePlaceholder}</label>
+          </div>
+          
+          <button type="submit" className="btn" disabled={isLoading}>
+            {isLoading ? 'Envoi en cours...' : texts.contact.submitBtn}
           </button>
+          
           {success && <p className="success-msg">{texts.contact.successMsg}</p>}
+          {error && <p className="error-msg">{error}</p>}
         </form>
 
         <div className="contact-info fade-up" ref={infoRef}>
@@ -97,12 +109,14 @@ export default function Contact() {
             {texts.contact.phoneLabel} :{" "}
             <a href="tel:+33000000000">+33 0 00 00 00 00</a>
           </p>
+          
+          {/* --- Icônes Sociales --- */}
           <div className="social-links">
-            <a href="https://github.com/" target="_blank">
-              GitHub
+            <a href="https://github.com/" target="_blank" aria-label="Mon profil GitHub">
+              <FaGithub />
             </a>
-            <a href="https://linkedin.com/" target="_blank">
-              LinkedIn
+            <a href="https://linkedin.com/" target="_blank" aria-label="Mon profil LinkedIn">
+              <FaLinkedin />
             </a>
           </div>
         </div>

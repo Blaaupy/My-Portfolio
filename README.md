@@ -1,16 +1,122 @@
-# React + Vite
+# Portfolio de Blaaup
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio web moderne et responsive, développé avec React, conçu pour présenter mes projets et compétences en développement web. Bilingue français/anglais, il offre une expérience utilisateur optimale avec un thème clair/sombre et une présentation de projets interactive.
 
-Currently, two official plugins are available:
+![Screenshot du portfolio](./public/images/ScreenshotDuPortfolio.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Fonctionnalités Clés
 
-## React Compiler
+-   **🌗 Thème Sombre/Clair (Custom)** : Basculez facilement entre un thème clair et un thème sombre grâce à un système de thème personnalisé, développé avec **React Context**. L'état du thème est préservé dans le `localStorage` pour une expérience utilisateur fluide.
+-   **🌍 Internationalisation (Custom)** : Le site est entièrement disponible en français et en anglais via un système de traduction maison, utilisant un **`LanguageContext`** pour gérer l'état de la langue et charger les textes dynamiquement.
+-   **📱 Design Responsive** : Une expérience utilisateur soignée sur tous les appareils, du mobile au desktop, avec une navigation adaptée (menu pivotant sur mobile).
+-   **🎨 Composants Thématisés** : Les icônes SVG s'adaptent dynamiquement au thème choisi pour une intégration visuelle parfaite, grâce à un composant `ThemedSvg` sur mesure.
+-   **📧 Formulaire de Contact Fonctionnel** : Un formulaire de contact stylisé et fonctionnel, utilisant **EmailJS** pour envoyer des messages directement depuis le site, sans back-end.
+-   **🎬 Présentation Dynamique des Projets** : Chaque projet est présenté via un système de "slides" interactif et flexible, supportant les images, vidéos, PDF et iframes, avec des aperçus réels et des documents téléchargeables.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies Utilisées
 
-## Expanding the ESLint configuration
+Ce projet a été réalisé avec les technologies suivantes :
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   **[React](https://reactjs.org/)** : La bibliothèque principale pour l'interface utilisateur et la gestion des composants.
+-   **[Vite](https://vitejs.dev/)** : Un outil de build rapide et moderne pour le développement et le déploiement.
+-   **[SCSS](https://sass-lang.com/)** : Pour un CSS structuré et maintenable avec des variables globales.
+-   **[React Router](https://reactrouter.com/)** : Pour la gestion de la navigation et des routes au sein de l'application (SPA).
+-   **[React Icons](https://react-icons.github.io/react-icons/)** & **[Lucide React](https://lucide.dev/)** : Pour intégrer facilement une large gamme d'icônes.
+-   **[React Circular Progressbar](https://www.npmjs.com/package/react-circular-progressbar)** : Pour les barres de progression animées dans la section compétences.
+-   **[EmailJS](https://www.emailjs.com/)** : Pour l'envoi d'e-mails depuis le formulaire de contact sans back-end.
+-   **[Vite Plugin SVGR](https://www.npmjs.com/package/vite-plugin-svgr)** : Pour importer les SVG directement en tant que composants React.
+
+## 📁 Structure du Projet
+
+L'architecture du projet est organisée pour être claire et maintenable.
+
+```
+portfolio-2/
+├── public/                 # Fichiers statiques servis par le serveur
+│   ├── files/              # Documents et médias spécifiques à chaque projet
+│   └── images/             # Images et logos du site (PNG, SVG)
+├── src/
+│   ├── assets/             # Images importées dynamiquement (icônes, etc.)
+│   ├── components/          # Composants React réutilisables et organisés par page
+│   │   ├── AboutPage/       # Composants de la page "À propos"
+│   │   ├── HomePage/        # Composants de la page d'accueil
+│   │   ├── ProjectsPage/    # Composants de la page des projets
+│   │   ├── Contact/         # Composants de la page de contact
+│   │   ├── Header/          # Composant d'en-tête avec navigation
+│   │   └── Footer/          # Composant de pied de page
+│   ├── context/             # React Context pour l'état global (langue, thème)
+│   ├── data/                # Données de l'application (textes i18n, projets)
+│   ├── pages/               # Composants de page associés aux routes React Router
+│   └── styles/              # Feuilles de style globales (variables, reset)
+├── .env                    # Fichier pour les variables d'environnement (clés API)
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+## 📊 Gestion de l'État et des Données
+
+-   **Thème et Langue** : L'état du thème (clair/sombre) et de la langue (fr/en) est géré globalement grâce à des **Contexts React** personnalisés (`ThemeContext` et `LanguageContext`). Cela assure une cohérence sur toute l'application.
+-   **Données des Projets** : Les informations des projets sont centralisées dans `src/data/projectsData.json`. Chaque projet est un objet structuré qui inclut des informations générales et un tableau `slides` flexible pour une présentation riche et narrative.
+
+## 🚀 Getting Started
+
+Pour obtenir une copie locale et la faire fonctionner, suivez ces étapes simples.
+
+### Prérequis
+
+Assurez-vous d'avoir [Node.js](https://nodejs.org/) (version 18 ou plus) et [npm](https://www.npmjs.com/) installés sur votre machine.
+
+### Installation
+
+1.  Clonez le dépôt :
+    ```bash
+    git clone https://github.com/Blaaup/portfolio-2.git
+    cd portfolio-2
+    ```
+
+2.  Installez les dépendances :
+    ```bash
+    npm install
+    ```
+
+### Configuration du Formulaire de Contact
+
+Le formulaire utilise EmailJS. Pour le rendre fonctionnel, vous devez configurer vos clés API.
+
+1.  **Créez un compte sur [EmailJS](https://www.emailjs.com/)**, configurez un service d'e-mail et un template.
+2.  À la racine du projet, créez un fichier nommé `.env`.
+3.  Ajoutez vos clés EmailJS dans ce fichier. **Vite prend en charge nativement les fichiers `.env`** si les variables sont préfixées par `VITE_` :
+    ```env
+    # .env
+    VITE_EMAILJS_SERVICE_ID="votre_service_id"
+    VITE_EMAILJS_TEMPLATE_ID="votre_template_id"
+    VITE_EMAILJS_PUBLIC_KEY="votre_public_key"
+    ```
+    *Important : Ne commettez jamais ce fichier `.env` sur Git.*
+
+### Lancement de l'application
+
+Démarrez le serveur de développement avec la commande :
+
+```bash
+npm run dev
+```
+
+Ouvrez votre navigateur et naviguez vers `http://localhost:5173`.
+
+## 🚀 Déploiement
+
+Ce projet est configuré pour être déployé facilement sur **GitHub Pages** grâce au package `gh-pages`.
+
+1.  Après avoir cloné le projet et installé les dépendances, exécutez simplement la commande :
+    ```bash
+    npm run deploy
+    ```
+2.  Cela construira le projet et le publiera sur la branche `gh-pages` de votre dépôt, le rendant accessible à l'adresse `https://Blaaup.github.io/portfolio-2/`.
+
+## 📝 License
+
+Ce projet est sous licence MIT. Consultez le fichier `LICENSE` pour plus d'informations.
+
+---

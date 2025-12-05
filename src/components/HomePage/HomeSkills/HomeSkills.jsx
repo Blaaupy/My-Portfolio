@@ -5,13 +5,38 @@ export default function HomeSkills({ texts }) {
   return (
     <section className="home-skills">
       <h2>{texts.home.skillsTitle}</h2>
-      <ul className="skills-list">
-        {technoData.slice(0, 8).map((skill, index) => ( // Show first 8 skills
-          <li key={index} title={skill.name}>
-            <img src={skill.icon} alt={skill.alt} className="skill-icon" />
-          </li>
-        ))}
-      </ul>
+      <div className="skills-list">
+        <div className="inner">
+          {/* Première copie de la liste */}
+          {technoData.map((skill, index) => (
+            <div className="skill-tag" key={`first-${index}`}>
+              <a href="/portfolio-2/about#about-skills">
+                <img 
+                  src={skill.icon} 
+                  alt={skill.alt} 
+                  className="skill-icon" 
+                  title={skill.name}
+                />
+              </a>
+            </div>
+          ))}
+          
+          {/* Deuxième copie de la liste pour créer la boucle */}
+          {technoData.map((skill, index) => (
+            <div className="skill-tag" key={`second-${index}`}>
+              <a href="/portfolio-2/about#about-skills">
+                <img 
+                  src={skill.icon} 
+                  alt={skill.alt} 
+                  className="skill-icon" 
+                  title={skill.name}
+                />
+              </a>
+            </div>
+          ))}
+        </div>
+        <div className="fade"></div>
+      </div>
     </section>
   );
 }

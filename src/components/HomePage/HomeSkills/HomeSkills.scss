@@ -5,47 +5,77 @@
   text-align: center;
 
   h2 {
-    // 1. Use the specific, larger font size for section titles from your variables
     font-size: vars.$font-size-section-title; 
     margin-bottom: vars.$spacing-lg;
     color: var(--color-primary);
   }
 
   .skills-list {
+    // Le conteneur qui masque le dépassement
+    position: relative;
+    width: 100%;
+    overflow: hidden; // Très important pour cacher ce qui défile
+    border-radius: 8px;
+    height: 80px;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
     
-    // 2. Use a smaller gap to bring the skill icons closer together
-    gap: vars.$spacing-sm; 
-    
-    list-style: none;
-    padding: 0;
+    // On ajoute les bordures au conteneur parent pour qu'il encadre l'animation
+    border-right: 4px solid var(--color-primary);
+    border-left: 4px solid var(--color-primary);
 
-    li {
+    .inner {
+      // Le conteneur qui va défiler. Sa largeur sera automatiquement celle de son contenu.
       display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 60px;
-      height: 60px;
-      background-color: var(--color-background);
+      gap: vars.$spacing-sm;
       
-      // 3. Use the secondary color for a vibrant green border
-      border: 1px solid var(--color-secondary); 
       
-      border-radius: vars.$radius-md;
-      transition: transform vars.$transition-base, box-shadow vars.$transition-base;
+      // L'animation clé : on déplace de 50% pour masquer la première copie et révéler la seconde.
+      animation: loop 20s linear infinite;
+    }
+    
+    // On cible les <a> pour le style, pas les <div> parentes
+    .skill-tag {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        background-color: var(--color-background);
+        border: 1px solid var(--color-secondary); 
+        border-radius: vars.$radius-md;
+        transition: transform vars.$transition-base, box-shadow vars.$transition-base;
+        text-decoration: none;
 
-      .skill-icon {
-        width: 35px;
-        height: 35px;
-        object-fit: contain;
-      }
+        .skill-icon {
+          width: 35px;
+          height: 35px;
+          object-fit: contain;
+        }
 
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 15px var(--color-shadow);
+        &:hover {
+          box-shadow: 0 4px 15px rgba(var(--color-primary-rgb), 0.5);
+        }
       }
     }
+  }
+
+  .fade {
+    position: absolute;
+    background: linear-gradient(90deg, var(--color-slider-bg), transparent 4%, transparent 96%, var(--color-slider-bg));
+    inset: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0); // Position de départ
+  }
+  100% {
+    // On translate de -50%, ce qui correspond exactement à la largeur de la première liste d'icônes.
+    // La seconde liste prend la place de la première, créant une boucle invisible.
+    transform: translateX(-50%); 
   }
 }

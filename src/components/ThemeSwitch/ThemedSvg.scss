@@ -1,0 +1,25 @@
+@use "../../styles/variables.scss" as *;
+
+.themed-svg-container {
+  display: inline-flex; // Se comporte comme une image
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-sm; // On peut utiliser vos variables ici
+
+  .themed-svg {
+    // La couleur est gérée ici, c'est plus propre
+    fill: var(--color-text);
+    color: var(--color-text);
+    
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.svg-loader {
+  display: inline-block;
+  width: 5rem; // Taille par défaut qui correspond
+  height: 5rem;
+  background-color: #eee;
+  border-radius: $radius-sm;
+}

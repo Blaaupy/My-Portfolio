@@ -8,6 +8,7 @@ import ArrowUp from "../../../assets/images/Arrow-Up.svg?react";
 
 import ProjectContent from "../ProjectContent/ProjectContent";
 import { LanguageContext } from "../../../context/LanguageContext";
+import ThemedSvg from "../../ThemeSwitch/ThemedSvg";
 
 export default function ProjectCard({
   project,
@@ -26,12 +27,23 @@ export default function ProjectCard({
   const longDesc = language === "fr" ? project.longFr : project.longEn;
 
   const ArrowIcon = isLeft ? ArrowLeft : ArrowRight;
+  const isSvg = project.logo.endsWith('.svg');
 
   return (
     <div className={`project-card-container ${isLeft ? "left" : "right"} ${expanded ? "expanded" : ""}`}>
       <div className="project-main">
         <div className="project-logo">
-          <img src={project.logo} alt={`Logo ${title}`} />
+          {isSvg ? (
+            <ThemedSvg
+              src={project.logo}
+              alt={`${project.titleFr} logo`}
+              className="project-logo"
+              width="5rem"  // On définit la taille ici
+              height="5rem" // On définit la taille ici
+            />
+          ) : (
+            <img src={project.logo} alt={`${project.titleFr} logo`} className="project-logo" />
+          )}
         </div>
 
         <div className="project-info">

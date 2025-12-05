@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 import { LanguageContext } from "../../context/LanguageContext";
+import MobileNav from "./MobileNav"; // 1. Importer le nouveau composant
 import "./Header.scss";
 
 export default function Header() {
@@ -17,6 +18,10 @@ export default function Header() {
         <p>Blaaup</p>
       </div>
 
+      {/* 2. Ajouter la navigation mobile ici */}
+      <MobileNav />
+
+      {/* 3. L'ancienne navigation, qui sera cachée sur mobile */}
       <nav className="nav">
         <NavLink to="/portfolio-2/" end className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
           {texts.nav.home}

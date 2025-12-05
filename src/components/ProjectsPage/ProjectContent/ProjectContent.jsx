@@ -5,18 +5,23 @@ import { LanguageContext } from "../../../context/LanguageContext";
 import { ThemeContext } from "../../../context/ThemeContext";
 
 export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
+  // --- CORRECTION : Tous les Hooks sont appelés en premier ---
   const { language } = useContext(LanguageContext);
   const { theme } = useContext(ThemeContext);
-  const slides = project.slides || [];
-  if (!slides.length) return null;
-
-  // --- State to control the content overlay ---
   const [showContent, setShowContent] = useState(false);
 
-  // --- Effect to reset the overlay when the slide changes ---
+  // On peut récupérer les slides ici, ce n'est pas un hook
+  const slides = project.slides || [];
+
+  // L'effet dépend de slideIndex, il doit donc être déclaré ici
   useEffect(() => {
     setShowContent(false);
   }, [slideIndex]);
+
+  // --- La logique conditionnelle vient maintenant APRÈS les hooks ---
+  if (!slides.length) {
+    return null;
+  }
 
   const nextSlide = () => onChangeSlide((slideIndex + 1) % slides.length);
   const prevSlide = () =>
@@ -132,12 +137,19 @@ export default function ProjectContent({ project, slideIndex, onChangeSlide }) {
                 {slide.type === "iframe" && (
                   <div className="files-slide">
                     <div className="file-preview">
-                      {(slide.type === "iframe" ? [slide] : slide.files).map((file, index) => {
+                      {/* 
+                        NOUVELLE LOGIQUE :
+                        1. On vérifie si slide.files existe et n'est pas vide.
+                        2. Si oui, on utilise slide.files.
+                        3. Sinon, on utilise un tableau contenant slide (pour la compatibilité avec d'autres projets).
+                      */}
+                      {((slide.files && slide.files.length > 0) ? slide.files : [slide]).map((file, index) => {
                         const iframeClass = slide.iframeType === "pdf" ? "iframe-pdf" : "iframe-site";
                         return (
                           <iframe
                             key={index}
-                            src={file.url || slide.url}
+                            // Maintenant, 'file' est l'objet qui contient bien l'URL
+                            src={file.url} 
                             title={file.title || file.name || slide.title || project.titleFr}
                             className={`project-iframe ${iframeClass}`}
                             loading="lazy"

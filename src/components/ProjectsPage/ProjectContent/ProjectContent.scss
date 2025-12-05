@@ -34,7 +34,7 @@
   /* ------------------------------------------------------- */
   .preview-container {
     width: 100%;
-    min-height: 31.25rem; // 500px
+    flex: 1;
     border-radius: $radius-md;
     background: var(--color-background);
     box-shadow: 0 6px 20px var(--color-shadow);
@@ -42,23 +42,9 @@
     display: flex;
     flex-direction: column;
     transition: box-shadow $transition-base;
-
+    min-height: calc(100vh - 15.625rem); // Hauteur minimale basée sur la fenêtre (ex: 100vh - 250px de marge pour le header/etc.)
     &:hover {
       box-shadow: 0 10px 30px var(--color-shadow);
-    }
-
-    iframe,
-    img {
-      width: 100%;
-      border: none;
-      object-fit: contain;
-      border-radius: $radius-sm;
-      transition: transform $transition-base;
-    }
-
-    iframe {
-      flex: 1;
-      height: 50rem; // 800px
     }
   }
 
@@ -66,20 +52,12 @@
   /* CONTENT WRAPPER & OVERLAY                              */
   /* ------------------------------------------------------- */
   .content-wrapper {
-    position: relative; // Establishes a positioning context for the overlay
+    position: relative;
     width: 100%;
-    flex: 1; // Allows the wrapper to grow and fill the container
+    flex: 1;
     display: flex;
     flex-direction: column;
   }
-
-  .content-wrapper {
-  position: relative;
-  width: 100%;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
 
   .content-overlay {
     position: absolute;
@@ -233,11 +211,9 @@
     
     iframe {
       width: 100%;
-      height: calc(100vh - 15.625rem); // 250px
-      max-height: 56.25rem; // 900px
+      flex: 1;
       border-radius: $radius-sm;
       border: none;
-      object-fit: contain;
       transition: transform $transition-base;
     }
   }

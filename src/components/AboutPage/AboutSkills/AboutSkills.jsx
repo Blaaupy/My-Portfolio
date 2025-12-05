@@ -11,6 +11,19 @@ export default function AboutSkills({ texts }) {
   const skillsRef = useRef([]);
 
   useEffect(() => {
+    const hash = window.location.hash; 
+
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 0); 
+    }
+  }, []); 
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -31,7 +44,7 @@ export default function AboutSkills({ texts }) {
   }, []);
 
   return (
-    <section className="about-skills">
+    <section id="about-skills" className="about-skills">
       <h2>{texts.about.skills.title}</h2>
       <p className="skills-intro">{texts.about.skills.intro}</p>
 
