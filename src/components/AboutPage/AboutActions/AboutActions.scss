@@ -7,6 +7,18 @@
   flex-wrap: wrap;
   
   .btn--secondary{
-    color: var(--accent);
+    color: var(--color-primary); // Correction pour que la couleur soit cohérente
+  }
+}
+
+// --- Adaptation pour les très petits mobiles ---
+@media screen and (max-width: 480px) {
+  .about-actions {
+    flex-direction: column;
+    align-items: stretch; // Pour que les boutons aient la même hauteur
+
+    .btn {
+      width: 100%; // Chaque bouton prend toute la largeur
+    }
   }
 }

@@ -3,16 +3,49 @@
 .about-intro {
   h1 {
     color: var(--color-primary);
-    margin-bottom: 1rem;
+    // --- MARGE DE BASE POUR GRANDS ÉCRANS ---
+    margin-bottom: vars.$spacing-lg; // 32px
     text-align: center;
-    font-size: vars.$font-size-hero;
+    font-size: vars.$font-size-hero; // 2.5rem
+    font-weight: vars.$font-weight-bold;
+    line-height: vars.$line-height-tight;
   }
 
   p {
     max-width: 700px;
-    color: var(--text);
-    line-height: 1.7;
+    color: var(--color-text);
+    // On utilise une variable pour la hauteur de ligne
+    line-height: vars.$line-height-relaxed; 
     text-align: center;
     margin: 0 auto;
+    font-size: vars.$font-size-md; // 1.1rem
+  }
+}
+
+// --- Adaptation pour les tablettes et mobiles ---
+@media screen and (max-width: 768px) {
+  .about-intro {
+    h1 {
+      font-size: vars.$font-size-xl; // 2rem
+      // --- MARGE RÉDUITE POUR MOBILE ---
+      margin-bottom: vars.$spacing-md; // 24px
+    }
+
+    p {
+      font-size: vars.$font-size-base; // 1rem
+    }
+  }
+}
+
+// --- Adaptation pour les petits mobiles ---
+@media screen and (max-width: 433px) {
+  .about-intro {
+    h1 {
+      font-size: vars.$font-size-lg; // 1.4rem
+    }
+
+    p {
+      font-size: vars.$font-size-sm; // 0.9rem
+    }
   }
 }

@@ -5,8 +5,10 @@
 
   .section-title {
     font-size: vars.$font-size-xl;
-    font-weight: 600;
-    margin-bottom: vars.$spacing-xl;
+    // On utilise une variable pour la graisse
+    font-weight: vars.$font-weight-semibold; 
+    // --- MARGE DE BASE POUR GRANDS ÉCRANS ---
+    margin-bottom: vars.$spacing-xl; // 48px
     color: var(--color-primary);
     position: relative;
 
@@ -25,7 +27,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: vars.$spacing-lg;
+    // --- ESPACEMENT DE BASE POUR GRANDS ÉCRANS ---
+    gap: vars.$spacing-lg; // 32px
     position: relative;
 
     &::before {
@@ -44,12 +47,13 @@
       background: var(--color-background);
       border: 1px solid var(--color-secondary);
       border-radius: vars.$radius-lg;
-      padding: vars.$spacing-sm;
+      padding: vars.$spacing-md;
       width: 100%;
-      max-width: 800px; // Add a max-width for readability
+      max-width: 800px;
       display: flex;
-      align-items: center;
-      gap: vars.$spacing-sm;
+      // On aligne en haut pour un meilleur rendu si le texte est long
+      align-items: flex-start; 
+      gap: vars.$spacing-md;
       position: relative;
       transition: transform vars.$transition-base, box-shadow vars.$transition-base;
 
@@ -63,7 +67,8 @@
 
       &:hover {
         transform: translateY(-5px);
-        box-shadow: 0 4px 15px rgba(var(--color-primary-rgb), 0.5);
+        // On utilise une variable pour l'ombre au survol
+        box-shadow: var(--shadow-lg);
       }
 
       .timeline-icon {
@@ -75,7 +80,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-shrink: 0;
+        flex-shrink: 0; // Empêche l'icône de rétrécir
         box-shadow: 0 0 10px var(--color-primary);
       }
 
@@ -84,7 +89,7 @@
         h3 {
           margin: 0;
           font-size: vars.$font-size-md;
-          font-weight: 600;
+          font-weight: vars.$font-weight-semibold;
         }
         .timeline-subtitle {
           font-size: vars.$font-size-sm;
@@ -96,6 +101,47 @@
           margin: 0;
           font-size: vars.$font-size-base;
           opacity: 0.9;
+          line-height: vars.$line-height-base;
+        }
+      }
+    }
+  }
+}
+
+// --- Adaptation pour les tablettes et mobiles ---
+// On ajuste uniquement les tailles de texte et les espacements, pas le layout
+@media screen and (max-width: 768px) {
+  .parcours-section {
+    .section-title {
+      font-size: vars.$font-size-lg;
+      // --- MARGE RÉDUITE POUR MOBILE ---
+      margin-bottom: vars.$spacing-lg; // 32px
+    }
+
+    .timeline {
+      // --- ESPACEMENT RÉDUIT POUR MOBILE ---
+      gap: vars.$spacing-md; // 24px
+
+      .timeline-item {
+        padding: vars.$spacing-sm; // Moins de padding à l'intérieur
+        gap: vars.$spacing-sm;
+
+        .timeline-icon {
+          // Icône légèrement plus petite sur mobile
+          width: 50px;
+          height: 50px;
+        }
+
+        .timeline-content {
+          h3 {
+            font-size: vars.$font-size-base;
+          }
+          .timeline-subtitle {
+            font-size: vars.$font-size-xs;
+          }
+          p {
+            font-size: vars.$font-size-sm;
+          }
         }
       }
     }
