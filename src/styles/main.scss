@@ -22,7 +22,7 @@ body {
   flex-direction: column;
   max-width: vars.$container-max-width;
   margin: 0 auto;
-  padding: vars.$spacing-xl 0;
+  padding: vars.$spacing-xl vars.$spacing-sm;
   gap: vars.$spacing-lg;
   min-height: calc(100vh - (2 * vars.$header-height));
 }

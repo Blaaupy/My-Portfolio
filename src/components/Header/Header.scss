@@ -3,8 +3,6 @@
 
 // === LE HEADER DEVIENT LA RÉFÉRENCE ===
 header {
-  // C'est la correction la plus importante !
-  // On dit au menu mobile de se positionner par rapport au header
   position: relative; 
   z-index: 1000;
 }
@@ -33,24 +31,23 @@ header {
   justify-content: center;
   background: none;
   border: none;
-  color: var(--color-primary); // Utilise la couleur de texte de votre thème
+  color: var(--color-primary);
   cursor: pointer;
-  padding: vars.$spacing-xs; // Un peu d'espace pour la zone de clic
+  padding: vars.$spacing-xs;
   border-radius: vars.$radius-sm;
   transition: background-color vars.$transition-base, color vars.$transition-base;
 
   &:hover {
-    background-color: var(--color-hover, #f0f0f0); // Utilise une couleur de survol
+    background-color: var(--color-hover, #f0f0f0);
     color: var(--color-primary);
   }
 }
 
-// 8. Ajouter les styles pour le panneau qui s'ouvre
 .settings-panel {
   position: absolute;
-  top: 100%; // Se positionne juste en dessous du bouton
-  right: 0; // Aligné à droite
-  background-color: var(--color-background); // Une couleur de fond légèrement différente
+  top: 100%;
+  right: 0;
+  background-color: var(--color-background);
   border: 1px solid var(--color-primary);
   border-radius: vars.$radius-md;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -59,8 +56,8 @@ header {
   flex-direction: column;
   gap: vars.$spacing-sm;
   min-width: 150px;
+  z-index: 1001;
 
-  // Animation d'apparition simple
   animation: fadeInSettings 0.2s ease-in-out;
 }
 
@@ -74,6 +71,7 @@ header {
     transform: translateY(0);
   }
 }
+
 // === ÉLÉMENT CENTRAL : VRAIMENT CENTRÉ ===
 .header-center {
   text-align: center;
@@ -130,21 +128,25 @@ header {
 // --- Menu Mobile (le panneau qui s'ouvre) --- 
 .mobile-nav-menu {
   position: absolute;
-  top: 100%; // On le place juste en dessous du header
+  top: 100%;
   left: 0;
   width: 100%;
   background-color: var(--color-background);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-primary);
+  border-radius: vars.$radius-md;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   
-  // --- CORRECTION DE L'ANIMATION ---
-  // On le cache en le déplaçant complètement vers le haut
-  transform: translateY(-100%);
+  padding: 0; 
+  
+  transform: translateY(-10px);
   opacity: 0;
   visibility: hidden;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0.3s;
 
+  // --- NOUVEAU : On cache tout ce qui dépasse des bords arrondis ---
+  overflow: hidden;
+
   &.mobile-nav-menu--open {
-    // On le fait redescendre à sa position normale
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
@@ -159,14 +161,16 @@ header {
 .mobile-nav {
   display: flex;
   flex-direction: column;
-  padding: vars.$spacing-md 0;
+  padding: 0;
 
   .nav-link {
     display: block;
     padding: vars.$spacing-sm vars.$spacing-md;
     text-decoration: none;
     color: var(--color-text);
-    transition: background-color vars.$transition-base;
+    transition: background-color vars.$transition-base, padding-left vars.$transition-base; // On ajoute padding-left à la transition
+
+    border-bottom: 1px solid var(--color-border, #e0e0e0);
 
     &:hover,
     &:focus-visible {
@@ -174,8 +178,28 @@ header {
     }
 
     &.active {
-      background-color: var(--color-primary);
-      color: #ffffff;
+      background-color: transparent;
+      color: var(--color-primary);
+      position: relative;
+
+      // --- NOUVEAU : On augmente le padding-left pour décaler le texte ---
+      // On calcule l'espace nécessaire : l'espacement original + la largeur de la barre + un petit espace
+      padding-left: vars.$spacing-lg; 
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background-color: var(--color-primary);
+        // On retire le border-radius ici, car le overflow:hidden sur le parent s'en occupe
+      }
+    }
+    
+    &:last-child {
+      border-bottom: none;
     }
   }
 }
