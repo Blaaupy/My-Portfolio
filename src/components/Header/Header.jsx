@@ -1,7 +1,7 @@
 // src/components/Header/Header.jsx
 
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { useContext, useEffect, useState, useRef } from "react"; // 1. Importer useRef
+import { useContext, useEffect, useState, useRef } from "react";
 import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
 import LanguageSelector from "../LanguageSelector/LanguageSelector"; 
 import { LanguageContext } from "../../context/LanguageContext";
@@ -15,27 +15,34 @@ export default function Header() {
   const [isSettingsMenuOpen, setIsSettingsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // 2. Créer une référence pour le panneau des paramètres
+  // Référence pour le panneau des paramètres
   const settingsPanelRef = useRef(null);
 
   const toggleSettingsMenu = () => {
     setIsSettingsMenuOpen(!isSettingsMenuOpen);
   };
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Fermer les menus à chaque changement de page
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setIsSettingsMenuOpen(false);
   }, [location]);
 
-  // 4. useEffect pour gérer le clic à l'extérieur du panneau
+  // --- CORRECTION : useEffect pour gérer le clic à l'extérieur ---
   useEffect(() => {
-    // La fonction qui sera appelée à chaque clic
     const handleClickOutside = (event) => {
-      // On vérifie si le clic a eu lieu à l'extérieur du panneau des paramètres
-      if (settingsPanelRef.current && !settingsPanelRef.current.contains(event.target)) {
+      // On vérifie deux conditions :
+      // 1. Le clic est en dehors du panneau de paramètres.
+      // 2. Le clic ne provient PAS du bouton des paramètres (ni de l'un de ses enfants, comme l'icône).
+      if (
+        settingsPanelRef.current &&
+        !settingsPanelRef.current.contains(event.target) &&
+        !event.target.closest('.settings-button')
+      ) {
         setIsSettingsMenuOpen(false);
       }
     };
@@ -45,8 +52,7 @@ export default function Header() {
       document.addEventListener('mousedown', handleClickOutside);
     }
 
-    // Fonction de nettoyage : on retire l'écouteur quand le composant est démonté
-    // ou quand `isSettingsMenuOpen` change (devient false)
+    // Fonction de nettoyage : on retire l'écouteur pour éviter les fuites de mémoire
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -107,15 +113,15 @@ export default function Header() {
         >
           <Settings size={23} />
         </button>
-
-        {/* 3. Attacher la ref au panneau */}
-        {isSettingsMenuOpen && (
-          <div className="settings-panel" ref={settingsPanelRef}>
-            <ThemeSwitch />
-            <LanguageSelector />
-          </div>
-        )}
       </div>
+      
+      {/* Le panneau est un enfant direct du <header> pour un bon positionnement */}
+      {isSettingsMenuOpen && (
+        <div className="settings-panel" ref={settingsPanelRef}>
+          <ThemeSwitch />
+          <LanguageSelector />
+        </div>
+      )}
 
       {/* --- Menu Mobile --- */}
       <div className={`mobile-nav-menu ${isMobileMenuOpen ? "mobile-nav-menu--open" : ""}`}>
