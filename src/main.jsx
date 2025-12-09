@@ -5,7 +5,7 @@ import "./styles/reset.scss";
 import "./styles/main.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  <React.StrictMode basename="/portfolio-2">
     <App />
   </React.StrictMode>
 );

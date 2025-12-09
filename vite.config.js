@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
+  base: '/portfolio-2/', // ← Ajoutez cette ligne
   plugins: [
     react(),
     svgr()
@@ -11,4 +12,4 @@ export default defineConfig({
   build: {
     outDir: 'dist'
   }
-});
+});   
