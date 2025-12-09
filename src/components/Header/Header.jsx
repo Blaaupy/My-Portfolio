@@ -111,7 +111,7 @@ export default function Header() {
           aria-label="Ouvrir le menu de navigation"
         >
           <span className="current-page">{getCurrentPageName()}</span>
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <X size={24} color="var(--color-text)"/> : <Menu size={24} color="var(--color-text)"/>}
         </button>
       </div>
 
