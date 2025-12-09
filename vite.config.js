@@ -5,11 +5,9 @@ import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
   plugins: [
-    svgr(),
-    react()
+    react(),
+    svgr()
   ],
-  // --- LA SOLUTION : un `base` conditionnel ---
-  base: process.env.NODE_ENV === 'production' ? '/portfolio-2/' : '/',
   build: {
     outDir: 'dist'
   }
