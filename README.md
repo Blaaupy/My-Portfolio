@@ -102,19 +102,34 @@ Démarrez le serveur de développement avec la commande :
 ```bash
 npm run dev
 ```
-
-Ouvrez votre navigateur et naviguez vers `http://localhost:5173`.
+En raison de la configuration de base dans vite.config.js pour le déploiement, l'application sera accessible à l'adresse suivante :
+http://localhost:5173/portfolio-2/
 
 ## 🚀 Déploiement
 
-Ce projet est configuré pour être déployé facilement sur **GitHub Pages** grâce au package `gh-pages`.
+Ce projet est configuré pour être déployé sur GitHub Pages en tant que Single Page Application (SPA). Le processus est automatisé pour gérer les routes côté client.
 
-1.  Après avoir cloné le projet et installé les dépendances, exécutez simplement la commande :
-    ```bash
-    npm run deploy
-    ```
-2.  Cela construira le projet et le publiera sur la branche `gh-pages` de votre dépôt, le rendant accessible à l'adresse `https://Blaaupy.github.io/portfolio-2/`.
+1.  Configuration de GitHub Pages :
 
+    Dans les paramètres de votre dépôt GitHub, allez dans la section "Pages".
+    Sous "Build and deployment", sélectionnez la source "Deploy from a branch".
+    Choisissez la branche main (ou master) et le dossier /dist.
+
+2.  Processus de Build Local :
+
+    Lancez la commande de build :
+```bash
+npm run build
+```
+    Cette commande effectue deux actions :
+
+        Build Vite : Crée le dossier dist avec les fichiers optimisés pour la production.
+
+        Script postbuild : Exécute automatiquement le script copy-404.cjs. Ce script copie le contenu de dist/index.html vers dist/404.html. C'est une étape cruciale pour que GitHub Pages puisse rediriger toutes les routes (ex: /about) vers le fichier index.html, permettant à React Router de gérer la navigation correctement.
+
+3.  Mise en Ligne :
+    Après le build, commitez et poussez les changements, y compris le dossier dist, sur votre branche principale. GitHub Pages se mettra à jour automatiquement.
+    
 ## 📝 License
 
 Ce projet est sous licence MIT. Consultez le fichier `LICENSE` pour plus d'informations.
