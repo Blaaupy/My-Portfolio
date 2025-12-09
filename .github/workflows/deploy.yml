@@ -72,6 +72,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           artifact_name: github-pages # Nom de l'artefact uploadé
-          path: ./dist
