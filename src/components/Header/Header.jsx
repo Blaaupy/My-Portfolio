@@ -60,12 +60,25 @@ export default function Header() {
 
   // Fonction pour obtenir le nom de la page actuelle
   const getCurrentPageName = () => {
-    const path = location.pathname;
-    if (path === "/" || path === "/") return texts.nav.home;
-    if (path === "about") return texts.nav.about;
-    if (path === "projects") return texts.nav.projects;
-    if (path === "contact") return texts.nav.contact;
-    return texts.nav.home;
+    // On extrait le dernier segment de l'URL.
+    // ex: "/portfolio-2/about" -> "about"
+    // ex: "/portfolio-2/" -> ""
+    const pathSegment = location.pathname.split('/').pop();
+
+    switch (pathSegment) {
+      case '':
+        // Si le segment est vide, c'est la page d'accueil
+        return texts.nav.home;
+      case 'about':
+        return texts.nav.about;
+      case 'projects':
+        return texts.nav.projects;
+      case 'contact':
+        return texts.nav.contact;
+      default:
+        // Par défaut, on retourne "Accueil" si la route n'est pas reconnue
+        return texts.nav.home;
+    }
   };
 
   return (
@@ -92,16 +105,14 @@ export default function Header() {
           </NavLink>
         </nav>
 
-        <div className="mobile-nav-control">
+        <button
+          className="mobile-nav-control"
+          onClick={toggleMobileMenu}
+          aria-label="Ouvrir le menu de navigation"
+        >
           <span className="current-page">{getCurrentPageName()}</span>
-          <button
-            className="menu-toggle-btn"
-            onClick={toggleMobileMenu}
-            aria-label="Ouvrir le menu de navigation"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
 
       {/* --- Les Contrôles --- */}
