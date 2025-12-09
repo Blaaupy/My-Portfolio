@@ -1,13 +1,13 @@
 [
-  { "name": "React", "color": "#61dafb", "level": 85, "icon": "/portfolio-2/images/React-icon.svg", "alt": "Logo React" },
-  { "name": "JavaScript", "color": "#f7df1e", "level": 90, "icon": "/portfolio-2/images/Javascript-shield.svg", "alt": "Logo JavaScript" },
-  { "name": "Node.js", "color": "#3c873a", "level": 70, "icon": "/portfolio-2/images/Node.js_logo.svg", "alt": "Logo Node.js" },
-  { "name": "Sass", "color": "#cc6699", "level": 80, "icon": "/portfolio-2/images/Sass_Logo_Color.svg", "alt": "Logo Sass" },
-  { "name": "HTML5", "color": "#e34f26", "level": 95, "icon": "/portfolio-2/images/HTML5_logo_and_wordmark.svg", "alt": "Logo HTML5" },
-  { "name": "CSS3", "color": "#1572b6", "level": 95, "icon": "/portfolio-2/images/CSS3_logo.svg", "alt": "Logo CSS3" },
-  { "name": "Git", "color": "#f34f29", "level": 80, "icon": "/portfolio-2/images/Git-logo.svg", "alt": "Logo Git" },
-  { "name": "Figma", "color": "#a259ff", "level": 65, "icon": "/portfolio-2/images/Figma Icon (Full-color).svg", "alt": "Logo Figma" },
-  { "name": "Photoshop", "color": "#31A8FF", "level": 85, "icon": "/portfolio-2/images/Adobe_Photoshop_icon.svg", "alt": "Logo Adobe Photoshop" },
-  { "name": "Python", "color": "#FFFF00", "level": 20, "icon": "/portfolio-2/images/Python-logo-notext.svg", "alt": "Logo Python" },
-  { "name": "Prisma", "color": "#000000", "level": 60, "icon": "/portfolio-2/images/Prisma-DarkSymbol.svg", "alt": "Logo Figma" }
+  { "name": "React", "color": "#61dafb", "level": 85, "icon": "images/React-icon.svg", "alt": "Logo React" },
+  { "name": "JavaScript", "color": "#f7df1e", "level": 90, "icon": "images/Javascript-shield.svg", "alt": "Logo JavaScript" },
+  { "name": "Node.js", "color": "#3c873a", "level": 70, "icon": "images/Node.js_logo.svg", "alt": "Logo Node.js" },
+  { "name": "Sass", "color": "#cc6699", "level": 80, "icon": "images/Sass_Logo_Color.svg", "alt": "Logo Sass" },
+  { "name": "HTML5", "color": "#e34f26", "level": 95, "icon": "images/HTML5_logo_and_wordmark.svg", "alt": "Logo HTML5" },
+  { "name": "CSS3", "color": "#1572b6", "level": 95, "icon": "images/CSS3_logo.svg", "alt": "Logo CSS3" },
+  { "name": "Git", "color": "#f34f29", "level": 80, "icon": "images/Git-logo.svg", "alt": "Logo Git" },
+  { "name": "Figma", "color": "#a259ff", "level": 65, "icon": "images/Figma Icon (Full-color).svg", "alt": "Logo Figma" },
+  { "name": "Photoshop", "color": "#31A8FF", "level": 85, "icon": "images/Adobe_Photoshop_icon.svg", "alt": "Logo Adobe Photoshop" },
+  { "name": "Python", "color": "#FFFF00", "level": 20, "icon": "images/Python-logo-notext.svg", "alt": "Logo Python" },
+  { "name": "Prisma", "color": "#000000", "level": 60, "icon": "images/Prisma-DarkSymbol.svg", "alt": "Logo Figma" }
 ]

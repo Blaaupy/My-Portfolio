@@ -1,3 +1,4 @@
+// src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./context/LanguageContext";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -16,10 +17,11 @@ function App() {
           <Header />
           <main>
             <Routes>
-              <Route path="/portfolio-2/" element={<Home />} />
-              <Route path="/portfolio-2/about" element={<About />} />
-              <Route path="/portfolio-2/projects" element={<Projects />} />
-              <Route path="/portfolio-2/contact" element={<Contact />} />
+              {/* On utilise des chemins relatifs */}
+              <Route path="/" element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="contact" element={<Contact />} />
             </Routes>
           </main>
           <Footer />

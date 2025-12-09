@@ -13,13 +13,13 @@ export default function HomeHero({ texts, downloadCV }) {
         </h1>
         <p>{texts.home.intro}</p>
         <div className="home-section-buttons">
-          <button className="btn" onClick={() => navigate("/portfolio-2/projects")}>
+          <button className="btn" onClick={() => navigate("projects")}>
             {texts.home.projectsBtn}
           </button>
           <button className="btn" onClick={downloadCV}>
             {texts.home.cvBtn}
           </button>
-          <button className="btn" onClick={() => navigate("/portfolio-2/contact")}>
+          <button className="btn" onClick={() => navigate("contact")}>
             {texts.home.contactBtn}
           </button>
         </div>

@@ -8,7 +8,7 @@ export default function HomeAbout({ texts }) {
     <section className="home-about">
       <h2>{texts.home.aboutTitle}</h2>
       <p>{texts.home.aboutText}</p>
-      <button className="btn" onClick={() => navigate("/portfolio-2/about")}>
+      <button className="btn" onClick={() => navigate("about")}>
         {texts.home.aboutBtn}
       </button>
     </section>

@@ -61,33 +61,33 @@ export default function Header() {
   // Fonction pour obtenir le nom de la page actuelle
   const getCurrentPageName = () => {
     const path = location.pathname;
-    if (path === "/portfolio-2/" || path === "/portfolio-2") return texts.nav.home;
-    if (path === "/portfolio-2/about") return texts.nav.about;
-    if (path === "/portfolio-2/projects") return texts.nav.projects;
-    if (path === "/portfolio-2/contact") return texts.nav.contact;
+    if (path === "/" || path === "/") return texts.nav.home;
+    if (path === "about") return texts.nav.about;
+    if (path === "projects") return texts.nav.projects;
+    if (path === "contact") return texts.nav.contact;
     return texts.nav.home;
   };
 
   return (
     <header>
       <div className="header-left">
-        <Link to="/portfolio-2/">
+        <Link to="/">
           <p>Blaaup</p>
         </Link>
       </div>
 
       <div className="header-center">
         <nav className="nav-desktop">
-          <NavLink to="/portfolio-2/" end className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+          <NavLink to="/" end className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
             {texts.nav.home}
           </NavLink>
-          <NavLink to="/portfolio-2/about" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+          <NavLink to="about" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
             {texts.nav.about}
           </NavLink>
-          <NavLink to="/portfolio-2/projects" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+          <NavLink to="projects" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
             {texts.nav.projects}
           </NavLink>
-          <NavLink to="/portfolio-2/contact" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+          <NavLink to="contact" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
             {texts.nav.contact}
           </NavLink>
         </nav>
@@ -126,16 +126,16 @@ export default function Header() {
       {/* --- Menu Mobile --- */}
       <div className={`mobile-nav-menu ${isMobileMenuOpen ? "mobile-nav-menu--open" : ""}`}>
         <nav className="mobile-nav">
-          <NavLink to="/portfolio-2/" end className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+          <NavLink to="/" end className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
             {texts.nav.home}
           </NavLink>
-          <NavLink to="/portfolio-2/about" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+          <NavLink to="about" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
             {texts.nav.about}
           </NavLink>
-          <NavLink to="/portfolio-2/projects" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+          <NavLink to="projects" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
             {texts.nav.projects}
           </NavLink>
-          <NavLink to="/portfolio-2/contact" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+          <NavLink to="contact" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
             {texts.nav.contact}
           </NavLink>
         </nav>

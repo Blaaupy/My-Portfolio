@@ -4,7 +4,7 @@
       "id": 1,
       "titleFr": "Booki — Site de réservation",
       "titleEn": "Booki — Booking Website",
-      "logo": "/portfolio-2/images/Booki.png",
+      "logo": " images/Booki.png",
       "shortFr": "Intégration complète d’un site de réservation en HTML/CSS, 100% responsive.",
       "shortEn": "Full integration of a booking website using HTML/CSS, fully responsive.",
       "longFr": "Création d’un site vitrine responsive à partir d'une maquette Figma. Travail autour du HTML sémantique, du Flexbox, du responsive mobile-first et de la validation W3C. Ce projet, mon premier concret en intégration web, m’a permis de poser des bases solides pour mes projets futurs.",
@@ -63,28 +63,28 @@
           "files": [
             {
               "name": "Booki Dev Web - Note de synthèse pour intégration du site Booki",
-              "url": "/portfolio-2/files/booki/DW_Booki_Note_de_synthese.pdf"
+              "url": " files/booki/DW_Booki_Note_de_synthese.pdf"
             }
           ]
         },
         {
           "type": "image",
           "title": "Maquette",
-          "src": "/portfolio-2/files/booki/Desktop.png",
+          "src": " files/booki/Desktop.png",
           "previewTextFr": "Maquette figma de Booki version desktop",
           "previewTextEn": "Booki desktop version figma mockup"
         },
         {
           "type": "image",
           "title": "Découpage initial de la maquette",
-          "src": "/portfolio-2/files/booki/Premier_découpage_maquette.jpg",
+          "src": " files/booki/Premier_découpage_maquette.jpg",
           "previewTextFr": "Premier découpage de maquette : première fois que je faisais ça, on voit plusieurs oublis (ex: barre de recherche).",
           "previewTextEn": "First mockup slicing: first time doing this, several elements were missing (e.g., search bar)."
         },
         {
           "type": "image",
           "title": "Découpage corrigé",
-          "src": "/portfolio-2/files/booki/Découpage_maquette_final.jpg",
+          "src": " files/booki/Découpage_maquette_final.jpg",
           "previewTextFr": "Découpage corrigé : version plus propre, segments mieux séparés, sections plus cohérentes.",
           "previewTextEn": "Corrected slicing: cleaner segmentation, better-separated sections and clearer structure."
         },
@@ -101,9 +101,9 @@
           "previewTextEn": "All Booki files",
           "previewTextFr": "Tous les fichiers Booki",
           "links": [
-            { "name": "Premier Découpage Maquette / First Mockup slicing", "url": "/portfolio-2/files/booki/Premier_découpage_maquette.jpg", "type": "download" },
-            { "name": "Découpage Maquette propre / Clean Mockup slicing", "url": "/portfolio-2/files/booki/Découpage_maquette_final.jpg", "type": "download" },
-            { "name": "Note de synthèse / Summary note", "url": "/portfolio-2/files/booki/DW_Booki_Note_de_synthese.pdf", "type": "download" },
+            { "name": "Premier Découpage Maquette / First Mockup slicing", "url": " files/booki/Premier_découpage_maquette.jpg", "type": "download" },
+            { "name": "Découpage Maquette propre / Clean Mockup slicing", "url": " files/booki/Découpage_maquette_final.jpg", "type": "download" },
+            { "name": "Note de synthèse / Summary note", "url": " files/booki/DW_Booki_Note_de_synthese.pdf", "type": "download" },
             { "name": "Maquette Original / Original Mockup", "url": "https://www.figma.com/design/r9YJyUkpVdrxzBBKGH7reY/Maquettes-Booki--desktop--mobile--tablette-?node-id=3-0&p=f&t=mcKTnz0PjGDT30Dg-0", "type": "navToLink" },
             { "name": "Lien GitHub / GitHub link", "url": "https://github.com/Blaaupy/booki-starter-code", "type": "navToLink" }
           ]
@@ -114,7 +114,7 @@
       "id": 2,
       "titleFr": "Sophie Bluel — Portfolio d’architecte",
       "titleEn": "Sophie Bluel — Architect Portfolio",
-      "logo": "/portfolio-2/images/SophieBluel.png",
+      "logo": " images/SophieBluel.png",
       "shortFr": "Site de portfolio dynamique avec système de login et gestion des projets.",
       "shortEn": "Dynamic portfolio website with admin login and project management.",
       "longFr": "Développement complet du front-end en JavaScript, manipulation du DOM, affichage dynamique des projets, filtres, modale d’édition, upload d’images, suppression via API et authentification par token. Ce projet m’a permis de renforcer mes compétences en gestion des événements utilisateurs, en communication avec une API et en sécurité basique des applications front-end.",
@@ -173,12 +173,12 @@
           "previewTextEn": "Project mockup and task organization via Kanban",
           "images": [
             {
-              "src": "/portfolio-2/files/sophiebluel/HomepageSophieBluel.png",
+              "src": " files/sophiebluel/HomepageSophieBluel.png",
               "labelFr": "Homepage — Maquette du projet",
               "labelEn": "Homepage — Mockup of the project"
             },
             {
-              "src": "/portfolio-2/files/sophiebluel/KanbanSophieBluel.png",
+              "src": " files/sophiebluel/KanbanSophieBluel.png",
               "labelFr": "Kanban — Tâches du projet",
               "labelEn": "Kanban — Project tasks"
             }
@@ -187,7 +187,7 @@
         {
           "type": "video",
           "title": "Fonctionnalités dynamiques",
-          "src": "/portfolio-2/files/sophiebluel/SophieBluelFonctionnalitées.mp4",
+          "src": " files/sophiebluel/SophieBluelFonctionnalitées.mp4",
           "previewTextFr": "Présentation des fonctionnalités dynamiques du portfolio",
           "previewTextEn": "Showcase of dynamic portfolio features"
         },
@@ -205,12 +205,12 @@
           "links": [
             { 
               "name": "Tâches du Kanban / Kanban tasks", 
-              "url": "/portfolio-2/files/sophiebluel/KanbanSophieBluel.png", 
+              "url": " files/sophiebluel/KanbanSophieBluel.png", 
               "type": "download" 
             },
             { 
               "name": "Vidéo des interactions / Interaction video", 
-              "url": "/portfolio-2/files/sophiebluel/SophieBluelFonctionnalitées.mp4", 
+              "url": " files/sophiebluel/SophieBluelFonctionnalitées.mp4", 
               "type": "download" 
             },
             { 
@@ -231,7 +231,7 @@
       "id": 3,
       "titleFr": "Nina Carducci — Photographe",
       "titleEn": "Nina Carducci — Photographer",
-      "logo": "/portfolio-2/images/Nina.svg",
+      "logo": " images/Nina.svg",
       "shortFr": "Optimisation SEO, performance et débogage complet d’un site de photographe.",
       "shortEn": "SEO, performance optimization and debugging of a photographer portfolio.",
       "longFr": "Correction des bugs JS/CSS sur un site existant, optimisation Lighthouse (Performance, SEO, Accessibilité), compression d’images volumineuses, lazy loading, amélioration du chargement des pages, structure sémantique et métadonnées adaptées. Ce projet m’a permis de me familiariser avec l’audit de sites tiers et la mise en œuvre de bonnes pratiques SEO et d’accessibilité sans altérer le fonctionnement du site.",
@@ -289,21 +289,21 @@
           "iframeType": "pdf",
           "previewTextFr": "Audit Lighthouse du site avant optimisation.",
           "previewTextEn": "Lighthouse report of the site before optimization.",
-          "url": "/portfolio-2/files/nina/Before_Optimisation_Lighthouse_Report.pdf"
+          "url": " files/nina/Before_Optimisation_Lighthouse_Report.pdf"
         },
         {
           "type": "iframe",
           "iframeType": "pdf",
           "previewTextFr": "Audit Lighthouse du site après optimisation.",
           "previewTextEn": "Lighthouse report of the site after optimization.",
-          "url": "/portfolio-2/files/nina/Optimised_Website_Lighthouse_Report.pdf"
+          "url": " files/nina/Optimised_Website_Lighthouse_Report.pdf"
         },
         {
           "type": "iframe",
           "iframeType": "pdf",
           "previewTextFr": "Rapport détaillant toutes les modifications effectuées sur le site.",
           "previewTextEn": "Detailed report of all changes made on the website.",
-          "url": "/portfolio-2/files/nina/RapportOptimisation.pdf"
+          "url": " files/nina/RapportOptimisation.pdf"
         },
         {
           "type": "iframe",
@@ -317,9 +317,9 @@
           "previewTextFr": "Tous les fichiers Nina Carducci",
           "previewTextEn": "All Nina Carducci files",
           "links": [
-            { "name": "Rapport Lighthouse avant optimisation / Lighthouse report of the site before optimization. ", "url": "/portfolio-2/files/nina/Before_Optimisation_Lighthouse_Report.pdf", "type": "download" },
-            { "name": "Rapport Lighthouse après optimisation / Lighthouse report of the site after optimization.", "url": "/portfolio-2/files/nina/Optimised_Website_Lighthouse_Report.pdf", "type": "download" },
-            { "name": "Rapport d’intervention / Detailed report of all changes made on the website. ", "url": "/portfolio-2/files/nina/RapportOptimisation.pdf", "type": "download" },
+            { "name": "Rapport Lighthouse avant optimisation / Lighthouse report of the site before optimization. ", "url": " files/nina/Before_Optimisation_Lighthouse_Report.pdf", "type": "download" },
+            { "name": "Rapport Lighthouse après optimisation / Lighthouse report of the site after optimization.", "url": " files/nina/Optimised_Website_Lighthouse_Report.pdf", "type": "download" },
+            { "name": "Rapport d’intervention / Detailed report of all changes made on the website. ", "url": " files/nina/RapportOptimisation.pdf", "type": "download" },
             { "name": "Site final optimisé / Final version of the website optimized", "url": "https://blaaupy.github.io/Nina-Carducci-Dev/", "type": "navToLink" },
             { "name": "Lien GitHub / GitHub link", "url": "https://github.com/Blaaupy/Nina-Carducci-Dev", "type": "navToLink" }
           ]
@@ -330,7 +330,7 @@
       "id": 4,
       "titleFr": "Kasa — Location Immobilière",
       "titleEn": "Kasa — Real Estate Rental",
-      "logo": "/portfolio-2/images/Kasa.png",
+      "logo": " images/Kasa.png",
       "shortFr": "Intégration complète d’une plateforme de location immobilière en React.",
       "shortEn": "Full integration of a real-estate rental platform built with React.",
       "longFr": "En tant que développeur front-end freelance pour Kasa, j’ai participé à la refonte complète de leur site de location immobilière en React. J’ai travaillé sur le routing, la gestion des props et du state, la création d’un carrousel d’images et un système de collapse dynamique. Ce projet m’a permis de renforcer ma compréhension des composants React et de l’architecture SPA.",
@@ -405,7 +405,7 @@
           "title": "Guidelines de développement",
           "previewTextFr": "Documentation PDF des bonnes pratiques de codage pour le projet Kasa.",
           "previewTextEn": "PDF documentation of coding best practices for the Kasa project.",
-          "url": "/portfolio-2/files/kasa/Kasa_coding_guidelines.pdf"
+          "url": " files/kasa/Kasa_coding_guidelines.pdf"
         },
         {
           "type": "doubleImage",
@@ -414,12 +414,12 @@
           "previewTextEn": "Main mockups: homepage and housing page.",
           "images": [
             {
-              "src": "/portfolio-2/files/kasa/HomepageKasa.png",
+              "src": " files/kasa/HomepageKasa.png",
               "labelFr": "Homepage — Maquette du projet",
               "labelEn": "Homepage — Mockup of the project"
             },
             {
-              "src": "/portfolio-2/files/kasa/HousingpageKasa.png",
+              "src": " files/kasa/HousingpageKasa.png",
               "labelFr": "Page logement — Maquette du projet",
               "labelEn": "Housing page — Mockup of the project"
             }
@@ -438,7 +438,7 @@
           "previewTextFr": "Liens vers maquettes complètes et dépôt GitHub du projet.",
           "previewTextEn": "Links to complete mockups and project GitHub repository.",
           "links": [
-            { "name": "Coding Guidelines Kasa", "url": "/portfolio-2/files/kasa/Kasa_coding_guidelines.pdf", "type": "download" },
+            { "name": "Coding Guidelines Kasa", "url": " files/kasa/Kasa_coding_guidelines.pdf", "type": "download" },
             { 
               "name": "Maquette complète / Complete mockup", 
               "url": "https://www.figma.com/design/kfKHknHySoTibZfdolGAX6/Sophie-Bluel---Desktop?node-id=0-1&p=f&t=EjqZlPxcRaTJEFfK-0", 
@@ -458,7 +458,7 @@
       "id": 5,
       "titleFr": "Mon Vieux Grimoire — Back-end Livre",
       "titleEn": "Mon Vieux Grimoire — Book Back-end",
-      "logo": "/portfolio-2/images/MonVieuxGrimoire.svg",
+      "logo": " images/MonVieuxGrimoire.svg",
       "shortFr": "Développement complet du back-end d’un site de notation de livres avec Node.js et MongoDB.",
       "shortEn": "Full back-end development of a book rating site with Node.js and MongoDB.",
       "longFr": "Ce projet consistait à développer le back-end d’un site de notation de livres, en utilisant Node.js, Express et MongoDB. J’ai mis en place les modèles de données, les opérations CRUD pour les livres et les notes, un système d’authentification sécurisé et l’optimisation des images. Ce projet m’a permis de renforcer mes compétences en architecture MVC, gestion d’API et sécurité des données.",
@@ -543,7 +543,7 @@
           "titleEn": "Functional Specifications",
           "previewTextFr": "Document PDF des spécifications fonctionnelles du projet.",
           "previewTextEn": "PDF document of the project's functional specifications.",
-          "url": "/portfolio-2/files/monvieuxgrimoire/Backend_Specifications_fonctionnelles.pdf"
+          "url": " files/monvieuxgrimoire/Backend_Specifications_fonctionnelles.pdf"
         },
         {
           "type": "iframe",
@@ -552,7 +552,7 @@
           "titleEn": "API Specifications",
           "previewTextFr": "Documentation PDF détaillant la structure et le fonctionnement de l’API.",
           "previewTextEn": "PDF documentation detailing the structure and behavior of the API.",
-          "url": "/portfolio-2/files/monvieuxgrimoire/Backend_Specifications_API.pdf"
+          "url": " files/monvieuxgrimoire/Backend_Specifications_API.pdf"
         },
         {
           "type": "video",
@@ -560,7 +560,7 @@
           "titleEn": "Full demonstration",
           "previewTextFr": "Vidéo complète présentant tout le fonctionnement du back-end.",
           "previewTextEn": "Full video demonstrating the complete back-end workflow.",
-          "src": "/portfolio-2/files/monvieuxgrimoire/MonVieuxGrimoireFonctionnalitées.mp4"
+          "src": " files/monvieuxgrimoire/MonVieuxGrimoireFonctionnalitées.mp4"
         },
         {
           "type": "allLinks",
@@ -569,17 +569,17 @@
           "links": [
             {
               "name": "Spécifications Fonctionnelles",
-              "url": "/portfolio-2/files/monvieuxgrimoire/Backend_Specifications_fonctionnelles.pdf",
+              "url": " files/monvieuxgrimoire/Backend_Specifications_fonctionnelles.pdf",
               "type": "download"
             },
             {
               "name": "Spécifications API",
-              "url": "/portfolio-2/files/monvieuxgrimoire/Backend_Specifications_API.pdf",
+              "url": " files/monvieuxgrimoire/Backend_Specifications_API.pdf",
               "type": "download"
             },
             {
               "name": "Vidéo démonstration / Demo video",
-              "url": "/portfolio-2/files/monvieuxgrimoire/MonVieuxGrimoireFonctionnalitées.mp4",
+              "url": " files/monvieuxgrimoire/MonVieuxGrimoireFonctionnalitées.mp4",
               "type": "download"
             },
             {
@@ -600,7 +600,7 @@
       "id": 6,
       "titleFr": "Qwenta — Gestion de Menus",
       "titleEn": "Qwenta — Menu Management",
-      "logo": "/portfolio-2/images/Qwenta.svg",
+      "logo": " images/Qwenta.svg",
       "shortFr": "Développement complet d’une application de gestion de menus et de commandes.",
       "shortEn": "Full development of a menu and order management application.",
       "longFr": "Le projet Qwenta consistait à créer une application permettant de gérer des menus et commandes pour une chaîne de restauration. J’ai participé à toutes les phases : conception, spécifications fonctionnelles et techniques, développement, suivi via Kanban et présentation finale.",
@@ -660,8 +660,8 @@
           "previewTextFr": "Maquette principale et exemple de fonctionnalité de l’application.",
           "previewTextEn": "Main mockup and example of the application's functionality.",
           "images": [
-            {"src": "/portfolio-2//files/qwenta/Qwenta_Homepage.png", "labelFr": "Page d’accueil — Maquette", "labelEn": "Homepage — Mockup"},
-            {"src": "/portfolio-2/files/qwenta/Qwenta_Example_of_a_Functionality.png", "labelFr": "Exemple de fonctionnalité", "labelEn": "Example of functionality"}
+            {"src": " /files/qwenta/Qwenta_Homepage.png", "labelFr": "Page d’accueil — Maquette", "labelEn": "Homepage — Mockup"},
+            {"src": " files/qwenta/Qwenta_Example_of_a_Functionality.png", "labelFr": "Exemple de fonctionnalité", "labelEn": "Example of functionality"}
           ]
         },
         {
@@ -671,7 +671,7 @@
           "titleEn": "Functional Specifications",
           "previewTextFr": "PDF des spécifications fonctionnelles du projet.",
           "previewTextEn": "PDF of the project's functional specifications.",
-          "url": "/portfolio-2/files/qwenta/Menu_Maker_by_Qwenta_Spécifications_Fonctionnelles.pdf"
+          "url": " files/qwenta/Menu_Maker_by_Qwenta_Spécifications_Fonctionnelles.pdf"
         },
         {
           "type": "iframe",
@@ -680,7 +680,7 @@
           "titleEn": "Technical Specifications",
           "previewTextFr": "PDF des spécifications techniques du projet.",
           "previewTextEn": "PDF of the project's technical specifications.",
-          "url": "/portfolio-2/files/qwenta/Spécifications_Techniques_PDF.pdf"
+          "url": " files/qwenta/Spécifications_Techniques_PDF.pdf"
         },
         {
           "type": "iframe",
@@ -689,13 +689,13 @@
           "titleEn": "Technological Watch",
           "previewTextFr": "PDF de la veille technologique réalisée pour le projet.",
           "previewTextEn": "PDF of the technological watch conducted for the project.",
-          "url": "/portfolio-2/files/qwenta/Veille_Technologique_PDF.pdf"
+          "url": " files/qwenta/Veille_Technologique_PDF.pdf"
         },
         {
           "type": "image",
           "previewTextFr": "Kanban",
           "previewTextEn": "Kanban",
-          "src": "/portfolio-2/files/qwenta/Kanban_Screen.png"
+          "src": " files/qwenta/Kanban_Screen.png"
         },
         {
           "type": "iframe",
@@ -704,19 +704,19 @@
           "titleEn": "Presentation",
           "previewTextFr": "Présentation PowerPoint du projet.",
           "previewTextEn": "Project PowerPoint presentation.",
-          "url": "/portfolio-2/files/qwenta/Qwenta_Presentation.pdf"
+          "url": " files/qwenta/Qwenta_Presentation.pdf"
         },
         {
           "type": "allLinks",
           "previewTextFr": "Tous les fichiers et ressources du projet Qwenta.",
           "previewTextEn": "All files and resources for the Qwenta project.",
           "links": [
-            {"name": "Maquette Homepage", "url": "/portfolio-2/files/qwenta/Qwenta_Homepage.png", "type": "download"},
-            {"name": "Exemple de fonctionnalité", "url": "/portfolio-2/files/qwenta/Qwenta_Example_of_a_Functionality.png", "type": "download"},
-            {"name": "Spécifications Fonctionnelles", "url": "/portfolio-2/files/qwenta/Menu_Maker_by_Qwenta_Spécifications_Fonctionnelles.pdf", "type": "download"},
-            {"name": "Spécifications Techniques", "url": "/portfolio-2/files/qwenta/Spécifications_Techniques_PDF.pdf", "type": "download"},
-            {"name": "Veille Technologique", "url": "/portfolio-2/files/qwenta/Veille_Technologique_PDF.pdf", "type": "download"},
-            {"name": "Présentation PowerPoint (en PDF)", "url": "/portfolio-2/files/qwenta/Qwenta_Presentation.pdf", "type": "download"},
+            {"name": "Maquette Homepage", "url": " files/qwenta/Qwenta_Homepage.png", "type": "download"},
+            {"name": "Exemple de fonctionnalité", "url": " files/qwenta/Qwenta_Example_of_a_Functionality.png", "type": "download"},
+            {"name": "Spécifications Fonctionnelles", "url": " files/qwenta/Menu_Maker_by_Qwenta_Spécifications_Fonctionnelles.pdf", "type": "download"},
+            {"name": "Spécifications Techniques", "url": " files/qwenta/Spécifications_Techniques_PDF.pdf", "type": "download"},
+            {"name": "Veille Technologique", "url": " files/qwenta/Veille_Technologique_PDF.pdf", "type": "download"},
+            {"name": "Présentation PowerPoint (en PDF)", "url": " files/qwenta/Qwenta_Presentation.pdf", "type": "download"},
             {"name": "Kanban", "url": "https://www.notion.so/27f90a03b5b0801485b1cc47510a770b?v=27f90a03b5b08098b74b000c49ef16f7&source=copy_link", "type": "navToLink"},
             {"name": "Maquette Figma", "url": "https://www.figma.com/design/Q6NEUPqwz1U3HFaCaVoF7N/Maquette-desktop---Menu-Maker-by-Qwenta?node-id=0-6", "type": "navToLink"}
           ]

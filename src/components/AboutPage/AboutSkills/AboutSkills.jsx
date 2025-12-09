@@ -76,7 +76,7 @@ export default function AboutSkills({ texts }) {
             <h3>{skill.name}</h3>
             <button
               className="skill-button"
-              onClick={() => navigate(`/portfolio-2/projects?tech=${skill.name}`)}
+              onClick={() => navigate(`/projects?tech=${skill.name}`)}
             >
               {texts.about.skills.button}
             </button>

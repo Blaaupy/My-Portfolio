@@ -1,5 +1,6 @@
 import "./HomeSkills.scss";
-import technoData from "../../../data/techno.json"; // Import the data
+import { Link } from "react-router-dom";
+import technoData from "../../../data/techno.json";
 
 export default function HomeSkills({ texts }) {
   return (
@@ -10,28 +11,28 @@ export default function HomeSkills({ texts }) {
           {/* Première copie de la liste */}
           {technoData.map((skill, index) => (
             <div className="skill-tag" key={`first-${index}`}>
-              <a href="/portfolio-2/about#about-skills">
+              <Link to="/about#about-skills">
                 <img 
                   src={skill.icon} 
                   alt={skill.alt} 
                   className="skill-icon" 
                   title={skill.name}
                 />
-              </a>
+              </Link>
             </div>
           ))}
           
           {/* Deuxième copie de la liste pour créer la boucle */}
           {technoData.map((skill, index) => (
             <div className="skill-tag" key={`second-${index}`}>
-              <a href="/portfolio-2/about#about-skills">
+              <Link to="/about#about-skills">
                 <img 
                   src={skill.icon} 
                   alt={skill.alt} 
                   className="skill-icon" 
                   title={skill.name}
                 />
-              </a>
+              </Link>
             </div>
           ))}
         </div>
