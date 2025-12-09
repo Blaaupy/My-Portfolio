@@ -9,5 +9,5 @@
   { "name": "Figma", "color": "#a259ff", "level": 65, "icon": "images/Figma Icon (Full-color).svg", "alt": "Logo Figma" },
   { "name": "Photoshop", "color": "#31A8FF", "level": 85, "icon": "images/Adobe_Photoshop_icon.svg", "alt": "Logo Adobe Photoshop" },
   { "name": "Python", "color": "#FFFF00", "level": 20, "icon": "images/Python-logo-notext.svg", "alt": "Logo Python" },
-  { "name": "Prisma", "color": "#000000", "level": 60, "icon": "images/Prisma-DarkSymbol.svg", "alt": "Logo Figma" }
+  { "name": "Prisma", "color": "#000000", "level": 60, "icon": "images/Prisma-DarkSymbol.svg", "alt": "Logo Prisma" }
 ]

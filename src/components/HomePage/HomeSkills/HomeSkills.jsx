@@ -13,7 +13,7 @@ export default function HomeSkills({ texts }) {
             <div className="skill-tag" key={`first-${index}`}>
               <Link to="/about#about-skills">
                 <img 
-                  src={skill.icon} 
+                  src={`${import.meta.env.BASE_URL}${skill.icon}`}
                   alt={skill.alt} 
                   className="skill-icon" 
                   title={skill.name}
@@ -27,7 +27,7 @@ export default function HomeSkills({ texts }) {
             <div className="skill-tag" key={`second-${index}`}>
               <Link to="/about#about-skills">
                 <img 
-                  src={skill.icon} 
+                  src={`${import.meta.env.BASE_URL}${skill.icon}`} 
                   alt={skill.alt} 
                   className="skill-icon" 
                   title={skill.name}

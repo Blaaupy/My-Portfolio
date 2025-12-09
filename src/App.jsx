@@ -13,7 +13,6 @@ function App() {
   return (
     <LanguageProvider>
       <ThemeProvider>
-        <Router>
           <Header />
           <main>
             <Routes>
@@ -25,7 +24,6 @@ function App() {
             </Routes>
           </main>
           <Footer />
-        </Router>
       </ThemeProvider>
     </LanguageProvider>
   );
