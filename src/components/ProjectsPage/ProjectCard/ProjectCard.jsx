@@ -49,7 +49,7 @@ export default function ProjectCard({
         <div className="project-info">
           <h2>{title}</h2>
           <p>{shortDesc}</p>
-
+          
           {expanded && (
             <div className="project-details">
               <p>{longDesc}</p>

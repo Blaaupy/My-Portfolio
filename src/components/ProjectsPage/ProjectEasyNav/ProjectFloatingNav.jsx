@@ -2,6 +2,7 @@ import "./ProjectFloatingNav.scss";
 import ProjectInternalNav from "../ProjectInternalNav/ProjectInternalNav";
 import { useContext, useState, useEffect } from "react";
 import { LanguageContext } from "../../../context/LanguageContext";
+import CustomSelect from "../../CustomSelect/CustomSelect";
 
 export default function ProjectFloatingNav({
   projects,
@@ -21,6 +22,10 @@ export default function ProjectFloatingNav({
   const { language, texts } = useContext(LanguageContext);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
+  const projectOptions = projects.map((project, index) => ({
+    value: index,
+    label: language === "fr" ? project.titleFr : project.titleEn,
+  }));
   
   useEffect(() => {
     const handleScroll = () => {
@@ -40,17 +45,13 @@ export default function ProjectFloatingNav({
     <div className={`floating-nav ${isVisible ? "show" : "hide"}`}>
       
       {/* Select pour choisir le projet */}
-      <select
+      {/* --- REMPLACER L'ANCIEN SELECT --- */}
+      <CustomSelect
         value={activeIndex}
         onChange={(e) => onSelectProject(Number(e.target.value))}
+        options={projectOptions}
         className="project-select"
-      >
-        {projects.map((project, index) => (
-          <option key={project.id} value={index}>
-            {language === "fr" ? project.titleFr : project.titleEn}
-          </option>
-        ))}
-      </select>
+      />
 
       {/* Bouton Ouvrir/Fermer pour le projet sélectionné */}
       <div

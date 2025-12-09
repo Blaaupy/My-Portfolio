@@ -224,19 +224,15 @@
   // --- NOUVEAU : "Shortcut" pour les très petits mobiles ---
   @media screen and (max-width: 480px) {
     width: 95%;
-
+    .project-preview-container {
+      padding: $spacing-xs 0; // On retire le padding pour un affichage plein écran
+    }
     // On garde le layout global (gauche/droite) mais on adapte le contenu
     .project-main {
       // On met le contenu de la carte en colonne pour un meilleur affichage
       flex-direction: column;
       text-align: center;
       gap: $spacing-sm;
-
-      // 1. On cache la flèche d'expansion qui n'a plus de sens
-      .project-arrow {
-        display: none;
-      }
-      
       .project-logo img {
         width: 3.75rem;
         height: 3.75rem;

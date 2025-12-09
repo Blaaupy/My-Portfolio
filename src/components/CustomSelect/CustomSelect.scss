@@ -1,0 +1,81 @@
+// src/components/CustomSelect/CustomSelect.scss
+@use "../../styles/variables" as *;
+
+.custom-select {
+  position: relative;
+  width: 100%; // Prend la largeur de son parent
+}
+
+.custom-select-button {
+  width: 100%;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $radius-sm;
+  border: 1px solid var(--color-primary);
+  background: var(--color-background);
+  color: var(--color-text);
+  font-size: $font-size-xs;
+  cursor: pointer;
+  transition: all $transition-fast;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+
+  &:hover {
+    background: rgba(var(--color-primary-rgb), 0.05);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 2px rgba(var(--color-secondary-rgb), 0.2);
+  }
+}
+
+.custom-select-arrow {
+  transition: transform $transition-base;
+  flex-shrink: 0; // Empêche l'icône de rétrécir si le texte est long
+  margin-left: $spacing-xs;
+
+  &.open {
+    transform: rotate(180deg);
+  }
+}
+
+.custom-select-options {
+  // --- C''est LA CLÉ : positionnement vers le haut ---
+  position: absolute;
+  bottom: 100%; // Positionne le menu juste au-dessus du bouton
+  left: 0;
+  right: 0;
+  
+  margin-bottom: 4px; // Petit espace entre le bouton et le menu
+  
+  background-color: var(--color-background);
+  border: 1px solid var(--color-primary);
+  border-radius: $radius-sm;
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-select-options li {
+  padding: $spacing-xs $spacing-sm;
+  cursor: pointer;
+  transition: background-color $transition-fast;
+
+  &:hover,
+  &:focus-visible {
+    background-color: rgba(var(--color-primary-rgb), 0.1);
+  }
+
+  &.active {
+    background-color: var(--color-primary);
+    color: #ffffff;
+  }
+}

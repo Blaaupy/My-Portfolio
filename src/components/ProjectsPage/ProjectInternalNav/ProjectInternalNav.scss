@@ -1,3 +1,4 @@
+// src/components/ProjectsPage/ProjectInternalNav/ProjectInternalNav.scss
 @use "../../../styles/variables" as *;
 
 .project-internal-nav {
@@ -8,8 +9,8 @@
 
   .nav-arrow,
   .nav-dots button {
-    height: 2rem; // 32px
-    min-width: 2rem; // 32px
+    height: 2rem;
+    min-width: 2rem;
     border: 1px solid var(--color-primary);
     border-radius: $radius-sm;
     background: transparent;
@@ -18,26 +19,19 @@
     justify-content: center;
     align-items: center;
     transition: all $transition-fast;
-    
-    // Set the text color to inherit from the theme
     color: var(--color-text);
 
     &:hover {
       background-color: var(--color-primary);
-      color: #ffffff; // White text/icon on hover
+      color: #ffffff;
     }
   }
 
   .nav-arrow {
-    // Style the SVG within the button
     svg {
-      width: 1rem; // 16px
-      height: 1rem; // 16px
-      
-      // Use currentColor to inherit from parent button
+      width: 1rem;
+      height: 1rem;
       fill: currentColor;
-      
-      // More specific selector to override inline styles in the SVG
       path {
         fill: currentColor;
       }
@@ -59,5 +53,46 @@
         color: #ffffff;
       }
     }
+  }
+
+  // Le compteur est stylé UNIQUEMENT dans la media query pour éviter tout conflit
+}
+
+/* ------------------------------------------------------- */
+/* RESPONSIVE : La media query qui va bien               */
+/* ------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .project-internal-nav {
+    gap: $spacing-sm;
+    // On s'assure que la navigation reste sur une seule ligne
+    flex-wrap: nowrap;
+  }
+
+  /* --- RÈGLE DE CHOC POUR CACHER LES POINTS --- */
+  .nav-dots {
+    display: none !important;
+    width: 0 !important;
+    visibility: hidden !important;
+    overflow: hidden !important;
+  }
+
+  /* --- STYLE POUR LE COMPTEUR QUI S'AFFICHE --- */
+  .nav-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    // On applique le même style que les points numérotés
+    height: 2rem;
+    min-width: 2rem;
+    border: 1px solid var(--color-primary);
+    border-radius: $radius-sm;
+    background: transparent;
+    padding: $spacing-xs $spacing-md;
+
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: var(--color-text);
+    text-align: center;
   }
 }

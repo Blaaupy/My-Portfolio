@@ -31,6 +31,9 @@ export default function ProjectInternalNav({
         ))}
       </div>
 
+      <div className="nav-counter">
+        {current + 1}  /  {slides.length}
+      </div>
       {/* Next Button */}
       <button className="nav-arrow" onClick={onNext} aria-label="Next Slide">
         <ArrowLeft />
