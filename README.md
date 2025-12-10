@@ -130,8 +130,4 @@ npm run build
 3.  Mise en Ligne :
     Après le build, commitez et poussez les changements, y compris le dossier dist, sur votre branche principale. GitHub Pages se mettra à jour automatiquement.
     
-## 📝 License
-
-Ce projet est sous licence MIT. Consultez le fichier `LICENSE` pour plus d'informations.
-
 ---
